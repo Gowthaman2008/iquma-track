@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --saudi-primary: #006C35;
+    --saudi-dark: #004B28;
+    --saudi-emerald: #008C4A;
+    --saudi-light: #EFF8F3;
+    --saudi-bg: #F5F8F6;
+    --saudi-card: #FFFFFF;
+    --saudi-text: #172B22;
+    --saudi-muted: #6B7C72;
+    --saudi-border: #E2ECE5;
+    --saudi-warning: #F59E0B;
+    --saudi-danger: #DC2626;
+    --saudi-success: #16A34A;
+  }
+}
+
+body {
+  background-color: var(--saudi-bg);
+  color: var(--saudi-text);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar for enterprise tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Saudi Green Theme Utilities */
+.bg-saudi-dark {
+  background-color: #004B28;
+}
+
+.bg-saudi-primary {
+  background-color: #006C35;
+}
+
+.bg-saudi-emerald {
+  background-color: #008C4A;
+}
+
+.bg-saudi-light {
+  background-color: #EFF8F3;
+}
+
+.text-saudi-primary {
+  color: #006C35;
+}
+
+.text-saudi-dark {
+  color: #004B28;
+}
+
+.text-saudi-muted {
+  color: #6B7C72;
+}
+
+.border-saudi {
+  border-color: #E2ECE5;
+}
+
+/* Print Styles for Reports */
+@media print {
+  aside, header, nav, .no-print {
+    display: none !important;
+  }
+  body, main {
+    background: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}

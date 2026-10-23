@@ -1,0 +1,164 @@
+// Production PostgreSQL / Supabase Schema for IqamaTrack
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model User {
+  id           String    @id @default(cuid())
+  name         String
+  email        String    @unique
+  passwordHash String
+  role         String    @default("HR_MANAGER") // SUPER_ADMIN, HR_MANAGER, EMPLOYEE
+  companyId    String?
+  company      Company?  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  auditLogs    AuditLog[]
+  renewalsMade IqamaRenewalHistory[] @relation("RenewedByUser")
+
+  @@map("users")
+}
+
+model Company {
+  id              String   @id @default(cuid())
+  companyName     String
+  logoUrl         String?
+  email           String
+  hrContactEmail  String?
+  saudiTimezone   String   @default("Asia/Riyadh")
+  commercialRegNo String?  // CR Number
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  users                User[]
+  employees            Employee[]
+  notificationSettings NotificationSetting?
+  auditLogs            AuditLog[]
+
+  @@map("companies")
+}
+
+model Employee {
+  id                    String    @id @default(cuid())
+  employeeId            String    @unique // e.g. EMP-1001
+  fullName              String
+  iqamaNumberEncrypted  String    // Encrypted AES-256-GCM
+  iqamaNumberMasked     String    // e.g. 245****891
+  iqamaIssueDate        DateTime
+  iqamaExpiryDate       DateTime
+  email                 String
+  mobileNumber          String    // Saudi +966
+  nationality           String
+  department            String
+  jobPosition           String
+  companyId             String
+  company               Company   @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  status                String    @default("ACTIVE") // ACTIVE, INACTIVE, TERMINATED, VACATION
+  dob                   DateTime?
+  gender                String?   // Male, Female
+  passportNumber        String?
+  passportExpiryDate    DateTime?
+  notes                 String?
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+
+  documents             IqamaDocument[]
+  renewalHistory        IqamaRenewalHistory[]
+  notificationLogs      NotificationLog[]
+
+  @@index([companyId])
+  @@index([iqamaExpiryDate])
+  @@index([status])
+  @@map("employees")
+}
+
+model IqamaDocument {
+  id           String   @id @default(cuid())
+  employeeId   String
+  employee     Employee @relation(fields: [employeeId], references: [id], onDelete: Cascade)
+  fileName     String   // System stored name
+  originalName String   // Original uploaded file name
+  filePath     String   // Relative or secure storage path
+  mimeType     String   // application/pdf, image/jpeg, etc.
+  fileSize     Int      // bytes
+  uploadedBy   String?
+  uploadedAt   DateTime @default(now())
+
+  @@index([employeeId])
+  @@map("iqama_documents")
+}
+
+model IqamaRenewalHistory {
+  id                 String   @id @default(cuid())
+  employeeId         String
+  employee           Employee @relation(fields: [employeeId], references: [id], onDelete: Cascade)
+  previousExpiryDate DateTime
+  newExpiryDate      DateTime
+  renewalDate        DateTime @default(now())
+  updatedById        String?
+  updatedByUser      User?    @relation("RenewedByUser", fields: [updatedById], references: [id], onDelete: SetNull)
+  updatedByName      String?  // Snapshot of name
+  cost               Float?
+  notes              String?
+  createdAt          DateTime @default(now())
+
+  @@index([employeeId])
+  @@map("iqama_renewal_history")
+}
+
+model NotificationLog {
+  id                     String    @id @default(cuid())
+  employeeId             String
+  employee               Employee  @relation(fields: [employeeId], references: [id], onDelete: Cascade)
+  notificationType       String    // 30_DAYS, 15_DAYS, 7_DAYS, 3_DAYS, 1_DAY, EXPIRES_TODAY, POST_EXPIRY_WEEKLY, MANUAL
+  recipient              String    // email address
+  scheduledDate          DateTime
+  sentAt                 DateTime?
+  status                 String    @default("PENDING") // SENT, FAILED, PENDING, SKIPPED
+  errorMessage           String?
+  uniqueNotificationKey  String    @unique // ${employeeId}_${expiryDateStr}_${notificationType}
+  createdAt              DateTime  @default(now())
+
+  @@index([employeeId])
+  @@index([status])
+  @@map("notification_logs")
+}
+
+model NotificationSetting {
+  id                      String   @id @default(cuid())
+  companyId               String   @unique
+  company                 Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  reminderDays            String   @default("[30,15,7,3,1,0]") // JSON array of numbers
+  recipients              String   @default("[\"EMPLOYEE\",\"HR_MANAGER\",\"SUPER_ADMIN\"]") // JSON array of roles
+  enabled                 Boolean  @default(true)
+  postExpiryFrequencyDays Int      @default(7) // weekly reminder after expiry
+  emailTemplateCustom     String?
+  updatedAt               DateTime @updatedAt
+
+  @@map("notification_settings")
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  companyId  String?
+  company    Company? @relation(fields: [companyId], references: [id], onDelete: SetNull)
+  userId     String?
+  user       User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  userName   String?
+  action     String   // CREATE, UPDATE, DELETE, RENEW, LOGIN, EXPORT, NOTIFY
+  entityType String   // EMPLOYEE, DOCUMENT, RENEWAL, SETTINGS, AUTH
+  entityId   String?
+  details    String?  // JSON or text description
+  createdAt  DateTime @default(now())
+
+  @@index([companyId])
+  @@index([createdAt])
+  @@map("audit_logs")
+}
