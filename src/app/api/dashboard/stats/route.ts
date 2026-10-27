@@ -48,7 +48,7 @@ export async function GET() {
     monthlyTrends[key] = { month: key, valid: 0, expiring: 0, expired: 0 };
   }
 
-  const evaluatedEmployees = employees.map((emp) => {
+  const evaluatedEmployees = (employees as any[]).map((emp: any) => {
     const evaluation = evaluateIqamaExpiry(emp.iqamaExpiryDate, emp.iqamaIssueDate);
     
     if (emp.status === "ACTIVE") {
@@ -158,8 +158,8 @@ export async function GET() {
     recentRenewals,
     recentNotifications,
     urgentEmployees: evaluatedEmployees
-      .filter((e) => e.evaluation.isActionRequired)
-      .sort((a, b) => a.evaluation.urgencyRank - b.evaluation.urgencyRank)
+      .filter((e: any) => e.evaluation.isActionRequired)
+      .sort((a: any, b: any) => a.evaluation.urgencyRank - b.evaluation.urgencyRank)
       .slice(0, 6),
   });
 }

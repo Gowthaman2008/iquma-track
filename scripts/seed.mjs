@@ -48,12 +48,12 @@ async function main() {
   // 1. Create Companies
   const company1 = await prisma.company.create({
     data: {
-      companyName: "Al-Rashid Contracting & Engineering",
-      email: "info@alrashid-sa.com",
-      hrContactEmail: "hr@alrashid-sa.com",
+      companyName: "AL Houf Trading & Contracting Group",
+      email: "info@alhouf.sa",
+      hrContactEmail: "hr@alhouf.sa",
       saudiTimezone: "Asia/Riyadh",
-      commercialRegNo: "1010482910",
-      logoUrl: "/branding/company-logo.svg",
+      commercialRegNo: "1010778899",
+      logoUrl: "/branding/alhouf-logo.svg",
     },
   });
 

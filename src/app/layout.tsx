@@ -1,23 +1,35 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   display: "swap",
+  variable: "--font-jakarta",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "IqamaTrack — Saudi Employee Document Management System",
+  title: "AL HOUF Group | Enterprise Saudi Contracting & Workforce Management",
   description:
-    "Enterprise-level Saudi Iqama expiry tracking, document storage, and automated notification system for HR and corporate administrators.",
+    "AL Houf Trading & Contracting Group — Pioneering civil engineering, industrial contracting, and Saudi Iqama workforce compliance under Vision 2030.",
+  icons: {
+    icon: "/favicon.svg",
+  },
   keywords: [
+    "AL Houf Group",
+    "Saudi Contracting",
     "Saudi Iqama Expiry",
-    "Iqama Tracker",
+    "IqamaTrack",
     "Muqeem Qiwa Management",
     "Saudi HR Portal",
-    "Expatriate Document Management",
   ],
 };
 
@@ -28,7 +40,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${jakarta.className} min-h-screen flex flex-col bg-[#F5F8F6] text-[#172B22] antialiased`}>
+      <head>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      </head>
+      <body className={`${jakarta.variable} ${inter.variable} ${jakarta.className} min-h-screen flex flex-col bg-[#000000] text-[#FFFFFF] antialiased selection:bg-[#10b981] selection:text-black`}>
         {children}
       </body>
     </html>

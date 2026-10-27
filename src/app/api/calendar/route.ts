@@ -34,7 +34,7 @@ export async function GET(request: Request) {
     orderBy: { iqamaExpiryDate: "asc" },
   });
 
-  const events = employees.map((emp) => {
+  const events = (employees as any[]).map((emp: any) => {
     const evaluation = evaluateIqamaExpiry(emp.iqamaExpiryDate);
     return {
       id: emp.id,

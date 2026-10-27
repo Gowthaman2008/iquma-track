@@ -34,8 +34,8 @@ export async function GET(request: Request) {
     orderBy: { iqamaExpiryDate: "asc" },
   });
 
-  const alerts = employees
-    .map((emp) => {
+  const alerts = (employees as any[])
+    .map((emp: any) => {
       const evaluation = evaluateIqamaExpiry(emp.iqamaExpiryDate);
       return {
         id: `alert-${emp.id}`,
@@ -51,8 +51,8 @@ export async function GET(request: Request) {
         isActionRequired: evaluation.isActionRequired,
       };
     })
-    .filter((a) => a.isActionRequired)
-    .sort((a, b) => a.daysRemaining - b.daysRemaining);
+    .filter((a: any) => a.isActionRequired)
+    .sort((a: any, b: any) => a.daysRemaining - b.daysRemaining);
 
   // Email notifications summary
   const logsWhere: any = {};
@@ -83,9 +83,9 @@ export async function GET(request: Request) {
     alerts,
     recentLogs: logs,
     stats: {
-      criticalAlerts: alerts.filter((a) => a.status === "CRITICAL" || a.status === "EXPIRES_TODAY").length,
-      expiringSoonAlerts: alerts.filter((a) => a.status === "EXPIRING_SOON").length,
-      expiredAlerts: alerts.filter((a) => a.status === "EXPIRED").length,
+      criticalAlerts: alerts.filter((a: any) => a.status === "CRITICAL" || a.status === "EXPIRES_TODAY").length,
+      expiringSoonAlerts: alerts.filter((a: any) => a.status === "EXPIRING_SOON").length,
+      expiredAlerts: alerts.filter((a: any) => a.status === "EXPIRED").length,
       sentCount,
       failedCount,
       pendingCount,

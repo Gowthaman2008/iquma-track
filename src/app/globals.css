@@ -2,19 +2,62 @@
 
 @layer base {
   :root {
-    --saudi-primary: #006C35;
-    --saudi-dark: #004B28;
-    --saudi-emerald: #008C4A;
-    --saudi-light: #EFF8F3;
-    --saudi-bg: #F5F8F6;
+    --saudi-primary: #059669;
+    --saudi-dark: #064E3B;
+    --saudi-emerald: #10B981;
+    --saudi-light: #ECFDF5;
+    --saudi-bg: #F8FAFC;
     --saudi-card: #FFFFFF;
-    --saudi-text: #172B22;
-    --saudi-muted: #6B7C72;
-    --saudi-border: #E2ECE5;
+    --saudi-text: #0F172A;
+    --saudi-muted: #64748B;
+    --saudi-border: #E2E8F0;
     --saudi-warning: #F59E0B;
-    --saudi-danger: #DC2626;
-    --saudi-success: #16A34A;
+    --saudi-danger: #EF4444;
+    --saudi-success: #10B981;
+
+    /* Shadcn UI tokens - Modern Enterprise Light Theme */
+    --background: #F8FAFC;
+    --foreground: #0F172A;
+    --card: #FFFFFF;
+    --card-foreground: #0F172A;
+    --popover: #FFFFFF;
+    --popover-foreground: #0F172A;
+    --primary: #059669;
+    --primary-foreground: #FFFFFF;
+    --secondary: #F1F5F9;
+    --secondary-foreground: #0F172A;
+    --muted: #F8FAFC;
+    --muted-foreground: #64748B;
+    --accent: #F1F5F9;
+    --accent-foreground: #0F172A;
+    --destructive: #EF4444;
+    --destructive-foreground: #FFFFFF;
+    --border: #E2E8F0;
+    --input: #E2E8F0;
+    --ring: #059669;
   }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 }
 
 body {

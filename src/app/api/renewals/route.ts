@@ -37,7 +37,7 @@ export async function GET() {
     orderBy: { renewalDate: "desc" },
   });
 
-  const totalCost = renewals.reduce((acc, r) => acc + (r.cost || 0), 0);
+  const totalCost = (renewals as any[]).reduce((acc: number, r: any) => acc + (r.cost || 0), 0);
 
   return NextResponse.json({
     renewals,

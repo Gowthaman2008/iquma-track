@@ -66,7 +66,7 @@ export async function GET(request: Request) {
   });
 
   // Evaluate expiry for each employee
-  let enriched = employees.map((emp) => {
+  let enriched = (employees as any[]).map((emp: any) => {
     const evaluation = evaluateIqamaExpiry(emp.iqamaExpiryDate, emp.iqamaIssueDate);
     return {
       ...emp,
@@ -76,7 +76,7 @@ export async function GET(request: Request) {
 
   // Filter by expiry status if requested
   if (expiryFilter && expiryFilter !== "ALL") {
-    enriched = enriched.filter((e) => e.evaluation.status === expiryFilter);
+    enriched = enriched.filter((e: any) => e.evaluation.status === expiryFilter);
   }
 
   return NextResponse.json({
