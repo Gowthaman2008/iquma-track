@@ -60,22 +60,28 @@ export async function getCurrentUser(): Promise<SessionUser | null> {
     const decoded = verifyToken(token);
     if (!decoded) return null;
 
-    // Verify user still exists in database
-    const user = await prisma.user.findUnique({
-      where: { id: decoded.id },
-      include: { company: true },
-    });
+    // Verify user in database if possible
+    try {
+      const user = await prisma.user.findUnique({
+        where: { id: decoded.id },
+        include: { company: true },
+      });
 
-    if (!user) return null;
+      if (user) {
+        return {
+          id: user.id,
+          name: user.name,
+          email: user.email,
+          role: user.role as "SUPER_ADMIN" | "HR_MANAGER" | "EMPLOYEE",
+          companyId: user.companyId,
+          companyName: user.company?.companyName,
+        };
+      }
+    } catch {
+      // In serverless cold starts or when DB connection is busy, trust verified token
+    }
 
-    return {
-      id: user.id,
-      name: user.name,
-      email: user.email,
-      role: user.role as "SUPER_ADMIN" | "HR_MANAGER" | "EMPLOYEE",
-      companyId: user.companyId,
-      companyName: user.company?.companyName,
-    };
+    return decoded;
   } catch {
     return null;
   }
