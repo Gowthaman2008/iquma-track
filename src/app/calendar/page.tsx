@@ -168,79 +168,83 @@ export default function CalendarPage() {
 
         {/* Calendar Grid */}
         <div className="bg-white rounded-3xl border border-[#E2ECE5] shadow-xs overflow-hidden">
-          {/* Days of Week Header */}
-          <div className="grid grid-cols-7 bg-[#F8FAF9] border-b border-[#E2ECE5] text-center py-2.5 text-xs font-bold text-gray-600 uppercase tracking-wider">
-            <span>Sun</span>
-            <span>Mon</span>
-            <span>Tue</span>
-            <span>Wed</span>
-            <span>Thu</span>
-            <span>Fri</span>
-            <span>Sat</span>
-          </div>
+          <div className="overflow-x-auto">
+            <div className="min-w-[660px]">
+              {/* Days of Week Header */}
+              <div className="grid grid-cols-7 bg-[#F8FAF9] border-b border-[#E2ECE5] text-center py-2.5 text-xs font-bold text-gray-600 uppercase tracking-wider">
+                <span>Sun</span>
+                <span>Mon</span>
+                <span>Tue</span>
+                <span>Wed</span>
+                <span>Thu</span>
+                <span>Fri</span>
+                <span>Sat</span>
+              </div>
 
-          {/* Days Cells */}
-          <div className="grid grid-cols-7 divide-x divide-y divide-gray-100 min-h-[550px]">
-            {/* Empty cells before month start */}
-            {Array.from({ length: firstDayIndex }).map((_, i) => (
-              <div key={`empty-${i}`} className="bg-gray-50/50 p-2 min-h-[90px]" />
-            ))}
+              {/* Days Cells */}
+              <div className="grid grid-cols-7 divide-x divide-y divide-gray-100 min-h-[550px]">
+                {/* Empty cells before month start */}
+                {Array.from({ length: firstDayIndex }).map((_, i) => (
+                  <div key={`empty-${i}`} className="bg-gray-50/50 p-2 min-h-[90px]" />
+                ))}
 
-            {/* Days in Month */}
-            {Array.from({ length: daysInMonth }).map((_, i) => {
-              const day = i + 1;
-              const dayEvents = getEventsForDay(day);
-              const isToday =
-                new Date().getDate() === day &&
-                new Date().getMonth() === month &&
-                new Date().getFullYear() === year;
+                {/* Days in Month */}
+                {Array.from({ length: daysInMonth }).map((_, i) => {
+                  const day = i + 1;
+                  const dayEvents = getEventsForDay(day);
+                  const isToday =
+                    new Date().getDate() === day &&
+                    new Date().getMonth() === month &&
+                    new Date().getFullYear() === year;
 
-              return (
-                <div
-                  key={`day-${day}`}
-                  onClick={() => dayEvents.length > 0 && setSelectedDayEvents({ day, events: dayEvents })}
-                  className={`p-2 min-h-[90px] transition relative flex flex-col justify-between cursor-pointer hover:bg-gray-50 ${
-                    isToday ? "bg-[#EFF8F3]/50 ring-2 ring-[#006C35] ring-inset" : ""
-                  }`}
-                >
-                  <div className="flex items-center justify-between">
-                    <span
-                      className={`text-xs font-bold inline-flex items-center justify-center w-6 h-6 rounded-full ${
-                        isToday
-                          ? "bg-[#006C35] text-white"
-                          : "text-gray-700"
+                  return (
+                    <div
+                      key={`day-${day}`}
+                      onClick={() => dayEvents.length > 0 && setSelectedDayEvents({ day, events: dayEvents })}
+                      className={`p-2 min-h-[90px] transition relative flex flex-col justify-between cursor-pointer hover:bg-gray-50 ${
+                        isToday ? "bg-[#EFF8F3]/50 ring-2 ring-[#006C35] ring-inset" : ""
                       }`}
                     >
-                      {day}
-                    </span>
-                    {dayEvents.length > 0 && (
-                      <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-emerald-100 text-[#004B28]">
-                        {dayEvents.length}
-                      </span>
-                    )}
-                  </div>
+                      <div className="flex items-center justify-between">
+                        <span
+                          className={`text-xs font-bold inline-flex items-center justify-center w-6 h-6 rounded-full ${
+                            isToday
+                              ? "bg-[#006C35] text-white"
+                              : "text-gray-700"
+                          }`}
+                        >
+                          {day}
+                        </span>
+                        {dayEvents.length > 0 && (
+                          <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-emerald-100 text-[#004B28]">
+                            {dayEvents.length}
+                          </span>
+                        )}
+                      </div>
 
-                  {/* Day Events Stack */}
-                  <div className="space-y-1 mt-1 overflow-hidden">
-                    {dayEvents.slice(0, 2).map((ev: any) => (
-                      <div
-                        key={ev.id}
-                        className="px-1.5 py-0.5 rounded text-[10px] font-semibold text-white truncate shadow-2xs"
-                        style={{ backgroundColor: ev.badgeColor }}
-                        title={`${ev.title} - ${ev.statusLabel}`}
-                      >
-                        {ev.title}
+                      {/* Day Events Stack */}
+                      <div className="space-y-1 mt-1 overflow-hidden">
+                        {dayEvents.slice(0, 2).map((ev: any) => (
+                          <div
+                            key={ev.id}
+                            className="px-1.5 py-0.5 rounded text-[10px] font-semibold text-white truncate shadow-2xs"
+                            style={{ backgroundColor: ev.badgeColor }}
+                            title={`${ev.title} - ${ev.statusLabel}`}
+                          >
+                            {ev.title}
+                          </div>
+                        ))}
+                        {dayEvents.length > 2 && (
+                          <div className="text-[9px] font-bold text-gray-500 pl-1">
+                            +{dayEvents.length - 2} more
+                          </div>
+                        )}
                       </div>
-                    ))}
-                    {dayEvents.length > 2 && (
-                      <div className="text-[9px] font-bold text-gray-500 pl-1">
-                        +{dayEvents.length - 2} more
-                      </div>
-                    )}
-                  </div>
-                </div>
-              );
-            })}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </div>

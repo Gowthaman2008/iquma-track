@@ -361,25 +361,25 @@ export default function LoginPage() {
               <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mb-2 text-center">
                 Quick Test Credentials
               </p>
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
                 <button
                   type="button"
                   onClick={() => setCredentials("ahmed.khan@alhouf.sa", "Employee@123456")}
-                  className="px-2 py-1.5 rounded-md border border-border bg-secondary/60 text-[11px] font-medium text-foreground hover:border-primary/50 hover:text-primary transition-colors cursor-pointer text-center"
+                  className="px-1.5 sm:px-2 py-1.5 rounded-md border border-border bg-secondary/60 text-[10px] sm:text-[11px] font-medium text-foreground hover:border-primary/50 hover:text-primary transition-colors cursor-pointer text-center truncate"
                 >
                   Employee
                 </button>
                 <button
                   type="button"
                   onClick={() => setCredentials("hr@iqamatrack.sa", "Hr@123456")}
-                  className="px-2 py-1.5 rounded-md border border-border bg-secondary/60 text-[11px] font-medium text-foreground hover:border-primary/50 hover:text-primary transition-colors cursor-pointer text-center"
+                  className="px-1.5 sm:px-2 py-1.5 rounded-md border border-border bg-secondary/60 text-[10px] sm:text-[11px] font-medium text-foreground hover:border-primary/50 hover:text-primary transition-colors cursor-pointer text-center truncate"
                 >
                   HR Manager
                 </button>
                 <button
                   type="button"
                   onClick={() => setCredentials("admin@iqamatrack.sa", "Admin@123456")}
-                  className="px-2 py-1.5 rounded-md border border-border bg-secondary/60 text-[11px] font-medium text-foreground hover:border-primary/50 hover:text-primary transition-colors cursor-pointer text-center"
+                  className="px-1.5 sm:px-2 py-1.5 rounded-md border border-border bg-secondary/60 text-[10px] sm:text-[11px] font-medium text-foreground hover:border-primary/50 hover:text-primary transition-colors cursor-pointer text-center truncate"
                 >
                   Super Admin
                 </button>

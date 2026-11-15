@@ -14,10 +14,15 @@ export async function GET(
 
   const { id } = await params;
 
-  const doc = await prisma.iqamaDocument.findUnique({
-    where: { id },
-    include: { employee: true },
-  });
+  let doc: any = null;
+  try {
+    doc = await prisma.iqamaDocument.findUnique({
+      where: { id },
+      include: { employee: true },
+    });
+  } catch (e) {
+    console.warn("Doc lookup failed:", e);
+  }
 
   if (!doc) {
     return NextResponse.json({ error: "Document not found" }, { status: 404 });

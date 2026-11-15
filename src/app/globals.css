@@ -60,11 +60,18 @@
   --color-ring: var(--ring);
 }
 
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   background-color: var(--saudi-bg);
   color: var(--saudi-text);
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   min-height: 100vh;
+  min-height: 100svh;
+  overflow-x: hidden;
 }
 
 /* Custom Scrollbar for enterprise tables */

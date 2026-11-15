@@ -16,24 +16,66 @@ export async function POST(request: Request) {
 
     const cleanEmail = email.toLowerCase().trim();
 
-    // 1. Check if employee exists with this email or similar prefix
-    let employee = await prisma.employee.findFirst({
-      where: {
-        OR: [
-          { email: cleanEmail },
-          { email: cleanEmail.replace("@gmail.com", "@iqamatrack.sa") },
-          { email: cleanEmail.replace("@gmail.com", "@alhouf.sa") },
-        ],
-      },
-      include: { company: true },
-    });
+    let employee: any = null;
+    let user: any = null;
 
-    // If not found by exact email, try finding first active employee for quick testing
-    if (!employee) {
+    try {
+      // 1. Check if employee exists with this email or similar prefix
       employee = await prisma.employee.findFirst({
-        where: { status: "ACTIVE" },
+        where: {
+          OR: [
+            { email: cleanEmail },
+            { email: cleanEmail.replace("@gmail.com", "@iqamatrack.sa") },
+            { email: cleanEmail.replace("@gmail.com", "@alhouf.sa") },
+          ],
+        },
         include: { company: true },
       });
+
+      // If not found by exact email, try finding first active employee for quick testing
+      if (!employee) {
+        employee = await prisma.employee.findFirst({
+          where: { status: "ACTIVE" },
+          include: { company: true },
+        });
+      }
+
+      if (employee) {
+        // 2. Ensure User account exists for this employee
+        user = await prisma.user.findUnique({
+          where: { email: cleanEmail },
+        });
+
+        if (!user) {
+          user = await prisma.user.create({
+            data: {
+              name: name || employee.fullName,
+              email: cleanEmail,
+              passwordHash: "GOOGLE_OAUTH_AUTHENTICATED",
+              role: "EMPLOYEE",
+              companyId: employee.companyId,
+            },
+          });
+        }
+      }
+    } catch (dbErr) {
+      console.warn("DB Google login error, using demo fallback:", dbErr);
+    }
+
+    // Fallback if DB is unavailable or empty
+    if (!employee) {
+      const { getFallbackPortalInfo } = await import("@/lib/demoStore");
+      const fallbackEmp = getFallbackPortalInfo(cleanEmail);
+      if (fallbackEmp) {
+        employee = fallbackEmp;
+        user = {
+          id: `usr_${fallbackEmp.id}`,
+          name: name || fallbackEmp.fullName,
+          email: cleanEmail,
+          role: "EMPLOYEE",
+          companyId: fallbackEmp.companyId,
+        };
+      }
     }
 
     if (!employee) {
@@ -41,23 +83,6 @@ export async function POST(request: Request) {
         { error: "No matching employee record found for this Google account. Please contact AL Houf HR." },
         { status: 404 }
       );
-    }
-
-    // 2. Ensure User account exists for this employee
-    let user = await prisma.user.findUnique({
-      where: { email: cleanEmail },
-    });
-
-    if (!user) {
-      user = await prisma.user.create({
-        data: {
-          name: name || employee.fullName,
-          email: cleanEmail,
-          passwordHash: "GOOGLE_OAUTH_AUTHENTICATED",
-          role: "EMPLOYEE",
-          companyId: employee.companyId,
-        },
-      });
     }
 
     const sessionPayload = {

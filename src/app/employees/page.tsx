@@ -261,7 +261,7 @@ export default function EmployeesPage() {
             </p>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             <button
               onClick={() => setImportModalOpen(true)}
               className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold bg-white border border-[#E2ECE5] text-gray-700 hover:bg-gray-50 transition shadow-xs"
@@ -425,7 +425,7 @@ export default function EmployeesPage() {
         {/* Professional Table */}
         <div className="bg-white rounded-2xl border border-[#E2ECE5] shadow-xs overflow-hidden">
           <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs">
+            <table className="w-full text-left text-xs min-w-[760px]">
               <thead className="bg-[#F8FAF9] border-b border-[#E2ECE5] text-gray-600 font-bold uppercase tracking-wider text-[11px]">
                 <tr>
                   <th className="py-3 px-4 w-10 text-center">
@@ -622,7 +622,7 @@ export default function EmployeesPage() {
           </div>
 
           {/* Pagination Controls */}
-          <div className="p-4 border-t border-[#E2ECE5] flex items-center justify-between text-xs text-gray-600">
+          <div className="p-4 border-t border-[#E2ECE5] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-600 text-center sm:text-left">
             <span>
               Showing {employees.length === 0 ? 0 : (currentPage - 1) * pageSize + 1} to{" "}
               {Math.min(currentPage * pageSize, employees.length)} of {employees.length} employees

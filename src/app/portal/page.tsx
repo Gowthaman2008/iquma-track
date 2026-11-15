@@ -187,8 +187,8 @@ export default function EmployeePortalPage() {
         )}
 
         {/* Iqama Residence Permit Card */}
-        <div className="bg-white rounded-3xl border border-[#E2ECE5] shadow-xs p-6 md:p-8 space-y-6">
-          <div className="flex items-center justify-between border-b pb-4">
+        <div className="bg-white rounded-3xl border border-[#E2ECE5] shadow-xs p-5 sm:p-8 space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b pb-4">
             <div className="flex items-center gap-3">
               <div className="p-3 rounded-2xl bg-[#EFF8F3] text-[#006C35]">
                 <CreditCard className="w-6 h-6" />
