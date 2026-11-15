@@ -155,11 +155,11 @@ function EmployeeProfileContent() {
             </div>
 
             {/* Expiry Badge Hero */}
-            <div className="bg-white/10 backdrop-blur-md p-3.5 rounded-2xl border border-white/20 text-right shrink-0">
+            <div className="bg-white/10 backdrop-blur-md p-3.5 rounded-2xl border border-white/20 text-left sm:text-right shrink-0">
               <div className="text-[11px] text-emerald-100 uppercase tracking-wider font-semibold">
                 Expiry Status
               </div>
-              <div className="mt-1 flex items-center justify-end gap-2">
+              <div className="mt-1 flex items-center justify-start sm:justify-end gap-2">
                 <StatusBadge
                   status={evaluation.status}
                   daysRemaining={evaluation.daysRemaining}
@@ -172,8 +172,8 @@ function EmployeeProfileContent() {
           </div>
 
           {/* Quick Actions Strip */}
-          <div className="bg-[#F8FAF9] border-b border-[#E2ECE5] px-6 py-3 flex flex-wrap items-center justify-between gap-3 text-xs">
-            <div className="flex items-center gap-4 text-gray-600">
+          <div className="bg-[#F8FAF9] border-b border-[#E2ECE5] px-4 sm:px-6 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-gray-600">
               <span className="flex items-center gap-1.5">
                 <Mail className="w-3.5 h-3.5 text-gray-400" />
                 <a href={`mailto:${employee.email}`} className="hover:underline">{employee.email}</a>
@@ -188,7 +188,7 @@ function EmployeeProfileContent() {
               </span>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
               <button
                 onClick={() => setUploadModalOpen(true)}
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 text-gray-700 font-semibold transition"
@@ -218,10 +218,10 @@ function EmployeeProfileContent() {
           )}
 
           {/* Navigation Tabs */}
-          <div className="flex border-b border-gray-100 px-6 text-xs font-bold text-gray-500 overflow-x-auto">
+          <div className="flex border-b border-gray-100 px-3 sm:px-6 text-xs font-bold text-gray-500 overflow-x-auto">
             <button
               onClick={() => setActiveTab("details")}
-              className={`py-3.5 px-4 border-b-2 transition ${
+              className={`py-3.5 px-3 sm:px-4 border-b-2 transition shrink-0 whitespace-nowrap ${
                 activeTab === "details"
                   ? "border-[#006C35] text-[#006C35]"
                   : "border-transparent hover:text-gray-900"
@@ -231,7 +231,7 @@ function EmployeeProfileContent() {
             </button>
             <button
               onClick={() => setActiveTab("documents")}
-              className={`py-3.5 px-4 border-b-2 transition flex items-center gap-1.5 ${
+              className={`py-3.5 px-3 sm:px-4 border-b-2 transition flex items-center gap-1.5 shrink-0 whitespace-nowrap ${
                 activeTab === "documents"
                   ? "border-[#006C35] text-[#006C35]"
                   : "border-transparent hover:text-gray-900"

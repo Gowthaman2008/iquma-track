@@ -30,12 +30,7 @@ export default function Hero({ onOpenGoogleLogin }: HeroProps) {
   return (
     <section
       id="overview"
-      style={{
-        position: "relative",
-        width: "100%",
-        height: "100vh",
-        overflow: "hidden",
-      }}
+      className="relative w-full min-h-screen min-h-[100svh] overflow-x-hidden flex flex-col justify-between"
     >
       {/* Arabic Architectural Masterpiece Background */}
       <motion.div
@@ -57,7 +52,7 @@ export default function Hero({ onOpenGoogleLogin }: HeroProps) {
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(to right, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.52) 42%, rgba(0, 0, 0, 0.22) 75%, rgba(0, 0, 0, 0.42) 100%)",
+            "linear-gradient(to right, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.6) 42%, rgba(0, 0, 0, 0.35) 75%, rgba(0, 0, 0, 0.55) 100%)",
         }}
       />
       <div
@@ -65,7 +60,7 @@ export default function Hero({ onOpenGoogleLogin }: HeroProps) {
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(to bottom, rgba(0, 0, 0, 0.38) 0%, transparent 26%, transparent 62%, rgba(0, 0, 0, 0.82) 100%)",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, transparent 26%, transparent 62%, rgba(0, 0, 0, 0.9) 100%)",
         }}
       />
 
@@ -85,17 +80,7 @@ export default function Hero({ onOpenGoogleLogin }: HeroProps) {
 
       {/* Left-anchored Content */}
       <div
-        style={{
-          position: "relative",
-          zIndex: 10,
-          display: "flex",
-          flexDirection: "column",
-          height: "100%",
-          justifyContent: "flex-start",
-          paddingTop: "24vh",
-          paddingLeft: "clamp(24px, 6vw, 64px)",
-          paddingRight: "24px",
-        }}
+        className="relative z-10 flex flex-col flex-1 justify-center pt-24 sm:pt-28 md:pt-36 pb-24 sm:pb-28 px-4 sm:px-8 md:px-16 max-w-4xl"
       >
         {/* Trusted-by avatar badge */}
         <motion.div
@@ -107,7 +92,7 @@ export default function Hero({ onOpenGoogleLogin }: HeroProps) {
             alignItems: "center",
             gap: "10px",
             borderRadius: "999px",
-            padding: "6px 16px 6px 6px",
+            padding: "5px 14px 5px 6px",
             background: "rgba(255, 255, 255, 0.08)",
             border: "1px solid rgba(255, 255, 255, 0.18)",
             backdropFilter: "blur(10px)",
@@ -120,8 +105,8 @@ export default function Hero({ onOpenGoogleLogin }: HeroProps) {
               <div
                 key={i}
                 style={{
-                  width: "22px",
-                  height: "22px",
+                  width: "20px",
+                  height: "20px",
                   borderRadius: "999px",
                   background: "linear-gradient(135deg, #10b981, #047857)",
                   border: "2px solid rgba(10, 20, 16, 0.9)",
@@ -132,7 +117,7 @@ export default function Hero({ onOpenGoogleLogin }: HeroProps) {
           </div>
           <span
             style={{
-              fontSize: "12.5px",
+              fontSize: "12px",
               color: "rgba(255, 255, 255, 0.9)",
               fontFamily: "'Inter', sans-serif",
             }}
@@ -149,16 +134,7 @@ export default function Hero({ onOpenGoogleLogin }: HeroProps) {
           initial={{ opacity: 0, y: 22 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.25, ease: "easeOut" }}
-          style={{
-            fontFamily: "'Plus Jakarta Sans', sans-serif",
-            fontWeight: 600,
-            fontSize: "clamp(2.5rem, 4.8vw, 4.2rem)",
-            lineHeight: 1.08,
-            letterSpacing: "-0.02em",
-            color: "#fff",
-            marginTop: "22px",
-            maxWidth: "640px",
-          }}
+          className="font-['Plus_Jakarta_Sans',sans-serif] font-semibold tracking-tight text-white mt-4 sm:mt-5 text-3xl sm:text-5xl lg:text-6xl leading-[1.12]"
         >
           AL Houf Group
           <br />
@@ -178,14 +154,7 @@ export default function Hero({ onOpenGoogleLogin }: HeroProps) {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.35, ease: "easeOut" }}
-          style={{
-            marginTop: "12px",
-            fontSize: "16px",
-            color: "rgba(16, 185, 129, 0.95)",
-            fontFamily: "'Plus Jakarta Sans', sans-serif",
-            fontWeight: 600,
-            letterSpacing: "0.02em",
-          }}
+          className="mt-2.5 sm:mt-3 text-sm sm:text-base text-emerald-400 font-['Plus_Jakarta_Sans',sans-serif] font-semibold tracking-wide"
         >
           مجموعة الهفوف للتجارة والمقاولات • رؤية 2030
         </motion.div>
@@ -195,14 +164,7 @@ export default function Hero({ onOpenGoogleLogin }: HeroProps) {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.45, ease: "easeOut" }}
-          style={{
-            marginTop: "14px",
-            fontSize: "15px",
-            lineHeight: 1.6,
-            color: "rgba(255, 255, 255, 0.76)",
-            fontFamily: "'Inter', sans-serif",
-            maxWidth: "460px",
-          }}
+          className="mt-3 sm:mt-4 text-xs sm:text-sm md:text-base text-white/80 leading-relaxed font-['Inter',sans-serif] max-w-xl"
         >
           AL Houf delivers Grade-1 civil contracting, infrastructure, and platinum-rated Iqama compliance across the Kingdom of Saudi Arabia.
         </motion.p>
@@ -212,37 +174,15 @@ export default function Hero({ onOpenGoogleLogin }: HeroProps) {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.58, ease: "easeOut" }}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            flexWrap: "wrap",
-            gap: "14px",
-            marginTop: "28px",
-          }}
+          className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mt-6 sm:mt-8 w-full sm:w-auto"
         >
           {/* Dark Pill CTA navigating directly to /login page */}
           <Link
             href="/login"
-            style={{
-              padding: "14px 26px",
-              borderRadius: "999px",
-              background: "#0a0a0a",
-              color: "#fff",
-              fontSize: "14px",
-              fontWeight: 600,
-              fontFamily: "'Inter', sans-serif",
-              textDecoration: "none",
-              border: "1px solid rgba(255, 255, 255, 0.22)",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-              boxShadow: "0 8px 24px rgba(0, 0, 0, 0.5)",
-              transition: "transform 0.15s ease",
-            }}
-            className="hover:scale-[1.03] active:scale-[0.97]"
+            className="hover:scale-[1.02] active:scale-[0.98] px-5 sm:px-6 py-3.5 rounded-full bg-[#0a0a0a] text-white text-xs sm:text-sm font-semibold border border-white/20 inline-flex items-center justify-center gap-2.5 shadow-xl transition-all"
           >
             {/* Google Icon */}
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="shrink-0">
               <path
                 d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
                 fill="#4285F4"
@@ -260,117 +200,44 @@ export default function Hero({ onOpenGoogleLogin }: HeroProps) {
                 fill="#EA4335"
               />
             </svg>
-            Employee Portal (Sign in)
+            <span>Employee Portal (Sign in)</span>
           </Link>
 
           {/* Secondary Pill CTA */}
           <motion.a
             href="#company"
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-            style={{
-              padding: "14px 24px",
-              borderRadius: "999px",
-              background: "rgba(255, 255, 255, 0.08)",
-              color: "rgba(255, 255, 255, 0.9)",
-              fontSize: "14px",
-              fontWeight: 500,
-              fontFamily: "'Inter', sans-serif",
-              textDecoration: "none",
-              border: "1px solid rgba(255, 255, 255, 0.16)",
-              backdropFilter: "blur(8px)",
-              WebkitBackdropFilter: "blur(8px)",
-            }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="px-5 sm:px-6 py-3.5 rounded-full bg-white/10 text-white text-xs sm:text-sm font-medium border border-white/15 backdrop-blur-md inline-flex items-center justify-center transition-all hover:bg-white/15"
           >
             Company Details
           </motion.a>
         </motion.div>
       </div>
 
-      {/* Social Icons Pinned to Bottom Left */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: "34px",
-          left: "clamp(24px, 6vw, 64px)",
-          zIndex: 10,
-          display: "flex",
-          gap: "10px",
-        }}
-      >
-        {socials.map((s) => (
-          <a
-            key={s.label}
-            href={s.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={s.label}
-            style={{
-              width: "34px",
-              height: "34px",
-              borderRadius: "999px",
-              border: "1px solid rgba(255, 255, 255, 0.22)",
-              background: "rgba(0, 0, 0, 0.35)",
-              backdropFilter: "blur(6px)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "rgba(255, 255, 255, 0.8)",
-              transition: "border-color 0.2s, color 0.2s, transform 0.2s",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.color = "#10b981";
-              e.currentTarget.style.borderColor = "#10b981";
-              e.currentTarget.style.transform = "translateY(-2px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.color = "rgba(255, 255, 255, 0.8)";
-              e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.22)";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-              <path d={s.path} />
-            </svg>
-          </a>
-        ))}
-      </div>
+      {/* Bottom Bar: Social Icons & Saudi Badge */}
+      <div className="relative z-10 px-4 sm:px-8 md:px-16 pb-6 flex items-center justify-between gap-4">
+        {/* Social Icons */}
+        <div className="flex items-center gap-2">
+          {socials.map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={s.label}
+              className="w-8 h-8 rounded-full border border-white/20 bg-black/40 backdrop-blur-md flex items-center justify-center text-white/80 hover:text-emerald-400 hover:border-emerald-400 transition"
+            >
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                <path d={s.path} />
+              </svg>
+            </a>
+          ))}
+        </div>
 
-      {/* Saudi Corporate HQ Badge at Bottom Right */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: "34px",
-          right: "clamp(24px, 6vw, 64px)",
-          zIndex: 10,
-        }}
-        className="hidden sm:block"
-      >
-        <div
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "8px",
-            padding: "8px 16px",
-            borderRadius: "999px",
-            background: "rgba(0, 0, 0, 0.5)",
-            backdropFilter: "blur(12px)",
-            WebkitBackdropFilter: "blur(12px)",
-            border: "1px solid rgba(255, 255, 255, 0.16)",
-            fontSize: "12px",
-            fontFamily: "'Inter', sans-serif",
-            color: "rgba(255, 255, 255, 0.85)",
-          }}
-        >
-          <span
-            style={{
-              width: "7px",
-              height: "7px",
-              borderRadius: "999px",
-              backgroundColor: "#10b981",
-              boxShadow: "0 0 8px #10b981",
-            }}
-          />
+        {/* Saudi Corporate HQ Badge */}
+        <div className="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/50 backdrop-blur-md border border-white/15 text-xs text-white/80 font-['Inter',sans-serif]">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#10b981]" />
           <span>Kingdom of Saudi Arabia • Vision 2030</span>
         </div>
       </div>

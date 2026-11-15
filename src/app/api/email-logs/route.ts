@@ -28,28 +28,36 @@ export async function GET(request: Request) {
     ];
   }
 
-  const logs = await prisma.notificationLog.findMany({
-    where,
-    orderBy: { createdAt: "desc" },
-    include: {
-      employee: {
-        select: {
-          fullName: true,
-          employeeId: true,
-          iqamaNumberMasked: true,
-          company: {
-            select: { companyName: true },
+  try {
+    const logs = await prisma.notificationLog.findMany({
+      where,
+      orderBy: { createdAt: "desc" },
+      include: {
+        employee: {
+          select: {
+            fullName: true,
+            employeeId: true,
+            iqamaNumberMasked: true,
+            company: {
+              select: { companyName: true },
+            },
           },
         },
       },
-    },
-    take: 100,
-  });
+      take: 100,
+    });
 
-  const totalLogs = await prisma.notificationLog.count({ where });
+    const totalLogs = await prisma.notificationLog.count({ where });
 
-  return NextResponse.json({
-    logs,
-    total: totalLogs,
-  });
+    return NextResponse.json({
+      logs,
+      total: totalLogs,
+    });
+  } catch (e) {
+    console.warn("Email logs query failed, returning empty log list:", e);
+    return NextResponse.json({
+      logs: [],
+      total: 0,
+    });
+  }
 }

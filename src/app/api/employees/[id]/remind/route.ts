@@ -15,9 +15,19 @@ export async function POST(
 
   const { id } = await params;
 
-  const employee = await prisma.employee.findUnique({
-    where: { id },
-  });
+  let employee: any = null;
+  try {
+    employee = await prisma.employee.findUnique({
+      where: { id },
+    });
+  } catch (e) {
+    console.warn("DB employee lookup failed, checking fallback:", e);
+  }
+
+  if (!employee) {
+    const { getFallbackEmployeeById } = await import("@/lib/demoStore");
+    employee = getFallbackEmployeeById(id);
+  }
 
   if (!employee) {
     return NextResponse.json({ error: "Employee not found." }, { status: 404 });

@@ -587,9 +587,9 @@ export default function HomePage() {
       </section>
 
       {/* 7. Aurora Minimalist Dark Footer */}
-      <footer className="relative py-14 px-6 lg:px-16 border-t border-white/[0.08] bg-black">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-xs text-gray-500">
-          <div className="flex items-center gap-4">
+      <footer className="relative py-12 sm:py-14 px-4 sm:px-6 lg:px-16 border-t border-white/[0.08] bg-black">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 text-xs text-gray-500 text-center sm:text-left">
+          <div className="flex items-center gap-3.5 sm:gap-4">
             <div className="w-10 h-10 rounded-xl overflow-hidden border border-emerald-500/40 bg-gradient-to-br from-emerald-950/60 to-black flex items-center justify-center shadow-lg shrink-0">
               <img
                 src="/logo/arabic-logo.png"
@@ -597,20 +597,20 @@ export default function HomePage() {
                 className="w-full h-full object-contain scale-110"
               />
             </div>
-            <div>
+            <div className="text-left">
               <div className="flex items-center gap-2">
-                <p className="font-bold text-white font-['Plus_Jakarta_Sans',sans-serif] tracking-wider">
-                  AL HOUF TRADING & CONTRACTING GROUP
+                <p className="font-bold text-white font-['Plus_Jakarta_Sans',sans-serif] tracking-wider text-xs sm:text-sm">
+                  AL HOUF GROUP
                 </p>
                 <span className="text-emerald-400 font-semibold text-xs">الهفوف</span>
               </div>
-              <p className="text-[11px] text-gray-400">
-                CR 1010778899 &bull; Saudi Arabia &bull; Under Vision 2030
+              <p className="text-[10px] sm:text-[11px] text-gray-400">
+                CR 1010778899 &bull; Saudi Arabia &bull; Vision 2030
               </p>
             </div>
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-5 sm:gap-x-6 gap-y-2">
             <a href="#overview" className="hover:text-emerald-400 transition">Overview</a>
             <a href="#company" className="hover:text-emerald-400 transition">Company</a>
             <a href="#sectors" className="hover:text-emerald-400 transition">Sectors</a>
@@ -624,7 +624,7 @@ export default function HomePage() {
             <Link href="/login" className="hover:text-white transition">Admin</Link>
           </div>
 
-          <div>
+          <div className="text-center md:text-right">
             <p>&copy; {new Date().getFullYear()} AL Houf Group. All rights reserved.</p>
           </div>
         </div>

@@ -149,18 +149,20 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center bg-background p-4 sm:p-6 relative">
+    <div className="w-full min-h-screen min-h-[100svh] flex flex-col items-center justify-center bg-background p-3 sm:p-6">
       {/* Return to Home link */}
-      <Link
-        href="/"
-        className="absolute top-6 left-6 z-20 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary/80 border border-border text-xs font-medium text-foreground/80 hover:text-foreground hover:bg-secondary transition backdrop-blur-md shadow-sm"
-      >
-        <ArrowLeft className="w-3.5 h-3.5" />
-        <span>Return to AL Houf Homepage</span>
-      </Link>
+      <div className="w-full max-w-5xl mb-3 flex items-center justify-start">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary/80 border border-border text-xs font-medium text-foreground/80 hover:text-foreground hover:bg-secondary transition backdrop-blur-md shadow-xs"
+        >
+          <ArrowLeft className="w-3.5 h-3.5" />
+          <span>Return to AL Houf Homepage</span>
+        </Link>
+      </div>
 
       <motion.div 
-        className="w-full max-w-5xl h-auto min-h-[640px] lg:h-[720px] grid grid-cols-1 lg:grid-cols-2 rounded-2xl overflow-hidden shadow-2xl border border-border bg-card"
+        className="w-full max-w-5xl h-auto min-h-0 sm:min-h-[580px] lg:h-[720px] grid grid-cols-1 lg:grid-cols-2 rounded-2xl overflow-hidden shadow-2xl border border-border bg-card"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -200,7 +202,7 @@ export default function LoginPage() {
         </div>
 
         {/* Right side: Login Form */}
-        <div className="w-full h-full bg-card text-card-foreground flex flex-col items-center justify-center p-6 sm:p-10 lg:p-12 overflow-y-auto">
+        <div className="w-full h-full bg-card text-card-foreground flex flex-col items-center justify-center p-4 sm:p-8 lg:p-12 overflow-y-auto">
           <motion.div 
             className="w-full max-w-sm"
             variants={containerVariants}
@@ -359,25 +361,25 @@ export default function LoginPage() {
               <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mb-2 text-center">
                 Quick Test Credentials
               </p>
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
                 <button
                   type="button"
                   onClick={() => setCredentials("ahmed.khan@alhouf.sa", "Employee@123456")}
-                  className="px-2 py-1.5 rounded-md border border-border bg-secondary/60 text-[11px] font-medium text-foreground hover:border-primary/50 hover:text-primary transition-colors cursor-pointer text-center"
+                  className="px-1.5 sm:px-2 py-1.5 rounded-md border border-border bg-secondary/60 text-[10px] sm:text-[11px] font-medium text-foreground hover:border-primary/50 hover:text-primary transition-colors cursor-pointer text-center truncate"
                 >
                   Employee
                 </button>
                 <button
                   type="button"
                   onClick={() => setCredentials("hr@iqamatrack.sa", "Hr@123456")}
-                  className="px-2 py-1.5 rounded-md border border-border bg-secondary/60 text-[11px] font-medium text-foreground hover:border-primary/50 hover:text-primary transition-colors cursor-pointer text-center"
+                  className="px-1.5 sm:px-2 py-1.5 rounded-md border border-border bg-secondary/60 text-[10px] sm:text-[11px] font-medium text-foreground hover:border-primary/50 hover:text-primary transition-colors cursor-pointer text-center truncate"
                 >
                   HR Manager
                 </button>
                 <button
                   type="button"
                   onClick={() => setCredentials("admin@iqamatrack.sa", "Admin@123456")}
-                  className="px-2 py-1.5 rounded-md border border-border bg-secondary/60 text-[11px] font-medium text-foreground hover:border-primary/50 hover:text-primary transition-colors cursor-pointer text-center"
+                  className="px-1.5 sm:px-2 py-1.5 rounded-md border border-border bg-secondary/60 text-[10px] sm:text-[11px] font-medium text-foreground hover:border-primary/50 hover:text-primary transition-colors cursor-pointer text-center truncate"
                 >
                   Super Admin
                 </button>
