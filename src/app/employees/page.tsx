@@ -32,6 +32,8 @@ export default function EmployeesPage() {
   const [employees, setEmployees] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
+  const [companyFilter, setCompanyFilter] = useState("ALL");
+  const [companiesList, setCompaniesList] = useState<{ id: string; companyName: string }[]>([]);
   const [departmentFilter, setDepartmentFilter] = useState("ALL");
   const [expiryFilter, setExpiryFilter] = useState("ALL");
   const [statusFilter, setStatusFilter] = useState("ALL");
@@ -47,13 +49,25 @@ export default function EmployeesPage() {
 
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 10;
+  const [pageSize, setPageSize] = useState(25);
+
+  useEffect(() => {
+    fetch("/api/companies")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.companies) {
+          setCompaniesList(data.companies);
+        }
+      })
+      .catch((e) => console.error("Failed to load companies:", e));
+  }, []);
 
   const fetchEmployees = async () => {
     setLoading(true);
     try {
       const params = new URLSearchParams();
       if (search) params.append("search", search);
+      if (companyFilter !== "ALL") params.append("companyId", companyFilter);
       if (departmentFilter !== "ALL") params.append("department", departmentFilter);
       if (expiryFilter !== "ALL") params.append("expiryStatus", expiryFilter);
       if (statusFilter !== "ALL") params.append("status", statusFilter);
@@ -71,8 +85,9 @@ export default function EmployeesPage() {
   };
 
   useEffect(() => {
+    setCurrentPage(1);
     fetchEmployees();
-  }, [departmentFilter, expiryFilter, statusFilter]);
+  }, [companyFilter, departmentFilter, expiryFilter, statusFilter]);
 
   // Handle live search with debounce
   useEffect(() => {
@@ -310,6 +325,20 @@ export default function EmployeesPage() {
 
           {/* Filters */}
           <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
+            {/* Company Filter */}
+            <select
+              value={companyFilter}
+              onChange={(e) => setCompanyFilter(e.target.value)}
+              className="px-3 py-2 bg-gray-50 border border-gray-200 rounded-xl text-xs text-gray-700 font-medium focus:outline-none focus:ring-2 focus:ring-[#006C35]"
+            >
+              <option value="ALL">All Companies (Group)</option>
+              {companiesList.map((c) => (
+                <option key={c.id} value={c.id}>
+                  {c.companyName}
+                </option>
+              ))}
+            </select>
+
             {/* Department Filter */}
             <select
               value={departmentFilter}
@@ -348,6 +377,23 @@ export default function EmployeesPage() {
               <option value="ACTIVE">Active</option>
               <option value="INACTIVE">Inactive</option>
               <option value="VACATION">Vacation</option>
+            </select>
+
+            {/* Page Size */}
+            <select
+              value={pageSize}
+              onChange={(e) => {
+                setPageSize(Number(e.target.value));
+                setCurrentPage(1);
+              }}
+              className="px-2.5 py-2 bg-gray-50 border border-gray-200 rounded-xl text-xs text-gray-600 focus:outline-none focus:ring-2 focus:ring-[#006C35]"
+              title="Rows per page"
+            >
+              <option value={10}>10 / page</option>
+              <option value={25}>25 / page</option>
+              <option value={50}>50 / page</option>
+              <option value={100}>100 / page</option>
+              <option value={250}>250 / page</option>
             </select>
           </div>
         </div>
@@ -449,6 +495,12 @@ export default function EmployeesPage() {
                             </span>
                             <span>&bull;</span>
                             <span>{emp.nationality}</span>
+                            {emp.company && (
+                              <>
+                                <span>&bull;</span>
+                                <span className="text-gray-400 font-medium">{emp.company.companyName}</span>
+                              </>
+                            )}
                           </div>
                         </td>
 

@@ -37,7 +37,7 @@ export async function GET(
   }
 
   // Multi-tenant authorization
-  if (user.role !== "SUPER_ADMIN" && employee.companyId !== user.companyId) {
+  if (user.role !== "SUPER_ADMIN" && user.role !== "HR_MANAGER" && employee.companyId !== user.companyId) {
     return NextResponse.json({ error: "Forbidden access." }, { status: 403 });
   }
 

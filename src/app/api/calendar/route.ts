@@ -16,7 +16,7 @@ export async function GET(request: Request) {
   const month = parseInt(searchParams.get("month") || `${new Date().getMonth() + 1}`, 10);
 
   const where: any = { status: "ACTIVE" };
-  if (user.role !== "SUPER_ADMIN" && user.companyId) {
+  if (user.role !== "SUPER_ADMIN" && user.role !== "HR_MANAGER" && user.companyId) {
     where.companyId = user.companyId;
   }
 

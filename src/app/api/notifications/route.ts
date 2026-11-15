@@ -15,7 +15,7 @@ export async function GET(request: Request) {
   const statusFilter = searchParams.get("status") || "ALL";
 
   const whereEmployee: any = {};
-  if (user.role !== "SUPER_ADMIN" && user.companyId) {
+  if (user.role !== "SUPER_ADMIN" && user.role !== "HR_MANAGER" && user.companyId) {
     whereEmployee.companyId = user.companyId;
   }
 

@@ -11,7 +11,7 @@ export async function GET() {
   }
 
   const whereEmployee: any = {};
-  if (user.role !== "SUPER_ADMIN" && user.companyId) {
+  if (user.role !== "SUPER_ADMIN" && user.role !== "HR_MANAGER" && user.companyId) {
     whereEmployee.companyId = user.companyId;
   }
 

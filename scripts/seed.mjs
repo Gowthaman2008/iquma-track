@@ -1,6 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
 import crypto from "crypto";
+import fs from "fs";
 
 const prisma = new PrismaClient();
 
@@ -10,6 +11,7 @@ const HEX_KEY = process.env.ENCRYPTION_KEY || "0123456789abcdef0123456789abcdef0
 const KEY = Buffer.from(HEX_KEY, "hex");
 
 function encryptIqama(plain) {
+  if (!plain) return "";
   const iv = crypto.randomBytes(IV_LENGTH);
   const cipher = crypto.createCipheriv(ALGORITHM, KEY, iv);
   let encrypted = cipher.update(plain, "utf8", "hex");
@@ -19,21 +21,38 @@ function encryptIqama(plain) {
 }
 
 function maskIqama(iqama) {
+  if (!iqama) return "—";
   const clean = iqama.trim();
-  return `${clean.slice(0, 3)}****${clean.slice(-3)}`;
+  if (clean.length < 5) return clean;
+  const start = clean.slice(0, 3);
+  const end = clean.slice(-3);
+  const middle = "*".repeat(Math.max(3, clean.length - 6));
+  return `${start}${middle}${end}`;
 }
 
-function addDaysToToday(days) {
-  const d = new Date();
-  d.setDate(d.getDate() + days);
-  d.setHours(12, 0, 0, 0); // Noon to prevent timezone boundary wrap
-  return d;
+function stringHash(str) {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = ((hash << 5) - hash) + str.charCodeAt(i);
+    hash |= 0;
+  }
+  return Math.abs(hash);
+}
+
+function sanitizeEmailSlug(name) {
+  return name
+    .toLowerCase()
+    .replace(/[^\w\s]/gi, "")
+    .trim()
+    .split(/\s+/)
+    .slice(0, 2)
+    .join(".");
 }
 
 async function main() {
-  console.log("🌱 Starting IqamaTrack Database Seeding...");
+  console.log("🌱 Starting Comprehensive Enterprise Demo Seeding...");
 
-  // Clean existing data
+  // 1. Clear existing records
   await prisma.notificationLog.deleteMany();
   await prisma.iqamaRenewalHistory.deleteMany();
   await prisma.iqamaDocument.deleteMany();
@@ -43,11 +62,12 @@ async function main() {
   await prisma.notificationSetting.deleteMany();
   await prisma.company.deleteMany();
 
-  console.log("Cleared existing tables.");
+  console.log("Cleared existing database tables.");
 
-  // 1. Create Companies
-  const company1 = await prisma.company.create({
+  // 2. Create the 3 main enterprise companies + Najd Digital
+  const companyAlhouf = await prisma.company.create({
     data: {
+      id: "cmvla9fqc0000r7tkb82ni1l4",
       companyName: "AL Houf Trading & Contracting Group",
       email: "info@alhouf.sa",
       hrContactEmail: "hr@alhouf.sa",
@@ -57,8 +77,33 @@ async function main() {
     },
   });
 
-  const company2 = await prisma.company.create({
+  const companySidrat = await prisma.company.create({
     data: {
+      id: "cmvsidratalkhaleej001",
+      companyName: "Sidrat Al Khaleej for Contracting",
+      email: "info@sidrat.sa",
+      hrContactEmail: "hr@sidrat.sa",
+      saudiTimezone: "Asia/Riyadh",
+      commercialRegNo: "1010889900",
+      logoUrl: "/branding/alhouf-logo.svg",
+    },
+  });
+
+  const companyAlhouf2 = await prisma.company.create({
+    data: {
+      id: "cmvalhouf2contracting001",
+      companyName: "AL Houf 2 Contracting",
+      email: "branch2@alhouf.sa",
+      hrContactEmail: "hr2@alhouf.sa",
+      saudiTimezone: "Asia/Riyadh",
+      commercialRegNo: "1010778898",
+      logoUrl: "/branding/alhouf-logo.svg",
+    },
+  });
+
+  const companyNajd = await prisma.company.create({
+    data: {
+      id: "cmvla9fql0001r7tkxf06zrqp",
       companyName: "Najd Digital Cloud Solutions",
       email: "operations@najdcloud.sa",
       hrContactEmail: "people@najdcloud.sa",
@@ -67,394 +112,317 @@ async function main() {
     },
   });
 
-  console.log(`Created 2 companies: ${company1.companyName}, ${company2.companyName}`);
+  console.log("Created 4 enterprise companies: AL Houf, Sidrat Al Khaleej, AL Houf 2, Najd Digital.");
 
-  // 2. Notification Settings
-  await prisma.notificationSetting.create({
-    data: {
-      companyId: company1.id,
-      reminderDays: JSON.stringify([30, 15, 7, 3, 1, 0]),
-      recipients: JSON.stringify(["EMPLOYEE", "HR_MANAGER", "SUPER_ADMIN"]),
-      enabled: true,
-      postExpiryFrequencyDays: 7,
-    },
-  });
+  // 3. Notification settings for each company
+  const defaultSettings = {
+    reminderDays: JSON.stringify([30, 15, 7, 3, 1, 0]),
+    recipients: JSON.stringify(["EMPLOYEE", "HR_MANAGER", "SUPER_ADMIN"]),
+    enabled: true,
+    postExpiryFrequencyDays: 7,
+  };
 
-  await prisma.notificationSetting.create({
-    data: {
-      companyId: company2.id,
-      reminderDays: JSON.stringify([30, 15, 7, 3, 1, 0]),
-      recipients: JSON.stringify(["EMPLOYEE", "HR_MANAGER"]),
-      enabled: true,
-      postExpiryFrequencyDays: 7,
-    },
-  });
+  await prisma.notificationSetting.create({ data: { companyId: companyAlhouf.id, ...defaultSettings } });
+  await prisma.notificationSetting.create({ data: { companyId: companySidrat.id, ...defaultSettings } });
+  await prisma.notificationSetting.create({ data: { companyId: companyAlhouf2.id, ...defaultSettings } });
+  await prisma.notificationSetting.create({ data: { companyId: companyNajd.id, ...defaultSettings } });
 
-  // 3. Create Users
+  // 4. Create Standard Demo Users
   const adminPasswordHash = await bcrypt.hash("Admin@123456", 10);
   const hrPasswordHash = await bcrypt.hash("Hr@123456", 10);
   const employeePasswordHash = await bcrypt.hash("Employee@123456", 10);
 
   const superAdmin = await prisma.user.create({
     data: {
+      id: "cmvla9g0z0007r7tkvd1qm748",
       name: "Tariq Al-Mansoor",
       email: "admin@iqamatrack.sa",
       passwordHash: adminPasswordHash,
       role: "SUPER_ADMIN",
-      companyId: company1.id,
+      companyId: companyAlhouf.id,
     },
   });
 
   const hrManager = await prisma.user.create({
     data: {
+      id: "cmvla9g2l0009r7tku2ysgdf1",
       name: "Fatima Al-Zahrani",
       email: "hr@iqamatrack.sa",
       passwordHash: hrPasswordHash,
       role: "HR_MANAGER",
-      companyId: company1.id,
+      companyId: companyAlhouf.id,
     },
   });
 
-  const employeeUser = await prisma.user.create({
+  const empUser1 = await prisma.user.create({
     data: {
+      id: "cmvlaq99a0003r7p05u331pg7",
+      name: "Ahmed Khan",
+      email: "ahmed.khan@alhouf.sa",
+      passwordHash: employeePasswordHash,
+      role: "EMPLOYEE",
+      companyId: companyAlhouf.id,
+    },
+  });
+
+  const empUser2 = await prisma.user.create({
+    data: {
+      id: "cmvla9g2t000br7tkv09ufvy2",
       name: "Ahmed Khan",
       email: "ahmed.khan@iqamatrack.sa",
       passwordHash: employeePasswordHash,
       role: "EMPLOYEE",
-      companyId: company1.id,
+      companyId: companyAlhouf.id,
     },
   });
 
-  console.log("Created users: Super Admin, HR Manager, and Employee.");
+  // Additional 1-click Google accounts
+  await prisma.user.create({
+    data: {
+      name: "Maria Santos",
+      email: "maria.s@alhouf.sa",
+      passwordHash: employeePasswordHash,
+      role: "EMPLOYEE",
+      companyId: companyAlhouf.id,
+    },
+  });
 
-  // 4. Create Realistic Employees
-  const employeesData = [
-    {
+  await prisma.user.create({
+    data: {
+      name: "Omar Al-Khatib",
+      email: "omar.khatib@alhouf.sa",
+      passwordHash: employeePasswordHash,
+      role: "EMPLOYEE",
+      companyId: companyAlhouf.id,
+    },
+  });
+
+  await prisma.user.create({
+    data: {
+      name: "Zainab Al-Hassan",
+      email: "zainab.h@alhouf.sa",
+      passwordHash: employeePasswordHash,
+      role: "EMPLOYEE",
+      companyId: companyAlhouf.id,
+    },
+  });
+
+  console.log("Created Super Admin, HR Manager, and Demo Employee credentials.");
+
+  // Also seed primary test employee Ahmed Khan (EMP-1001) for 1-click employee login
+  const ahmedKhanEmp = await prisma.employee.create({
+    data: {
       employeeId: "EMP-1001",
       fullName: "Ahmed Khan",
-      iqamaRaw: "2451928304",
-      daysFromNow: 4, // CRITICAL (4 days remaining)
-      issueDaysAgo: 360,
-      email: "ahmed.khan@iqamatrack.sa",
+      iqamaNumberEncrypted: encryptIqama("2451928304"),
+      iqamaNumberMasked: maskIqama("2451928304"),
+      iqamaExpiryDate: new Date(Date.now() + 4 * 24 * 60 * 60 * 1000), // Critical (4 days)
+      iqamaIssueDate: new Date(Date.now() - 360 * 24 * 60 * 60 * 1000),
+      email: "ahmed.khan@alhouf.sa",
       mobileNumber: "+966 50 123 4567",
       nationality: "Pakistan",
-      department: "Engineering",
+      department: "Head Office",
       jobPosition: "Senior Civil Engineer",
       gender: "Male",
       status: "ACTIVE",
       passportNumber: "PK987123",
-      notes: "Qiwa contract renewal submitted. Awaiting labor office fee clearance.",
+      notes: "Primary demo employee. Qiwa contract renewal submitted. Awaiting labor office fee clearance.",
+      companyId: companyAlhouf.id,
     },
-    {
-      employeeId: "EMP-1002",
-      fullName: "Mohamed El-Sayed",
-      iqamaRaw: "2384719283",
-      daysFromNow: 0, // EXPIRES TODAY!
-      issueDaysAgo: 365,
-      email: "m.elsayed@alrashid-sa.com",
-      mobileNumber: "+966 55 987 6543",
-      nationality: "Egypt",
-      department: "Finance",
-      jobPosition: "Chief Financial Accountant",
-      gender: "Male",
-      status: "ACTIVE",
-      passportNumber: "EG456123",
-      notes: "URGENT: Iqama expires today. Renewal payment processed via Sadad.",
-    },
-    {
-      employeeId: "EMP-1003",
-      fullName: "Rajesh Kumar",
-      iqamaRaw: "2498273615",
-      daysFromNow: -14, // EXPIRED (14 days ago)
-      issueDaysAgo: 380,
-      email: "rajesh.k@alrashid-sa.com",
-      mobileNumber: "+966 54 321 8901",
-      nationality: "India",
-      department: "IT & DevOps",
-      jobPosition: "Network Infrastructure Lead",
-      gender: "Male",
-      status: "ACTIVE",
-      passportNumber: "IN883921",
-      notes: "Exceeded grace period by 14 days. Penalty of SAR 500 applies.",
-    },
-    {
-      employeeId: "EMP-1004",
-      fullName: "Maria Santos",
-      iqamaRaw: "2512938475",
-      daysFromNow: 18, // EXPIRING SOON (18 days remaining)
-      issueDaysAgo: 347,
-      email: "maria.s@alrashid-sa.com",
-      mobileNumber: "+966 56 789 0123",
-      nationality: "Philippines",
-      department: "Human Resources",
-      jobPosition: "Talent Acquisition Specialist",
-      gender: "Female",
-      status: "ACTIVE",
-      passportNumber: "PH654321",
-      notes: "Medical insurance renewed. Ready for Muqeem renewal submission.",
-    },
-    {
-      employeeId: "EMP-1005",
-      fullName: "Omar Al-Khatib",
-      iqamaRaw: "2419283746",
-      daysFromNow: 2, // CRITICAL (2 days remaining)
-      issueDaysAgo: 363,
-      email: "omar.khatib@alrashid-sa.com",
-      mobileNumber: "+966 53 456 7890",
-      nationality: "Jordan",
-      department: "Operations",
-      jobPosition: "Project Safety Manager",
-      gender: "Male",
-      status: "ACTIVE",
-      passportNumber: "JO771234",
-      notes: "SVP approval received for 2-year renewal.",
-    },
-    {
-      employeeId: "EMP-1006",
-      fullName: "Zainab Al-Hassan",
-      iqamaRaw: "1098273645", // Saudi National Citizen ID (starts with 1)
-      daysFromNow: 340, // VALID
-      issueDaysAgo: 25,
-      email: "zainab.h@alrashid-sa.com",
-      mobileNumber: "+966 50 876 5432",
-      nationality: "Saudi Arabia",
-      department: "Human Resources",
-      jobPosition: "Government Relations Officer (GRO)",
-      gender: "Female",
-      status: "ACTIVE",
-      passportNumber: "SA102938",
-      notes: "National ID verified. Handles Muqeem / Qiwa portals.",
-    },
-    {
-      employeeId: "EMP-1007",
-      fullName: "Suresh Pillai",
-      iqamaRaw: "2471829304",
-      daysFromNow: -5, // EXPIRED (5 days ago)
-      issueDaysAgo: 370,
-      email: "suresh.p@alrashid-sa.com",
-      mobileNumber: "+966 55 112 2334",
-      nationality: "India",
-      department: "Logistics",
-      jobPosition: "Warehouse Operations Supervisor",
-      gender: "Male",
-      status: "ACTIVE",
-      passportNumber: "IN772819",
-      notes: "First automated post-expiry reminder sent.",
-    },
-    {
-      employeeId: "EMP-1008",
-      fullName: "David Miller",
-      iqamaRaw: "2538192736",
-      daysFromNow: 85, // VALID (85 days)
-      issueDaysAgo: 280,
-      email: "david.m@alrashid-sa.com",
-      mobileNumber: "+966 56 998 8776",
-      nationality: "United Kingdom",
-      department: "Engineering",
-      jobPosition: "Technical Consulting Director",
-      gender: "Male",
-      status: "ACTIVE",
-      passportNumber: "UK123987",
-      notes: "Standard expatriate contract.",
-    },
-    {
-      employeeId: "EMP-1009",
-      fullName: "Tariq Mansour Jr",
-      iqamaRaw: "2461928374",
-      daysFromNow: 28, // EXPIRING SOON (28 days)
-      issueDaysAgo: 337,
-      email: "tariq.jr@alrashid-sa.com",
-      mobileNumber: "+966 54 223 3445",
-      nationality: "Lebanon",
-      department: "Sales",
-      jobPosition: "Key Accounts Manager",
-      gender: "Male",
-      status: "ACTIVE",
-      passportNumber: "LB998811",
-      notes: "30-day reminder email successfully delivered.",
-    },
-    {
-      employeeId: "EMP-1010",
-      fullName: "Ibrahim Mustafa",
-      iqamaRaw: "2482736451",
-      daysFromNow: 165, // VALID
-      issueDaysAgo: 200,
-      email: "i.mustafa@alrashid-sa.com",
-      mobileNumber: "+966 50 334 4556",
-      nationality: "Sudan",
-      department: "Engineering",
-      jobPosition: "Site Electrical Engineer",
-      gender: "Male",
-      status: "ACTIVE",
-      passportNumber: "SD554433",
-      notes: "Annual vacation scheduled in 4 months.",
-    },
-    {
-      employeeId: "EMP-1011",
-      fullName: "Johnathan Lee",
-      iqamaRaw: "2549182736",
-      daysFromNow: 6, // CRITICAL (6 days)
-      issueDaysAgo: 359,
-      email: "j.lee@alrashid-sa.com",
-      mobileNumber: "+966 55 445 5667",
-      nationality: "Singapore",
-      department: "IT & DevOps",
-      jobPosition: "Cloud Solutions Architect",
-      gender: "Male",
-      status: "ACTIVE",
-      passportNumber: "SG887766",
-      notes: "Awaiting final health insurance policy upload.",
-    },
-    {
-      employeeId: "EMP-1012",
-      fullName: "Noura Al-Shehri",
-      iqamaRaw: "1087263548", // Saudi National Citizen
-      daysFromNow: 420, // VALID
-      issueDaysAgo: 10,
-      email: "noura.s@alrashid-sa.com",
-      mobileNumber: "+966 50 556 6778",
-      nationality: "Saudi Arabia",
-      department: "Finance",
-      jobPosition: "Senior Financial Analyst",
-      gender: "Female",
-      status: "ACTIVE",
-      passportNumber: "SA332211",
-      notes: "Saudi national employee.",
-    },
-  ];
+  });
 
-  const createdEmployees = [];
+  // 5. Load and insert all extracted employees
+  const rawData = JSON.parse(fs.readFileSync("scripts/extracted_employees.json", "utf8"));
+  console.log(`Loaded ${rawData.length} extracted employees from JSON.`);
 
-  for (const emp of employeesData) {
-    const expiryDate = addDaysToToday(emp.daysFromNow);
-    const issueDate = addDaysToToday(-emp.issueDaysAgo);
+  const usedEmails = new Set(["ahmed.khan@alhouf.sa", "ahmed.khan@iqamatrack.sa", "admin@iqamatrack.sa", "hr@iqamatrack.sa", "maria.s@alhouf.sa", "omar.khatib@alhouf.sa", "zainab.h@alhouf.sa"]);
+  const usedEmpCodes = new Set(["EMP-1001"]);
 
+  let createdCount = 0;
+  let renewalCount = 0;
+  let notificationCount = 0;
+
+  for (const item of rawData) {
+    // 1. Resolve Company
+    let targetCompany = companyAlhouf;
+    const coLower = (item.companyName || "").toLowerCase();
+    if (coLower.includes("sidrat")) {
+      targetCompany = companySidrat;
+    } else if (coLower.includes("2")) {
+      targetCompany = companyAlhouf2;
+    }
+
+    // 2. Resolve Unique Employee Code
+    let empCode = item.employeeCode;
+    if (usedEmpCodes.has(empCode)) {
+      let suffix = 2;
+      while (usedEmpCodes.has(`${empCode}-${suffix}`)) {
+        suffix++;
+      }
+      empCode = `${empCode}-${suffix}`;
+    }
+    usedEmpCodes.add(empCode);
+
+    // 3. Resolve Unique Email
+    const domain = targetCompany.id === companySidrat.id ? "sidrat.sa" : "alhouf.sa";
+    let baseSlug = sanitizeEmailSlug(item.fullName) || `emp.${empCode.toLowerCase().replace(/[^a-z0-9]/g, "")}`;
+    let email = `${baseSlug}@${domain}`;
+    let emailCounter = 2;
+    while (usedEmails.has(email)) {
+      email = `${baseSlug}${emailCounter}@${domain}`;
+      emailCounter++;
+    }
+    usedEmails.add(email);
+
+    // 4. Resolve Dates
+    const expDateStr = item.expiryDate || "2027-01-01";
+    const expiryDate = new Date(`${expDateStr}T12:00:00.000Z`);
+    let issueDate;
+    if (item.isSaudi) {
+      issueDate = new Date("2021-01-01T12:00:00.000Z");
+    } else {
+      issueDate = new Date(expiryDate.getTime() - 365 * 24 * 60 * 60 * 1000);
+    }
+
+    // 5. Deterministic Mobile & Passport
+    const hash = stringHash(`${item.rawId || empCode}`);
+    const mobileDigits = (hash % 9000000 + 1000000).toString();
+    const mobileNumber = `+966 50 ${mobileDigits.slice(0, 3)} ${mobileDigits.slice(3)}`;
+
+    const countryCodeMap = {
+      India: "Z",
+      Bangladesh: "A",
+      Pakistan: "PK",
+      Sudan: "SD",
+      Egypt: "EG",
+      Morocco: "MC",
+      "Saudi Arabia": "SA",
+      "Sri Lanka": "N",
+      Yemen: "Y",
+    };
+    const prefix = countryCodeMap[item.nationality] || "P";
+    const passportDigits = (hash % 900000 + 100000).toString();
+    const passportNumber = `${prefix}${passportDigits}`;
+
+    // 6. Encrypt & Mask Iqama
+    const rawIqama = item.rawId || `25${(hash % 90000000 + 10000000)}`;
+    const iqamaEncrypted = encryptIqama(rawIqama);
+    const iqamaMasked = maskIqama(rawIqama);
+
+    // 7. Insert Employee
     const created = await prisma.employee.create({
       data: {
-        employeeId: emp.employeeId,
-        fullName: emp.fullName,
-        iqamaNumberEncrypted: encryptIqama(emp.iqamaRaw),
-        iqamaNumberMasked: maskIqama(emp.iqamaRaw),
+        employeeId: empCode,
+        fullName: item.fullName,
+        iqamaNumberEncrypted: iqamaEncrypted,
+        iqamaNumberMasked: iqamaMasked,
         iqamaExpiryDate: expiryDate,
         iqamaIssueDate: issueDate,
-        email: emp.email,
-        mobileNumber: emp.mobileNumber,
-        nationality: emp.nationality,
-        department: emp.department,
-        jobPosition: emp.jobPosition,
-        gender: emp.gender,
-        status: emp.status,
-        passportNumber: emp.passportNumber,
-        notes: emp.notes,
-        companyId: company1.id,
+        email,
+        mobileNumber,
+        nationality: item.nationality || "Other",
+        department: item.department || "Raja",
+        jobPosition: item.jobPosition || "Staff Specialist",
+        gender: item.gender || "Male",
+        status: "ACTIVE",
+        passportNumber,
+        notes: item.notes,
+        companyId: targetCompany.id,
       },
     });
 
-    createdEmployees.push(created);
+    createdCount++;
+
+    // 8. Create Renewal History if present
+    if (item.renewals && item.renewals.length > 0) {
+      for (const ren of item.renewals) {
+        await prisma.iqamaRenewalHistory.create({
+          data: {
+            employeeId: created.id,
+            previousExpiryDate: new Date(`${ren.previous}T12:00:00.000Z`),
+            newExpiryDate: new Date(`${ren.new}T12:00:00.000Z`),
+            renewalDate: new Date(`${ren.previous}T12:00:00.000Z`),
+            updatedById: hrManager.id,
+            updatedByName: hrManager.name,
+            cost: ren.cost || 9650.0,
+            notes: ren.notes || "Annual Iqama renewal processed via Muqeem portal.",
+          },
+        });
+        renewalCount++;
+      }
+    }
+
+    // 9. Generate realistic Notification Logs for Expired / Critical / Expiring Soon employees
+    const today = new Date("2026-11-15T12:00:00.000Z");
+    const daysDiff = Math.round((expiryDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+
+    if (daysDiff < 0) {
+      // Overdue - post expiry alert
+      const expiryIso = expiryDate.toISOString().split("T")[0];
+      await prisma.notificationLog.create({
+        data: {
+          employeeId: created.id,
+          notificationType: "POST_EXPIRY_WEEKLY",
+          recipient: created.email,
+          scheduledDate: new Date(today.getTime() - 2 * 24 * 60 * 60 * 1000),
+          sentAt: new Date(today.getTime() - 2 * 24 * 60 * 60 * 1000),
+          status: "SENT",
+          uniqueNotificationKey: `${created.id}_${expiryIso}_POST_EXPIRY_WEEKLY`,
+        },
+      });
+      notificationCount++;
+    } else if (daysDiff <= 7) {
+      // Critical 7-day reminder
+      const expiryIso = expiryDate.toISOString().split("T")[0];
+      await prisma.notificationLog.create({
+        data: {
+          employeeId: created.id,
+          notificationType: "7_DAYS",
+          recipient: created.email,
+          scheduledDate: new Date(today.getTime() - 1 * 24 * 60 * 60 * 1000),
+          sentAt: new Date(today.getTime() - 1 * 24 * 60 * 60 * 1000),
+          status: "SENT",
+          uniqueNotificationKey: `${created.id}_${expiryIso}_7_DAYS`,
+        },
+      });
+      notificationCount++;
+    } else if (daysDiff <= 30) {
+      // 30-day reminder
+      const expiryIso = expiryDate.toISOString().split("T")[0];
+      await prisma.notificationLog.create({
+        data: {
+          employeeId: created.id,
+          notificationType: "30_DAYS",
+          recipient: created.email,
+          scheduledDate: new Date(today.getTime() - 3 * 24 * 60 * 60 * 1000),
+          sentAt: new Date(today.getTime() - 3 * 24 * 60 * 60 * 1000),
+          status: "SENT",
+          uniqueNotificationKey: `${created.id}_${expiryIso}_30_DAYS`,
+        },
+      });
+      notificationCount++;
+    }
   }
 
-  console.log(`Created ${createdEmployees.length} realistic employee records.`);
-
-  // 5. Add sample Renewal History records for some employees
-  const renewedEmp1 = createdEmployees[0]; // Ahmed Khan
-  await prisma.iqamaRenewalHistory.create({
-    data: {
-      employeeId: renewedEmp1.id,
-      previousExpiryDate: addDaysToToday(-360),
-      newExpiryDate: addDaysToToday(4),
-      renewalDate: addDaysToToday(-360),
-      updatedById: hrManager.id,
-      updatedByName: hrManager.name,
-      cost: 9500.0,
-      notes: "Renewed for 1 year. Maktab Amal fee SAR 9600 + Iqama fee SAR 650.",
-    },
-  });
-
-  const renewedEmp8 = createdEmployees[7]; // David Miller
-  await prisma.iqamaRenewalHistory.create({
-    data: {
-      employeeId: renewedEmp8.id,
-      previousExpiryDate: addDaysToToday(-280),
-      newExpiryDate: addDaysToToday(85),
-      renewalDate: addDaysToToday(-280),
-      updatedById: superAdmin.id,
-      updatedByName: superAdmin.name,
-      cost: 10250.0,
-      notes: "Premium expatriate tier Iqama renewal processed via Muqeem portal.",
-    },
-  });
-
-  console.log("Created renewal history records.");
-
-  // 6. Add sample Notification Logs
-  const expiryDateIso0 = createdEmployees[0].iqamaExpiryDate.toISOString().split("T")[0];
-  await prisma.notificationLog.create({
-    data: {
-      employeeId: createdEmployees[0].id,
-      notificationType: "7_DAYS",
-      recipient: createdEmployees[0].email,
-      scheduledDate: addDaysToToday(-3),
-      sentAt: addDaysToToday(-3),
-      status: "SENT",
-      uniqueNotificationKey: `${createdEmployees[0].id}_${expiryDateIso0}_7_DAYS`,
-    },
-  });
-
-  const expiryDateIso8 = createdEmployees[8].iqamaExpiryDate.toISOString().split("T")[0];
-  await prisma.notificationLog.create({
-    data: {
-      employeeId: createdEmployees[8].id,
-      notificationType: "30_DAYS",
-      recipient: createdEmployees[8].email,
-      scheduledDate: addDaysToToday(-2),
-      sentAt: addDaysToToday(-2),
-      status: "SENT",
-      uniqueNotificationKey: `${createdEmployees[8].id}_${expiryDateIso8}_30_DAYS`,
-    },
-  });
-
-  // Expired employee log
-  const expiryDateIso2 = createdEmployees[2].iqamaExpiryDate.toISOString().split("T")[0];
-  await prisma.notificationLog.create({
-    data: {
-      employeeId: createdEmployees[2].id,
-      notificationType: "POST_EXPIRY_WEEK_1",
-      recipient: createdEmployees[2].email,
-      scheduledDate: addDaysToToday(-7),
-      sentAt: addDaysToToday(-7),
-      status: "SENT",
-      uniqueNotificationKey: `${createdEmployees[2].id}_${expiryDateIso2}_POST_EXPIRY_WEEK_1`,
-    },
-  });
-
-  console.log("Created initial notification logs.");
-
-  // 7. Audit Log entries
+  // 10. Audit Log
   await prisma.auditLog.create({
     data: {
-      companyId: company1.id,
+      companyId: companyAlhouf.id,
       userId: superAdmin.id,
       userName: superAdmin.name,
-      action: "LOGIN",
-      entityType: "AUTH",
-      details: "Super Admin logged in from Riyadh IP address",
-    },
-  });
-
-  await prisma.auditLog.create({
-    data: {
-      companyId: company1.id,
-      userId: hrManager.id,
-      userName: hrManager.name,
       action: "CREATE",
       entityType: "EMPLOYEE",
-      entityId: createdEmployees[0].id,
-      details: "Added new employee Ahmed Khan (EMP-1001)",
+      details: `Batch imported ${createdCount} demo employees from official company dataset across AL Houf, Sidrat Al Khaleej, and AL Houf 2.`,
     },
   });
 
-  console.log("Created audit logs.");
-  console.log("✅ Seeding completed successfully!");
+  console.log(`\n========================================`);
+  console.log(`🎉 SUCCESS: Database populated with real dataset!`);
+  console.log(`   Employees Created:   ${createdCount + 1}`);
+  console.log(`   Renewals Logged:     ${renewalCount}`);
+  console.log(`   Notifications Sent:  ${notificationCount}`);
+  console.log(`   Companies Active:    4`);
+  console.log(`========================================\n`);
 }
 
 main()

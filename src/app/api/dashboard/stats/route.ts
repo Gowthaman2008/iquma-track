@@ -11,9 +11,9 @@ export async function GET() {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  // Filter by company if user is not SUPER_ADMIN or if companyId exists
+  // Filter by company if user is not SUPER_ADMIN or HR_MANAGER
   const whereClause: { companyId?: string } = {};
-  if (user.role !== "SUPER_ADMIN" && user.companyId) {
+  if (user.role !== "SUPER_ADMIN" && user.role !== "HR_MANAGER" && user.companyId) {
     whereClause.companyId = user.companyId;
   }
 

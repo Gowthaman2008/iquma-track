@@ -23,21 +23,38 @@ export async function GET(request: Request) {
 
   const where: any = {};
 
-  // Company tenancy restriction
-  if (user.role !== "SUPER_ADMIN" && user.companyId) {
+  // Company tenancy restriction: Admins and HR Managers can view all group companies
+  if (user.role !== "SUPER_ADMIN" && user.role !== "HR_MANAGER" && user.companyId) {
     where.companyId = user.companyId;
-  } else if (companyFilter) {
+  } else if (companyFilter && companyFilter !== "ALL") {
     where.companyId = companyFilter;
   }
 
-  // Search filter
+  // Search filter (supports names, employee code, email, notes, and full/partial Iqama)
   if (search) {
-    where.OR = [
-      { fullName: { contains: search } },
-      { employeeId: { contains: search } },
-      { iqamaNumberMasked: { contains: search } },
-      { email: { contains: search } },
+    const trimmed = search.trim();
+    const orConditions: any[] = [
+      { fullName: { contains: trimmed } },
+      { employeeId: { contains: trimmed } },
+      { iqamaNumberMasked: { contains: trimmed } },
+      { email: { contains: trimmed } },
+      { notes: { contains: trimmed } },
     ];
+
+    if (trimmed.length >= 5) {
+      const masked = maskIqamaNumber(trimmed);
+      orConditions.push({ iqamaNumberMasked: { contains: masked } });
+      const start3 = trimmed.slice(0, 3);
+      const end3 = trimmed.slice(-3);
+      orConditions.push({
+        AND: [
+          { iqamaNumberMasked: { startsWith: start3 } },
+          { iqamaNumberMasked: { endsWith: end3 } },
+        ],
+      });
+    }
+
+    where.OR = orConditions;
   }
 
   if (department && department !== "ALL") {

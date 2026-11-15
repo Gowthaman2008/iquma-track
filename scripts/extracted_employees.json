@@ -1,0 +1,5167 @@
+[
+  {
+    "employeeCode": "EMP-0001",
+    "rawId": "2504430352",
+    "fullName": "Ibrahim Abdel Moneim Ibrahim Mohamed Nour",
+    "nameArb": "ابراهيم عبد المنعم ابراهيم محمدنور",
+    "nationality": "Sudan",
+    "gender": "Male",
+    "salary": 2500.0,
+    "bank": "NCBK",
+    "bankAc": "SA9610000011100279534905",
+    "department": "Head Office",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2023-05-15",
+    "renewals": [],
+    "jobPosition": "Senior Administrative Specialist",
+    "notes": "Name (Arabic): ابراهيم عبد المنعم ابراهيم محمدنور | Base Salary: SAR 2,500.00 | Bank: NCBK (A/C: SA9610000011100279534905)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0003",
+    "rawId": "2409497837",
+    "fullName": "Ahmed Farag Mohamed Shaheen",
+    "nameArb": "احمد فراج محمد شاهين",
+    "nationality": "Egypt",
+    "gender": "Male",
+    "salary": 3000.0,
+    "bank": "NCBK",
+    "bankAc": "SA6810000010300000610009",
+    "department": "Head Office",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2024-01-21",
+    "renewals": [],
+    "jobPosition": "Chief Financial Accountant",
+    "notes": "Name (Arabic): احمد فراج محمد شاهين | Base Salary: SAR 3,000.00 | Bank: NCBK (A/C: SA6810000010300000610009)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0005",
+    "rawId": "2503488179",
+    "fullName": "Ahmed Mohamed Osman Ahmed",
+    "nameArb": "احمد محمد عثمان أحمد",
+    "nationality": "Sudan",
+    "gender": "Male",
+    "salary": 2500.0,
+    "bank": "NCBK",
+    "bankAc": "SA9810000011100251785109",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2023-09-06",
+    "renewals": [],
+    "jobPosition": "Senior Civil Construction Lead",
+    "notes": "Name (Arabic): احمد محمد عثمان أحمد | Base Salary: SAR 2,500.00 | Bank: NCBK (A/C: SA9810000011100251785109)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0151",
+    "rawId": "2504430352",
+    "fullName": "ابراهيم عبدالمنعم ابراهيم محمدنور",
+    "nameArb": "ابراهيم عبد المنعم ابراهيم محمدنور",
+    "nationality": "India",
+    "gender": "Male",
+    "salary": 2500.0,
+    "bank": "NCBK",
+    "bankAc": "SA9610000011100279534905",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-07-28",
+    "renewals": [
+      {
+        "previous": "2023-05-15",
+        "new": "2026-07-28",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Senior Civil Construction Lead",
+    "notes": "Name (Arabic): ابراهيم عبد المنعم ابراهيم محمدنور | Base Salary: SAR 2,500.00 | Bank: NCBK (A/C: SA9610000011100279534905)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0012",
+    "rawId": "2516445810",
+    "fullName": "Santhaseelan Kuppusamy",
+    "nameArb": "سانتاسيلان كوبو سامي",
+    "nationality": "India",
+    "gender": "Male",
+    "salary": 2500.0,
+    "bank": "RJHI",
+    "bankAc": "SA6280000158608016121147",
+    "department": "Ibra",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2023-09-18",
+    "renewals": [],
+    "jobPosition": "Site Logistics & Equipment Supervisor",
+    "notes": "Name (Arabic): سانتاسيلان كوبو سامي | Base Salary: SAR 2,500.00 | Bank: RJHI (A/C: SA6280000158608016121147)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0014",
+    "rawId": "2439880846",
+    "fullName": "Saleem Ahmad Mohammad Furqan",
+    "nameArb": "سليم احمد محمد فرقان",
+    "nationality": "India",
+    "gender": "Male",
+    "salary": 2400.0,
+    "bank": "NCBK",
+    "bankAc": "SA5410000018100001184208",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-27",
+    "renewals": [
+      {
+        "previous": "2026-07-31",
+        "new": "2027-01-27",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Mechanical & Systems Foreman",
+    "notes": "Name (Arabic): سليم احمد محمد فرقان | Base Salary: SAR 2,400.00 | Bank: NCBK (A/C: SA5410000018100001184208)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0016",
+    "rawId": "2247157700",
+    "fullName": "Shohel MD Safiq",
+    "nameArb": "شوهل محمد شفيق",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": "NCBK",
+    "bankAc": "SA9210000015900000706006",
+    "department": "Ibra",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2023-10-23",
+    "renewals": [],
+    "jobPosition": "Site Maintenance Lead",
+    "notes": "Name (Arabic): شوهل محمد شفيق | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA9210000015900000706006)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0018",
+    "rawId": "2487557072",
+    "fullName": "Abdul Rasheed Pichaikkani",
+    "nameArb": "عبد الرشيد بيشاتكاني",
+    "nationality": "India",
+    "gender": "Male",
+    "salary": 2500.0,
+    "bank": "RJHI",
+    "bankAc": "SA6780000158608016121154",
+    "department": "Ibra",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2023-12-21",
+    "renewals": [],
+    "jobPosition": "Site Logistics & Equipment Supervisor",
+    "notes": "Name (Arabic): عبد الرشيد بيشاتكاني | Base Salary: SAR 2,500.00 | Bank: RJHI (A/C: SA6780000158608016121154)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0020",
+    "rawId": "2502725621",
+    "fullName": "Ali Adam Ibrahim Abdullah",
+    "nameArb": "على ادم ابراهيم عبدالله",
+    "nationality": "Sudan",
+    "gender": "Male",
+    "salary": 2300.0,
+    "bank": "NCBK",
+    "bankAc": "SA6410000011100208139407",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2023-04-06",
+    "renewals": [],
+    "jobPosition": "Mechanical & Systems Foreman",
+    "notes": "Name (Arabic): على ادم ابراهيم عبدالله | Base Salary: SAR 2,300.00 | Bank: NCBK (A/C: SA6410000011100208139407)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0039",
+    "rawId": "2464156187",
+    "fullName": "Mohamed Younus Athalebbai Uduman Mohideen",
+    "nameArb": "محمد يونس تاليبي دومان ميدين",
+    "nationality": "India",
+    "gender": "Male",
+    "salary": 2400.0,
+    "bank": "INMA",
+    "bankAc": "SA6605000068204028762000",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-29",
+    "renewals": [
+      {
+        "previous": "2026-08-02",
+        "new": "2027-01-29",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Mechanical & Systems Foreman",
+    "notes": "Name (Arabic): محمد يونس تاليبي دومان ميدين | Base Salary: SAR 2,400.00 | Bank: INMA (A/C: SA6605000068204028762000)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0146",
+    "rawId": "2591306473",
+    "fullName": "Vinothkumar Sankar",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-08-08",
+    "renewals": [],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0160",
+    "rawId": "2608490534",
+    "fullName": "MO Arman",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-09-06",
+    "renewals": [],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0019",
+    "rawId": "2537133056",
+    "fullName": "Aashik Ahamed Ahamedameen",
+    "nameArb": "عشيق احمد احمدمين",
+    "nationality": "India",
+    "gender": "Male",
+    "salary": 2400.0,
+    "bank": "NCBK",
+    "bankAc": "SA7610000016700001354602",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-09",
+    "renewals": [
+      {
+        "previous": "2026-09-10",
+        "new": "2026-12-09",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Mechanical & Systems Foreman",
+    "notes": "Name (Arabic): عشيق احمد احمدمين | Base Salary: SAR 2,400.00 | Bank: NCBK (A/C: SA7610000016700001354602)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0048",
+    "rawId": "2538508363",
+    "fullName": "Noor Mohamed Yacoob",
+    "nameArb": "نور محمد يعقوب",
+    "nationality": "India",
+    "gender": "Male",
+    "salary": 2400.0,
+    "bank": "NCBK",
+    "bankAc": "SA2110000016700001371500",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-09",
+    "renewals": [
+      {
+        "previous": "2026-09-10",
+        "new": "2026-12-09",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Mechanical & Systems Foreman",
+    "notes": "Name (Arabic): نور محمد يعقوب | Base Salary: SAR 2,400.00 | Bank: NCBK (A/C: SA2110000016700001371500)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0026",
+    "rawId": "2207366846",
+    "fullName": "Kabir Hassain Abdui Gaffar",
+    "nameArb": "كبير حسين عبد الغفار",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 2400.0,
+    "bank": "INMA",
+    "bankAc": "SA1205000068204554709000",
+    "department": "Ibra",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2023-09-13",
+    "renewals": [],
+    "jobPosition": "Senior Electrical Technician",
+    "notes": "Name (Arabic): كبير حسين عبد الغفار | Base Salary: SAR 2,400.00 | Bank: INMA (A/C: SA1205000068204554709000)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0172",
+    "rawId": "2619409580",
+    "fullName": "Yeasin Arafat",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2026-12-09",
+    "renewals": [
+      {
+        "previous": "2026-09-10",
+        "new": "2026-12-09",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0124",
+    "rawId": "2571330212",
+    "fullName": "Mohasin Mondol",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-10",
+    "renewals": [
+      {
+        "previous": "2026-09-11",
+        "new": "2026-12-10",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0133",
+    "rawId": "2578977239",
+    "fullName": "Sundara Narayanan Lakshmanan",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-11",
+    "renewals": [
+      {
+        "previous": "2026-09-12",
+        "new": "2026-12-11",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0004",
+    "rawId": "2563812003",
+    "fullName": "Nilofar Khan",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-12",
+    "renewals": [
+      {
+        "previous": "2026-09-13",
+        "new": "2026-12-12",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0034",
+    "rawId": "2531331714",
+    "fullName": "Belal Hossen",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-12",
+    "renewals": [
+      {
+        "previous": "2026-09-13",
+        "new": "2026-12-12",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0047",
+    "rawId": "2564036586",
+    "fullName": "Sathish Ramu",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-12",
+    "renewals": [
+      {
+        "previous": "2026-09-13",
+        "new": "2026-12-12",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0079",
+    "rawId": "2563953278",
+    "fullName": "Anil Kumar",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-12",
+    "renewals": [
+      {
+        "previous": "2026-09-13",
+        "new": "2026-12-12",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0229",
+    "rawId": "2638940649",
+    "fullName": "MD Shoriful Islam",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2026-12-12",
+    "renewals": [
+      {
+        "previous": "2026-09-13",
+        "new": "2026-12-12",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0011",
+    "rawId": "2508612427",
+    "fullName": "Hasan Uddin Mondol",
+    "nameArb": "حسن الدين مندل",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": "NCBK",
+    "bankAc": "SA5410000018600001872107",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-14",
+    "renewals": [
+      {
+        "previous": "2026-09-15",
+        "new": "2026-12-14",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Site Operations Technician",
+    "notes": "Name (Arabic): حسن الدين مندل | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA5410000018600001872107)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0174",
+    "rawId": "2626830406",
+    "fullName": "MD Ujjal",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2026-12-14",
+    "renewals": [
+      {
+        "previous": "2026-09-15",
+        "new": "2026-12-14",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0075",
+    "rawId": "2340076088",
+    "fullName": "Muhammad Ramzan Manzoor Ahmad",
+    "nameArb": "محمد رمضان منصور أحمد",
+    "nationality": "Pakistan",
+    "gender": "Male",
+    "salary": null,
+    "bank": "NCBK",
+    "bankAc": "SA7410000066800000631908",
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2026-12-15",
+    "renewals": [
+      {
+        "previous": "2026-09-16",
+        "new": "2026-12-15",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Name (Arabic): محمد رمضان منصور أحمد | Bank: NCBK (A/C: SA7410000066800000631908)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0175",
+    "rawId": "2626830026",
+    "fullName": "Abdur Rahim Kha",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2026-12-16",
+    "renewals": [
+      {
+        "previous": "2026-09-17",
+        "new": "2026-12-16",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0043",
+    "rawId": "2485823690",
+    "fullName": "Monir Molla",
+    "nameArb": "منير مولا",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": "NCBK",
+    "bankAc": "SA0610000018100001164605",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-09-19",
+    "renewals": [],
+    "jobPosition": "Site Operations Technician",
+    "notes": "Name (Arabic): منير مولا | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA0610000018100001164605)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0051",
+    "rawId": "2485823393",
+    "fullName": "Nabir Hossain Shisho Miah",
+    "nameArb": "نبير شيشو مياه",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": "NCBK",
+    "bankAc": "SA4910000018100001164801",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-18",
+    "renewals": [
+      {
+        "previous": "2026-09-19",
+        "new": "2026-12-18",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Site Operations Technician",
+    "notes": "Name (Arabic): نبير شيشو مياه | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA4910000018100001164801)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0046",
+    "rawId": "2529430296",
+    "fullName": "Merghani Elfatih Merghani Osman",
+    "nameArb": "ميرغنى الفاتح ميرغنى عثمان",
+    "nationality": "Sudan",
+    "gender": "Male",
+    "salary": 2500.0,
+    "bank": "RIBL",
+    "bankAc": "SA6720000009325998359940",
+    "department": "Head Office",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2023-08-28",
+    "renewals": [],
+    "jobPosition": "Senior Administrative Specialist",
+    "notes": "Name (Arabic): ميرغنى الفاتح ميرغنى عثمان | Base Salary: SAR 2,500.00 | Bank: RIBL (A/C: SA6720000009325998359940)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0155",
+    "rawId": "2605948583",
+    "fullName": "Swapn Molla",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-18",
+    "renewals": [
+      {
+        "previous": "2026-09-19",
+        "new": "2026-12-18",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0156",
+    "rawId": "2606421010",
+    "fullName": "Nazmul Hasan",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-18",
+    "renewals": [
+      {
+        "previous": "2026-09-19",
+        "new": "2026-12-18",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0049",
+    "rawId": "2537132611",
+    "fullName": "Youssef Harid",
+    "nameArb": "يوسف حارض",
+    "nationality": "Morocco",
+    "gender": "Male",
+    "salary": 0.0,
+    "bank": "#N/A",
+    "bankAc": "#N/A",
+    "department": "Head Office",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2023-12-30",
+    "renewals": [],
+    "jobPosition": "Head Office Operations Coordinator",
+    "notes": "Name (Arabic): يوسف حارض | Bank: #N/A (A/C: #N/A)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0104",
+    "rawId": "2564396717",
+    "fullName": "MD Sahadat Hossain 3",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-20",
+    "renewals": [
+      {
+        "previous": "2026-06-23",
+        "new": "2026-12-20",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Site Operations Technician",
+    "notes": "Base Salary: SAR 1,500.00",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0105",
+    "rawId": "2564396915",
+    "fullName": "Ragupathy Kasinathan",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-21",
+    "renewals": [
+      {
+        "previous": "2026-09-22",
+        "new": "2026-12-21",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0036",
+    "rawId": "2509259897",
+    "fullName": "Mohammad Rezaul Karim",
+    "nameArb": "محمد مد كارام راجول",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 2400.0,
+    "bank": "NCBK",
+    "bankAc": "SA2010000018100001256600",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-03-22",
+    "renewals": [
+      {
+        "previous": "2026-09-23",
+        "new": "2027-03-22",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Mechanical & Systems Foreman",
+    "notes": "Name (Arabic): محمد مد كارام راجول | Base Salary: SAR 2,400.00 | Bank: NCBK (A/C: SA2010000018100001256600)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0053",
+    "rawId": "1066905744",
+    "fullName": "Turki Ali Hassan Alqarni",
+    "nameArb": "تركي علي حسن القرني",
+    "nationality": "Saudi Arabia",
+    "gender": "Male",
+    "salary": 2000.0,
+    "bank": "RJHI",
+    "bankAc": "SA1580000222608010003913",
+    "department": "Head Office",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2030-12-31",
+    "renewals": [],
+    "jobPosition": "Government Relations Officer (GRO)",
+    "notes": "Name (Arabic): تركي علي حسن القرني | Base Salary: SAR 2,000.00 | Bank: RJHI (A/C: SA1580000222608010003913) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "isSaudi": true
+  },
+  {
+    "employeeCode": "EMP-0054",
+    "rawId": "1075288629",
+    "fullName": "Abdulrahman Abdullah Mohammed BIN Salman",
+    "nameArb": "عبدالرحمن عبدالله محمد بن سلمان",
+    "nationality": "Saudi Arabia",
+    "gender": "Male",
+    "salary": 3000.0,
+    "bank": "NCBK",
+    "bankAc": "SA5510000012978066000108",
+    "department": "Head Office",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2030-12-31",
+    "renewals": [],
+    "jobPosition": "Government Relations Officer (GRO)",
+    "notes": "Name (Arabic): عبدالرحمن عبدالله محمد بن سلمان | Base Salary: SAR 3,000.00 | Bank: NCBK (A/C: SA5510000012978066000108) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "isSaudi": true
+  },
+  {
+    "employeeCode": "EMP-0055",
+    "rawId": "1070674351",
+    "fullName": "Ahlam Abdullah Mohammed Alqarni",
+    "nameArb": "أحلام عبدالله محمد القرني",
+    "nationality": "Saudi Arabia",
+    "gender": "Female",
+    "salary": 2000.0,
+    "bank": "RJHI",
+    "bankAc": "SA6880000222608016018220",
+    "department": "Head Office",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2030-12-31",
+    "renewals": [],
+    "jobPosition": "HR & Talent Acquisition Specialist",
+    "notes": "Name (Arabic): أحلام عبدالله محمد القرني | Base Salary: SAR 2,000.00 | Bank: RJHI (A/C: SA6880000222608016018220) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "isSaudi": true
+  },
+  {
+    "employeeCode": "EMP-0056",
+    "rawId": "1047760465",
+    "fullName": "Tahani Mohammed A Tumaihi",
+    "nameArb": "تهاني محمد علي طميحي",
+    "nationality": "Saudi Arabia",
+    "gender": "Female",
+    "salary": 2000.0,
+    "bank": "#N/A",
+    "bankAc": "#N/A",
+    "department": "Head Office",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2030-12-31",
+    "renewals": [],
+    "jobPosition": "HR & Talent Acquisition Specialist",
+    "notes": "Name (Arabic): تهاني محمد علي طميحي | Base Salary: SAR 2,000.00 | Bank: #N/A (A/C: #N/A) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "isSaudi": true
+  },
+  {
+    "employeeCode": "EMP-0057",
+    "rawId": "1117668572",
+    "fullName": "Hassan Baalghayth Hassan Alqarni",
+    "nameArb": "حسن بلغيث حسن القرني",
+    "nationality": "Saudi Arabia",
+    "gender": "Male",
+    "salary": 2000.0,
+    "bank": "RJHI",
+    "bankAc": "SA2380000176608016185066",
+    "department": "Head Office",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2030-12-31",
+    "renewals": [],
+    "jobPosition": "Government Relations Officer (GRO)",
+    "notes": "Name (Arabic): حسن بلغيث حسن القرني | Base Salary: SAR 2,000.00 | Bank: RJHI (A/C: SA2380000176608016185066) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "isSaudi": true
+  },
+  {
+    "employeeCode": "EMP-0058",
+    "rawId": "1069690921",
+    "fullName": "Hanan Mohammed Mohammed Alqarni",
+    "nameArb": "حنان محمد محمد القرني",
+    "nationality": "Saudi Arabia",
+    "gender": "Female",
+    "salary": 2000.0,
+    "bank": "RJHI",
+    "bankAc": "SA3580000334608010198064",
+    "department": "Head Office",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2030-12-31",
+    "renewals": [],
+    "jobPosition": "HR & Talent Acquisition Specialist",
+    "notes": "Name (Arabic): حنان محمد محمد القرني | Base Salary: SAR 2,000.00 | Bank: RJHI (A/C: SA3580000334608010198064) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "isSaudi": true
+  },
+  {
+    "employeeCode": "EMP-0059",
+    "rawId": "1058661222",
+    "fullName": "Nura Fayez BIN Mohammed Alshehri",
+    "nameArb": "نورا فايز بن محمد الشهري",
+    "nationality": "Saudi Arabia",
+    "gender": "Female",
+    "salary": 2000.0,
+    "bank": "RJHI",
+    "bankAc": "SA9180000458608010168158",
+    "department": "Head Office",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2030-12-31",
+    "renewals": [],
+    "jobPosition": "HR & Talent Acquisition Specialist",
+    "notes": "Name (Arabic): نورا فايز بن محمد الشهري | Base Salary: SAR 2,000.00 | Bank: RJHI (A/C: SA9180000458608010168158) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "isSaudi": true
+  },
+  {
+    "employeeCode": "EMP-0060",
+    "rawId": "1052595707",
+    "fullName": "Razihah Ali Hassan Alqarni",
+    "nameArb": "رازحه علي حسن القرني",
+    "nationality": "Saudi Arabia",
+    "gender": "Female",
+    "salary": 2000.0,
+    "bank": "NCBK",
+    "bankAc": "SA7110000013867689000109",
+    "department": "Head Office",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2030-12-31",
+    "renewals": [],
+    "jobPosition": "HR & Talent Acquisition Specialist",
+    "notes": "Name (Arabic): رازحه علي حسن القرني | Base Salary: SAR 2,000.00 | Bank: NCBK (A/C: SA7110000013867689000109) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "isSaudi": true
+  },
+  {
+    "employeeCode": "EMP-0061",
+    "rawId": "1059581635",
+    "fullName": "Hassan Ali Mohammed Alshehri",
+    "nameArb": "حسن علي محمد الشهري",
+    "nationality": "Saudi Arabia",
+    "gender": "Male",
+    "salary": 3000.0,
+    "bank": "#N/A",
+    "bankAc": "#N/A",
+    "department": "Head Office",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2030-12-31",
+    "renewals": [],
+    "jobPosition": "Government Relations Officer (GRO)",
+    "notes": "Name (Arabic): حسن علي محمد الشهري | Base Salary: SAR 3,000.00 | Bank: #N/A (A/C: #N/A) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "isSaudi": true
+  },
+  {
+    "employeeCode": "EMP-0062",
+    "rawId": "1063241689",
+    "fullName": "Ohud Shadad Omar Alotaibi",
+    "nameArb": "عهود شداد عمر العتيبي",
+    "nationality": "Saudi Arabia",
+    "gender": "Female",
+    "salary": 3000.0,
+    "bank": "NCBK",
+    "bankAc": "SA0410000013800000833504",
+    "department": "Head Office",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2030-12-31",
+    "renewals": [],
+    "jobPosition": "HR & Talent Acquisition Specialist",
+    "notes": "Name (Arabic): عهود شداد عمر العتيبي | Base Salary: SAR 3,000.00 | Bank: NCBK (A/C: SA0410000013800000833504) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "isSaudi": true
+  },
+  {
+    "employeeCode": "EMP-0037",
+    "rawId": "2509259186",
+    "fullName": "MD Monirul Islam",
+    "nameArb": "محمد منيرول مد اسلام",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 2400.0,
+    "bank": "NCBK",
+    "bankAc": "SA2310000018100001274200",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-22",
+    "renewals": [
+      {
+        "previous": "2026-09-23",
+        "new": "2026-12-22",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Mechanical & Systems Foreman",
+    "notes": "Name (Arabic): محمد منيرول مد اسلام | Base Salary: SAR 2,400.00 | Bank: NCBK (A/C: SA2310000018100001274200)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0041",
+    "rawId": "2485823138",
+    "fullName": "MD Jubayed Billal Miah",
+    "nameArb": "مد زوبيد بلال مياه",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": "NCBK",
+    "bankAc": "SA5010000018100001526108",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-03-23",
+    "renewals": [
+      {
+        "previous": "2026-09-24",
+        "new": "2027-03-23",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Site Operations Technician",
+    "notes": "Name (Arabic): مد زوبيد بلال مياه | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA5010000018100001526108)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0064",
+    "rawId": "2061025322",
+    "fullName": "Abdul Wahab Hajanaji Pvdeen",
+    "nameArb": "عبد الوهاب حاجاني بفدين",
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": "NCBK",
+    "bankAc": "SA7410000066800000521910",
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2026-12-23",
+    "renewals": [
+      {
+        "previous": "2026-09-24",
+        "new": "2026-12-23",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Name (Arabic): عبد الوهاب حاجاني بفدين | Bank: NCBK (A/C: SA7410000066800000521910)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0110",
+    "rawId": "2510991835",
+    "fullName": "Robel Miah MD Mintu Miah",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-23",
+    "renewals": [
+      {
+        "previous": "2026-09-24",
+        "new": "2026-12-23",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0230",
+    "rawId": "2609523283",
+    "fullName": "MD Lokman Kha",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2026-12-25",
+    "renewals": [
+      {
+        "previous": "2026-09-26",
+        "new": "2026-12-25",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0107",
+    "rawId": "2511596393",
+    "fullName": "Barek Miah",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-27",
+    "renewals": [
+      {
+        "previous": "2026-09-28",
+        "new": "2026-12-27",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0150",
+    "rawId": "2587476975",
+    "fullName": "Riad Hossain",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-27",
+    "renewals": [
+      {
+        "previous": "2026-09-28",
+        "new": "2026-12-27",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0106",
+    "rawId": "2511099439",
+    "fullName": "MD Yasin Mojumder Raju",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-28",
+    "renewals": [
+      {
+        "previous": "2026-09-29",
+        "new": "2026-12-28",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0109",
+    "rawId": "2511599769",
+    "fullName": "Mollik Miah",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-28",
+    "renewals": [
+      {
+        "previous": "2026-09-29",
+        "new": "2026-12-28",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0134",
+    "rawId": "2578977627",
+    "fullName": "Ganesh Ramesh",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-29",
+    "renewals": [
+      {
+        "previous": "2026-09-30",
+        "new": "2026-12-29",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0176",
+    "rawId": "2621876248",
+    "fullName": "Mohamed Harish Basheer",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-03-29",
+    "renewals": [
+      {
+        "previous": "2026-12-29",
+        "new": "2027-03-29",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0066",
+    "rawId": "2110825839",
+    "fullName": "Abdulmotailif Ali",
+    "nameArb": "عبد المطيليف - - علي",
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": "#N/A",
+    "bankAc": "#N/A",
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2026-12-30",
+    "renewals": [
+      {
+        "previous": "2026-10-01",
+        "new": "2026-12-30",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Name (Arabic): عبد المطيليف - - علي | Bank: #N/A (A/C: #N/A)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0114",
+    "rawId": "2565755408",
+    "fullName": "Sheik Nisarudeen",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-12-30",
+    "renewals": [
+      {
+        "previous": "2026-10-01",
+        "new": "2026-12-30",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0187",
+    "rawId": "2639447180",
+    "fullName": "Hafizur Molla",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2026-12-30",
+    "renewals": [
+      {
+        "previous": "2026-10-01",
+        "new": "2026-12-30",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0188",
+    "rawId": "2639392527",
+    "fullName": "Romin",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2026-12-30",
+    "renewals": [
+      {
+        "previous": "2026-10-01",
+        "new": "2026-12-30",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0045",
+    "rawId": "2503978328",
+    "fullName": "Motin Mia",
+    "nameArb": "موتين ميا",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": "NCBK",
+    "bankAc": "SA7410000018600001798900",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-02",
+    "renewals": [
+      {
+        "previous": "2026-10-04",
+        "new": "2027-01-02",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Site Operations Technician",
+    "notes": "Name (Arabic): موتين ميا | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA7410000018600001798900)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0157",
+    "rawId": "2605973987",
+    "fullName": "Boominathan Rajendran",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-04-05",
+    "renewals": [
+      {
+        "previous": "2027-01-05",
+        "new": "2027-04-05",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0179",
+    "rawId": "2297516987",
+    "fullName": "Abdul Hakeem Allavudeen",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-01-05",
+    "renewals": [
+      {
+        "previous": "2026-10-07",
+        "new": "2027-01-05",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0031",
+    "rawId": "2527521351",
+    "fullName": "Muhammad Sajjad Ghulam Hassan",
+    "nameArb": "محمد سجاد غلام حسن",
+    "nationality": "Pakistan",
+    "gender": "Male",
+    "salary": 2600.0,
+    "bank": "NCBK",
+    "bankAc": "SA4410000018100001513509",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-06",
+    "renewals": [
+      {
+        "previous": "2026-10-08",
+        "new": "2027-01-06",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Senior Civil Construction Lead",
+    "notes": "Name (Arabic): محمد سجاد غلام حسن | Base Salary: SAR 2,600.00 | Bank: NCBK (A/C: SA4410000018100001513509)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0078",
+    "rawId": "2105902841",
+    "fullName": "Sheik Allavdeen Jahir Hussin",
+    "nameArb": "الشيخ علاء الدين جاهر حسين",
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": "NCBK",
+    "bankAc": "SA5110000018100000209800",
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-01-06",
+    "renewals": [
+      {
+        "previous": "2026-10-08",
+        "new": "2027-01-06",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Name (Arabic): الشيخ علاء الدين جاهر حسين | Bank: NCBK (A/C: SA5110000018100000209800)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0113",
+    "rawId": "2565755630",
+    "fullName": "Tamizhvanan Ganesa",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-10-08",
+    "renewals": [],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0002",
+    "rawId": "2505887766",
+    "fullName": "Ibrahim Kholil",
+    "nameArb": "ابراهيم ميا مياه خليل",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": "NCBK",
+    "bankAc": "SA6410000018600001801602",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-07",
+    "renewals": [
+      {
+        "previous": "2026-10-09",
+        "new": "2027-01-07",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Site Operations Technician",
+    "notes": "Name (Arabic): ابراهيم ميا مياه خليل | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA6410000018600001801602)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0141",
+    "rawId": "2589050638",
+    "fullName": "Gunaseelan Rajendran",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-10-09",
+    "renewals": [],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0074",
+    "rawId": "2342768856",
+    "fullName": "Muhammad Bilal Yousaf Bhutta Muhammad Yousaf Bhutta",
+    "nameArb": "محمد بلال يوسف بوته محمد يوسف بوته",
+    "nationality": "Pakistan",
+    "gender": "Male",
+    "salary": null,
+    "bank": "NCBK",
+    "bankAc": "SA8510000066800000518705",
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-01-09",
+    "renewals": [
+      {
+        "previous": "2026-10-11",
+        "new": "2027-01-09",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Name (Arabic): محمد بلال يوسف بوته محمد يوسف بوته | Bank: NCBK (A/C: SA8510000066800000518705)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0189",
+    "rawId": "2641029539",
+    "fullName": "Mohammad Aslam Rafik",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "AL Houf",
+    "expiryDate": "2027-01-11",
+    "renewals": [],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0024",
+    "rawId": "2488733326",
+    "fullName": "Kamrul Hasan Abdus Shohid",
+    "nameArb": "قمر ال حسن عبد ال عبد الشهيد",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": "NCBK",
+    "bankAc": "SA3810000018600001865702",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-12",
+    "renewals": [
+      {
+        "previous": "2026-10-14",
+        "new": "2027-01-12",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Site Operations Technician",
+    "notes": "Name (Arabic): قمر ال حسن عبد ال عبد الشهيد | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA3810000018600001865702)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0135",
+    "rawId": "2571921069",
+    "fullName": "Milad Hossen",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-04-13",
+    "renewals": [
+      {
+        "previous": "2027-01-13",
+        "new": "2027-04-13",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0077",
+    "rawId": "2341950810",
+    "fullName": "Parvejalam Mohammad Safik",
+    "nameArb": "بارفيج لام محمد صفيق",
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": "NCBK",
+    "bankAc": "SA7510000066800000531107",
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-01-14",
+    "renewals": [
+      {
+        "previous": "2026-10-16",
+        "new": "2027-01-14",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Name (Arabic): بارفيج لام محمد صفيق | Bank: NCBK (A/C: SA7510000066800000531107)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0099",
+    "rawId": "2260851841",
+    "fullName": "Parari Abdul Khadar",
+    "nameArb": "باراري عبد القادر",
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": "#N/A",
+    "bankAc": "#N/A",
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-01-14",
+    "renewals": [
+      {
+        "previous": "2026-10-16",
+        "new": "2027-01-14",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Name (Arabic): باراري عبد القادر | Bank: #N/A (A/C: #N/A)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0116",
+    "rawId": "2566124935",
+    "fullName": "Rasal Moktar Mondol",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-15",
+    "renewals": [
+      {
+        "previous": "2026-10-17",
+        "new": "2027-01-15",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0117",
+    "rawId": "2566013872",
+    "fullName": "MD Ismail",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-15",
+    "renewals": [
+      {
+        "previous": "2026-10-17",
+        "new": "2027-01-15",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0029",
+    "rawId": "2516313190",
+    "fullName": "Mohammad Rasel Hossain",
+    "nameArb": "محمد راسل أوسين",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": "NCBK",
+    "bankAc": "SA0310000018100001383006",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-16",
+    "renewals": [
+      {
+        "previous": "2026-10-18",
+        "new": "2027-01-16",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Site Operations Technician",
+    "notes": "Name (Arabic): محمد راسل أوسين | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA0310000018100001383006)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0118",
+    "rawId": "2567318346",
+    "fullName": "Imam Hosen",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-04-21",
+    "renewals": [
+      {
+        "previous": "2027-01-21",
+        "new": "2027-04-21",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0119",
+    "rawId": "2567326018",
+    "fullName": "MD Zabed Hossen",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-21",
+    "renewals": [
+      {
+        "previous": "2026-07-25",
+        "new": "2027-01-21",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0120",
+    "rawId": "2567326265",
+    "fullName": "Munnaf Hossain",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-21",
+    "renewals": [
+      {
+        "previous": "2026-07-25",
+        "new": "2027-01-21",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0122",
+    "rawId": "2567326653",
+    "fullName": "MD Yasin Mondol",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-23",
+    "renewals": [
+      {
+        "previous": "2026-07-27",
+        "new": "2027-01-23",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0143",
+    "rawId": "2589356597",
+    "fullName": "Farook Mohamed Haneefa",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-23",
+    "renewals": [
+      {
+        "previous": "2026-07-27",
+        "new": "2027-01-23",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0068",
+    "rawId": "2418317091",
+    "fullName": "Imran Khan Hafeezullah Khan",
+    "nameArb": "عمران خان حفيظ الله خان",
+    "nationality": "Pakistan",
+    "gender": "Male",
+    "salary": null,
+    "bank": "NCBK",
+    "bankAc": "SA1010000066800000521801",
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-01-24",
+    "renewals": [
+      {
+        "previous": "2026-07-28",
+        "new": "2027-01-24",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Name (Arabic): عمران خان حفيظ الله خان | Bank: NCBK (A/C: SA1010000066800000521801)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0097",
+    "rawId": "2545899110",
+    "fullName": "Sepat Mannan",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-25",
+    "renewals": [
+      {
+        "previous": "2026-07-29",
+        "new": "2027-01-25",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0179-2",
+    "rawId": "2631705403",
+    "fullName": "Bablur Rahman",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-01-25",
+    "renewals": [
+      {
+        "previous": "2026-07-29",
+        "new": "2027-01-25",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0008",
+    "rawId": "2515562227",
+    "fullName": "Babul Akter",
+    "nameArb": "بابل اختر",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": "NCBK",
+    "bankAc": "SA1910000018600001880303",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-26",
+    "renewals": [
+      {
+        "previous": "2026-07-30",
+        "new": "2027-01-26",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Site Operations Technician",
+    "notes": "Name (Arabic): بابل اختر | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA1910000018600001880303)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0128",
+    "rawId": "2540174717",
+    "fullName": "Mohamed Sameer",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-27",
+    "renewals": [
+      {
+        "previous": "2026-07-31",
+        "new": "2027-01-27",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0071",
+    "rawId": "2429405711",
+    "fullName": "Kubendran Ramados Ramados",
+    "nameArb": "KUBENDRAN RAMADOS RAMADOS",
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": "NCBK",
+    "bankAc": "SA4210000066800000518509",
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-01-28",
+    "renewals": [
+      {
+        "previous": "2026-08-01",
+        "new": "2027-01-28",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Name (Arabic): KUBENDRAN RAMADOS RAMADOS | Bank: NCBK (A/C: SA4210000066800000518509)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0092",
+    "rawId": "2136145378",
+    "fullName": "Saleemkhan Abdulrazik",
+    "nameArb": "سليم خان",
+    "nationality": "Pakistan",
+    "gender": "Male",
+    "salary": null,
+    "bank": "#N/A",
+    "bankAc": "#N/A",
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-01-28",
+    "renewals": [
+      {
+        "previous": "2026-08-01",
+        "new": "2027-01-28",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Name (Arabic): سليم خان | Bank: #N/A (A/C: #N/A)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0098",
+    "rawId": "2547774204",
+    "fullName": "Dipu Bhuiyan",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-28",
+    "renewals": [
+      {
+        "previous": "2026-08-01",
+        "new": "2027-01-28",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0196",
+    "rawId": "2636410330",
+    "fullName": "MD Forhad Hossain",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-01-28",
+    "renewals": [
+      {
+        "previous": "2026-08-01",
+        "new": "2027-01-28",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0197",
+    "rawId": "2636415560",
+    "fullName": "MD Eyasin Sultan",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-01-28",
+    "renewals": [
+      {
+        "previous": "2026-08-01",
+        "new": "2027-01-28",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0198",
+    "rawId": "2636415594",
+    "fullName": "Ajim Hossen Mento",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-01-28",
+    "renewals": [
+      {
+        "previous": "2026-08-01",
+        "new": "2027-01-28",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0199",
+    "rawId": "2636415636",
+    "fullName": "MD Aris Ali",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-01-28",
+    "renewals": [
+      {
+        "previous": "2026-08-01",
+        "new": "2027-01-28",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0200",
+    "rawId": "2636415644",
+    "fullName": "Naem Hossen",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-01-28",
+    "renewals": [
+      {
+        "previous": "2026-08-01",
+        "new": "2027-01-28",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0201",
+    "rawId": "2636415735",
+    "fullName": "Abir Hasan",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-01-28",
+    "renewals": [
+      {
+        "previous": "2026-08-01",
+        "new": "2027-01-28",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0179-3",
+    "rawId": "2631705452",
+    "fullName": "Shahedul",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-01-29",
+    "renewals": [
+      {
+        "previous": "2026-08-02",
+        "new": "2027-01-29",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0032",
+    "rawId": "2541736167",
+    "fullName": "Muhammad Tariq Wazir Ahmed",
+    "nameArb": "محمد طارق وزير احمد",
+    "nationality": "Pakistan",
+    "gender": "Male",
+    "salary": 2600.0,
+    "bank": "NCBK",
+    "bankAc": "SA5810000016700001371707",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-30",
+    "renewals": [
+      {
+        "previous": "2026-08-03",
+        "new": "2027-01-30",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Senior Civil Construction Lead",
+    "notes": "Name (Arabic): محمد طارق وزير احمد | Base Salary: SAR 2,600.00 | Bank: NCBK (A/C: SA5810000016700001371707)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0166",
+    "rawId": "2613412812",
+    "fullName": "Mohamed Asiq Iqbal",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-01-30",
+    "renewals": [
+      {
+        "previous": "2026-08-03",
+        "new": "2027-01-30",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0167",
+    "rawId": "2523643423",
+    "fullName": "MD Shakib Mia",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-01-30",
+    "renewals": [
+      {
+        "previous": "2026-11-01",
+        "new": "2027-01-30",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0025",
+    "rawId": "2505957171",
+    "fullName": "Kamrul Shamel Mollah",
+    "nameArb": "قمر شميل ميا مولا",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": "NCBK",
+    "bankAc": "SA8010000018100001230106",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-31",
+    "renewals": [
+      {
+        "previous": "2026-08-04",
+        "new": "2027-01-31",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Site Operations Technician",
+    "notes": "Name (Arabic): قمر شميل ميا مولا | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA8010000018100001230106)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0033",
+    "rawId": "2505957445",
+    "fullName": "Mohammad Ariful Islam",
+    "nameArb": "محمد عارف مياه اسلام",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": "NCBK",
+    "bankAc": "SA7310000018600001805902",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-31",
+    "renewals": [
+      {
+        "previous": "2026-08-04",
+        "new": "2027-01-31",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Site Operations Technician",
+    "notes": "Name (Arabic): محمد عارف مياه اسلام | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA7310000018600001805902)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0121",
+    "rawId": "2567326521",
+    "fullName": "MD Ariful Islam (2)",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-31",
+    "renewals": [
+      {
+        "previous": "2026-08-04",
+        "new": "2027-01-31",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0126",
+    "rawId": "2567944455",
+    "fullName": "MD Sagor Sheikh",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-05-01",
+    "renewals": [
+      {
+        "previous": "2027-01-31",
+        "new": "2027-05-01",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0127",
+    "rawId": "2567944216",
+    "fullName": "Shahid Sheikh",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-31",
+    "renewals": [
+      {
+        "previous": "2026-08-04",
+        "new": "2027-01-31",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0129",
+    "rawId": "2567944760",
+    "fullName": "Nazrul Islam",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-31",
+    "renewals": [
+      {
+        "previous": "2026-08-04",
+        "new": "2027-01-31",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0145",
+    "rawId": "2550215798",
+    "fullName": "MD Saiful Islam",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-02-03",
+    "renewals": [
+      {
+        "previous": "2026-08-07",
+        "new": "2027-02-03",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0158",
+    "rawId": "2606420186",
+    "fullName": "Mohamed Darik Jainulabudeen",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-02-04",
+    "renewals": [
+      {
+        "previous": "2026-08-08",
+        "new": "2027-02-04",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0202",
+    "rawId": "2636415602",
+    "fullName": "Rakib Hossen",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-04",
+    "renewals": [
+      {
+        "previous": "2026-08-08",
+        "new": "2027-02-04",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0203",
+    "rawId": "2636415693",
+    "fullName": "MD Mostofa Biswas",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-04",
+    "renewals": [
+      {
+        "previous": "2026-08-08",
+        "new": "2027-02-04",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0204",
+    "rawId": "2636415719",
+    "fullName": "Sujon Hossen",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-04",
+    "renewals": [
+      {
+        "previous": "2026-08-08",
+        "new": "2027-02-04",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0205",
+    "rawId": "2636429942",
+    "fullName": "Mohammad Somun Islam",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-04",
+    "renewals": [
+      {
+        "previous": "2026-08-08",
+        "new": "2027-02-04",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0206",
+    "rawId": "2636430056",
+    "fullName": "Abul Kalam",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-04",
+    "renewals": [
+      {
+        "previous": "2026-08-08",
+        "new": "2027-02-04",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0209",
+    "rawId": "2636996700",
+    "fullName": "MD Abdullah",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-04",
+    "renewals": [
+      {
+        "previous": "2026-08-08",
+        "new": "2027-02-04",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0210",
+    "rawId": "2636996965",
+    "fullName": "Akash Rahman",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-04",
+    "renewals": [
+      {
+        "previous": "2026-08-08",
+        "new": "2027-02-04",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0211",
+    "rawId": "2636997070",
+    "fullName": "Shahriar Hossain Sojib",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-04",
+    "renewals": [
+      {
+        "previous": "2026-08-08",
+        "new": "2027-02-04",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0212",
+    "rawId": "2636997658",
+    "fullName": "MD Manik Hossen",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-04",
+    "renewals": [
+      {
+        "previous": "2026-08-08",
+        "new": "2027-02-04",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0213",
+    "rawId": "2636997757",
+    "fullName": "Nur Islam",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-04",
+    "renewals": [
+      {
+        "previous": "2026-08-08",
+        "new": "2027-02-04",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0507",
+    "rawId": "2636996437",
+    "fullName": "Rakib Hossen",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-04",
+    "renewals": [
+      {
+        "previous": "2026-08-08",
+        "new": "2027-02-04",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0508",
+    "rawId": "2636996536",
+    "fullName": "Mizanur Rahman",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-04",
+    "renewals": [
+      {
+        "previous": "2026-08-08",
+        "new": "2027-02-04",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0153",
+    "rawId": "2589517206",
+    "fullName": "MD Nayan",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-02-05",
+    "renewals": [
+      {
+        "previous": "2026-08-09",
+        "new": "2027-02-05",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0017",
+    "rawId": "2506223151",
+    "fullName": "Sohel Sheak",
+    "nameArb": "شوهيل مد مياه شيخ",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": "NCBK",
+    "bankAc": "SA7410000018600001801907",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-02-06",
+    "renewals": [
+      {
+        "previous": "2026-08-10",
+        "new": "2027-02-06",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Site Operations Technician",
+    "notes": "Name (Arabic): شوهيل مد مياه شيخ | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA7410000018600001801907)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0050",
+    "rawId": "2478290790",
+    "fullName": "Hridoy Ahammed Hossain",
+    "nameArb": "هيريدوي حسون",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": "NCBK",
+    "bankAc": "SA6510000018600001865604",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-02-06",
+    "renewals": [
+      {
+        "previous": "2026-08-10",
+        "new": "2027-02-06",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Site Operations Technician",
+    "notes": "Name (Arabic): هيريدوي حسون | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA6510000018600001865604)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0100",
+    "rawId": "2492671199",
+    "fullName": "Robin Mia",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-02-06",
+    "renewals": [
+      {
+        "previous": "2026-11-08",
+        "new": "2027-02-06",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0154",
+    "rawId": "2563645536",
+    "fullName": "Soham Mondol",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-02-06",
+    "renewals": [
+      {
+        "previous": "2026-08-10",
+        "new": "2027-02-06",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0179-4",
+    "rawId": "2632634552",
+    "fullName": "Mohammad Azaad Anish",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-02-06",
+    "renewals": [
+      {
+        "previous": "2026-08-10",
+        "new": "2027-02-06",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0182",
+    "rawId": "2636430098",
+    "fullName": "Faijan Ahmed Mohammad Gufran",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-02-06",
+    "renewals": [
+      {
+        "previous": "2026-08-10",
+        "new": "2027-02-06",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0215",
+    "rawId": "2637188331",
+    "fullName": "Barkat Ullah",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-06",
+    "renewals": [
+      {
+        "previous": "2026-08-10",
+        "new": "2027-02-06",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0216",
+    "rawId": "2637188414",
+    "fullName": "Abu Saif",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-06",
+    "renewals": [
+      {
+        "previous": "2026-08-10",
+        "new": "2027-02-06",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0217",
+    "rawId": "2637188596",
+    "fullName": "Bodu Chanda Das",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-06",
+    "renewals": [
+      {
+        "previous": "2026-08-10",
+        "new": "2027-02-06",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0218",
+    "rawId": "2637188844",
+    "fullName": "Kamrul Islam",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-06",
+    "renewals": [
+      {
+        "previous": "2026-08-10",
+        "new": "2027-02-06",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0219",
+    "rawId": "2637188935",
+    "fullName": "MD Amran Hossain",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-06",
+    "renewals": [
+      {
+        "previous": "2026-08-10",
+        "new": "2027-02-06",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0220",
+    "rawId": "2637189776",
+    "fullName": "Jahidul Islam",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-06",
+    "renewals": [
+      {
+        "previous": "2026-08-10",
+        "new": "2027-02-06",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0147",
+    "rawId": "2594601805",
+    "fullName": "Sayed Amir Hamja",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-02-07",
+    "renewals": [
+      {
+        "previous": "2026-08-11",
+        "new": "2027-02-07",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0168",
+    "rawId": "2613804679",
+    "fullName": "MD Ebrahim Pramanik",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-02-09",
+    "renewals": [
+      {
+        "previous": "2026-08-13",
+        "new": "2027-02-09",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0221",
+    "rawId": "2637189065",
+    "fullName": "MD Rasel Hossain",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-09",
+    "renewals": [
+      {
+        "previous": "2026-08-13",
+        "new": "2027-02-09",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0222",
+    "rawId": "2637189842",
+    "fullName": "MD Rajib Sheikh",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-09",
+    "renewals": [
+      {
+        "previous": "2026-08-13",
+        "new": "2027-02-09",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0223",
+    "rawId": "2637190113",
+    "fullName": "MD Rana",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-09",
+    "renewals": [
+      {
+        "previous": "2026-08-13",
+        "new": "2027-02-09",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0072",
+    "rawId": "2086061500",
+    "fullName": "Mohamed Hussain Raj Mohamed Hussain",
+    "nameArb": "محمد حسين راج محمد حسين",
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": "SABB",
+    "bankAc": "SA2945000000078257722001",
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-11-01",
+    "renewals": [
+      {
+        "previous": "2026-11-12",
+        "new": "2027-11-01",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Name (Arabic): محمد حسين راج محمد حسين | Bank: SABB (A/C: SA2945000000078257722001)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0159",
+    "rawId": "2607909260",
+    "fullName": "Abdullah Mahmud",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-02-10",
+    "renewals": [
+      {
+        "previous": "2026-08-14",
+        "new": "2027-02-10",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0179-5",
+    "rawId": "2624498313",
+    "fullName": "Bait Ullah Gul",
+    "nameArb": null,
+    "nationality": "Pakistan",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-02-11",
+    "renewals": [
+      {
+        "previous": "2026-08-15",
+        "new": "2027-02-11",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0040",
+    "rawId": "2463011094",
+    "fullName": "MD Billal",
+    "nameArb": "مد بلال",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": "NCBK",
+    "bankAc": "SA9510000018100001428007",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-02-13",
+    "renewals": [
+      {
+        "previous": "2026-08-17",
+        "new": "2027-02-13",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Site Operations Technician",
+    "notes": "Name (Arabic): مد بلال | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA9510000018100001428007)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0181",
+    "rawId": "2633280140",
+    "fullName": "Awais Saleem Khan",
+    "nameArb": null,
+    "nationality": "Pakistan",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-02-13",
+    "renewals": [
+      {
+        "previous": "2026-08-17",
+        "new": "2027-02-13",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0194",
+    "rawId": "2634926717",
+    "fullName": "Muhammed Baksh",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "AL Houf",
+    "expiryDate": "2026-11-15",
+    "renewals": [],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0125",
+    "rawId": "2569794007",
+    "fullName": "Kabir Hosen",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-11-16",
+    "renewals": [
+      {
+        "previous": "2026-08-18",
+        "new": "2026-11-16",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0070",
+    "rawId": "2439275898",
+    "fullName": "Krishnalal Sundaresan Sundaresan",
+    "nameArb": "كريشنال سوندارسان سوندرسان",
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": "RJHI",
+    "bankAc": "SA9780000102608016387448",
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2026-11-18",
+    "renewals": [
+      {
+        "previous": "2026-08-20",
+        "new": "2026-11-18",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Name (Arabic): كريشنال سوندارسان سوندرسان | Bank: RJHI (A/C: SA9780000102608016387448)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0169",
+    "rawId": "2613789235",
+    "fullName": "Rakib Hossen",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2026-11-18",
+    "renewals": [
+      {
+        "previous": "2026-08-20",
+        "new": "2026-11-18",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0180",
+    "rawId": "2623787740",
+    "fullName": "Abdul Basit Hussain",
+    "nameArb": null,
+    "nationality": "Pakistan",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2026-11-18",
+    "renewals": [
+      {
+        "previous": "2026-08-19",
+        "new": "2026-11-18",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0224",
+    "rawId": "2638932554",
+    "fullName": "MD Robul Shrikh",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2026-11-18",
+    "renewals": [
+      {
+        "previous": "2026-08-20",
+        "new": "2026-11-18",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0225",
+    "rawId": "2638932851",
+    "fullName": "MD Esmail Hossain",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2026-11-18",
+    "renewals": [
+      {
+        "previous": "2026-08-20",
+        "new": "2026-11-18",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0226",
+    "rawId": "2638932976",
+    "fullName": "Rayhan Mirdha",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2026-11-18",
+    "renewals": [
+      {
+        "previous": "2026-08-20",
+        "new": "2026-11-18",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0227",
+    "rawId": "2638933214",
+    "fullName": "MD Masum Mollik",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2026-11-18",
+    "renewals": [
+      {
+        "previous": "2026-08-20",
+        "new": "2026-11-18",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-2001",
+    "rawId": "2549611008",
+    "fullName": "Zameer Khan Farid",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2026-11-18",
+    "renewals": [],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0179-6",
+    "rawId": "2632634388",
+    "fullName": "Masroof Mahmood Khan",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2026-11-19",
+    "renewals": [
+      {
+        "previous": "2026-08-21",
+        "new": "2026-11-19",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0030",
+    "rawId": "2485641407",
+    "fullName": "Mohammad Roman Miah",
+    "nameArb": "محمد رومان مياه",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": "NCBK",
+    "bankAc": "SA3310000018100001164507",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-02-19",
+    "renewals": [
+      {
+        "previous": "2026-08-23",
+        "new": "2027-02-19",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Site Operations Technician",
+    "notes": "Name (Arabic): محمد رومان مياه | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA3310000018100001164507)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0132",
+    "rawId": "2577625144",
+    "fullName": "Ganesamoorthi Iyappan",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-02-19",
+    "renewals": [
+      {
+        "previous": "2026-08-23",
+        "new": "2027-02-19",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0093",
+    "rawId": "2507414015",
+    "fullName": "Mohammed Rahman Mohammed Ziyadh",
+    "nameArb": "محمد رحمن",
+    "nationality": "Sri Lanka",
+    "gender": "Male",
+    "salary": null,
+    "bank": "#N/A",
+    "bankAc": "#N/A",
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2026-11-23",
+    "renewals": [
+      {
+        "previous": "2026-08-25",
+        "new": "2026-11-23",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Name (Arabic): محمد رحمن | Bank: #N/A (A/C: #N/A)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0102",
+    "rawId": "2556115109",
+    "fullName": "Shahadat 2",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2026-11-23",
+    "renewals": [],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Internal Ref / Sponsor: AFSHAR",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0103",
+    "rawId": "2556115158",
+    "fullName": "Mohammad Osman",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-02-21",
+    "renewals": [
+      {
+        "previous": "2026-11-23",
+        "new": "2027-02-21",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Internal Ref / Sponsor: ZABED IQBAL",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0170",
+    "rawId": "2623639198",
+    "fullName": "Mohammad Saleem",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-02-21",
+    "renewals": [
+      {
+        "previous": "2026-11-23",
+        "new": "2027-02-21",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Internal Ref / Sponsor: ZAMEER KHAN",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-2002",
+    "rawId": "2607451321",
+    "fullName": "MD Milon Mondol",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-02-22",
+    "renewals": [
+      {
+        "previous": "2026-11-24",
+        "new": "2027-02-22",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Internal Ref / Sponsor: MILON",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0148",
+    "rawId": "2594601979",
+    "fullName": "Mahmmud Mohammad Safeek",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-02-23",
+    "renewals": [
+      {
+        "previous": "2026-11-25",
+        "new": "2027-02-23",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Internal Ref / Sponsor: HARUNUR",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0183",
+    "rawId": "2636247526",
+    "fullName": "Liton Hosen",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-02-24",
+    "renewals": [
+      {
+        "previous": "2026-11-26",
+        "new": "2027-02-24",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Internal Ref / Sponsor: MASUD",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0022",
+    "rawId": "2504630035",
+    "fullName": "Forhad Hossain",
+    "nameArb": "فرهد حسين",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": "NCBK",
+    "bankAc": "SA9710000018600001891509",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-02-25",
+    "renewals": [
+      {
+        "previous": "2026-11-27",
+        "new": "2027-02-25",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Site Operations Technician",
+    "notes": "Name (Arabic): فرهد حسين | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA9710000018600001891509)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0149",
+    "rawId": "2594601979",
+    "fullName": "Milton Sheikh",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-02-25",
+    "renewals": [
+      {
+        "previous": "2026-11-27",
+        "new": "2027-02-25",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0171",
+    "rawId": "2623787898",
+    "fullName": "Bajol Chowdhury",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-02-25",
+    "renewals": [
+      {
+        "previous": "2026-11-27",
+        "new": "2027-02-25",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0190",
+    "rawId": "2641029398",
+    "fullName": "Muhammad Naveed Haq",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "AL Houf",
+    "expiryDate": "2027-02-25",
+    "renewals": [
+      {
+        "previous": "2026-11-27",
+        "new": "2027-02-25",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0010",
+    "rawId": "2485823740",
+    "fullName": "Jewel Abul Kashem",
+    "nameArb": "جويل أبو ال قاسم",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": "NCBK",
+    "bankAc": "SA7610000018100001164703",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-02-26",
+    "renewals": [
+      {
+        "previous": "2026-11-28",
+        "new": "2027-02-26",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Site Operations Technician",
+    "notes": "Name (Arabic): جويل أبو ال قاسم | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA7610000018100001164703)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0069",
+    "rawId": "2101043640",
+    "fullName": "Jainul Abdeen Mohamed Zackariya",
+    "nameArb": "زين العابدين محمد زكريا",
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": "NCBK",
+    "bankAc": "SA1810000066800000513703",
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-02-26",
+    "renewals": [
+      {
+        "previous": "2026-11-28",
+        "new": "2027-02-26",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Name (Arabic): زين العابدين محمد زكريا | Bank: NCBK (A/C: SA1810000066800000513703)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0096",
+    "rawId": "2563310081",
+    "fullName": "Hafizur Rahman",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-02-26",
+    "renewals": [
+      {
+        "previous": "2026-11-28",
+        "new": "2027-02-26",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0136",
+    "rawId": "2608491573",
+    "fullName": "MD Anisur Rahman",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-02-26",
+    "renewals": [
+      {
+        "previous": "2026-11-28",
+        "new": "2027-02-26",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0038",
+    "rawId": "2524635311",
+    "fullName": "MD Abu Musa",
+    "nameArb": "محمد مياه موسى ابو",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 2400.0,
+    "bank": "NCBK",
+    "bankAc": "SA9010000018100001502205",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-02-28",
+    "renewals": [
+      {
+        "previous": "2026-11-30",
+        "new": "2027-02-28",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Mechanical & Systems Foreman",
+    "notes": "Name (Arabic): محمد مياه موسى ابو | Base Salary: SAR 2,400.00 | Bank: NCBK (A/C: SA9010000018100001502205)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0006",
+    "rawId": "2463902060",
+    "fullName": "Akbar Ali Mohamed Basheer",
+    "nameArb": "أكبر على محمد بشير",
+    "nationality": "India",
+    "gender": "Male",
+    "salary": 2400.0,
+    "bank": "NCBK",
+    "bankAc": "SA1910000015900000646404",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-03-02",
+    "renewals": [
+      {
+        "previous": "2026-12-02",
+        "new": "2027-03-02",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Mechanical & Systems Foreman",
+    "notes": "Name (Arabic): أكبر على محمد بشير | Base Salary: SAR 2,400.00 | Bank: NCBK (A/C: SA1910000015900000646404)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0065",
+    "rawId": "2563310297",
+    "fullName": "Monju Motaleb",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-03-02",
+    "renewals": [
+      {
+        "previous": "2026-12-02",
+        "new": "2027-03-02",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Site Operations Technician",
+    "notes": "Base Salary: SAR 1,500.00",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0140",
+    "rawId": "2136866064",
+    "fullName": "Zulfiqar",
+    "nameArb": null,
+    "nationality": "Pakistan",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-03-02",
+    "renewals": [
+      {
+        "previous": "2026-12-02",
+        "new": "2027-03-02",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0076",
+    "rawId": "2563310198",
+    "fullName": "Tayub Sakender",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-03-03",
+    "renewals": [
+      {
+        "previous": "2026-12-03",
+        "new": "2027-03-03",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Site Operations Technician",
+    "notes": "Base Salary: SAR 1,500.00",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0228",
+    "rawId": "2624575490",
+    "fullName": "Jamal UD Din Sardar Hussain",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-03-03",
+    "renewals": [
+      {
+        "previous": "2026-12-03",
+        "new": "2027-03-03",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0044",
+    "rawId": "2524018583",
+    "fullName": "Rahadul Islam",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-03-04",
+    "renewals": [
+      {
+        "previous": "2026-12-04",
+        "new": "2027-03-04",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0123",
+    "rawId": "2571000162",
+    "fullName": "Abdul Shahid",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-03-04",
+    "renewals": [
+      {
+        "previous": "2026-12-04",
+        "new": "2027-03-04",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0162",
+    "rawId": "2608490385",
+    "fullName": "Mohammad Khalid",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-03-05",
+    "renewals": [
+      {
+        "previous": "2026-12-05",
+        "new": "2027-03-05",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0137",
+    "rawId": "2609693060",
+    "fullName": "Arif Hossan",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-03-06",
+    "renewals": [
+      {
+        "previous": "2026-12-06",
+        "new": "2027-03-06",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0138",
+    "rawId": "2609698481",
+    "fullName": "Arman Ramzan",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-03-06",
+    "renewals": [
+      {
+        "previous": "2026-12-06",
+        "new": "2027-03-06",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0139",
+    "rawId": "2608491136",
+    "fullName": "Rony Miah",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-03-06",
+    "renewals": [
+      {
+        "previous": "2026-12-06",
+        "new": "2027-03-06",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0173",
+    "rawId": "2626621607",
+    "fullName": "Vallarasan Ramadoss",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2027-03-06",
+    "renewals": [
+      {
+        "previous": "2026-12-06",
+        "new": "2027-03-06",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0193",
+    "rawId": "2643618982",
+    "fullName": "Ajad Husen Husen",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "AL Houf",
+    "expiryDate": "2027-03-07",
+    "renewals": [
+      {
+        "previous": "2026-12-07",
+        "new": "2027-03-07",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0191",
+    "rawId": "2641029513",
+    "fullName": "Sajib Abdul Ali",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "AL Houf",
+    "expiryDate": "2027-03-09",
+    "renewals": [
+      {
+        "previous": "2026-12-09",
+        "new": "2027-03-09",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0192",
+    "rawId": "2643618875",
+    "fullName": "Rahat Husain Husain",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "AL Houf",
+    "expiryDate": "2027-03-09",
+    "renewals": [
+      {
+        "previous": "2026-12-09",
+        "new": "2027-03-09",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-2003",
+    "rawId": "2617933821",
+    "fullName": "Muhammad Javed Iqbal Ahmad",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-03-13",
+    "renewals": [
+      {
+        "previous": "2026-12-13",
+        "new": "2027-03-13",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0028",
+    "rawId": "2509666315",
+    "fullName": "Muhammad Shafi Imam Bakhsh",
+    "nameArb": "محمد امام بخش شيف",
+    "nationality": "Pakistan",
+    "gender": "Male",
+    "salary": 2600.0,
+    "bank": "NCBK",
+    "bankAc": "SA5010000018100001274102",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-03-23",
+    "renewals": [
+      {
+        "previous": "2026-12-23",
+        "new": "2027-03-23",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Senior Civil Construction Lead",
+    "notes": "Name (Arabic): محمد امام بخش شيف | Base Salary: SAR 2,600.00 | Bank: NCBK (A/C: SA5010000018100001274102)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0108",
+    "rawId": "2511596971",
+    "fullName": "Kawer Miah",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-03-27",
+    "renewals": [
+      {
+        "previous": "2026-12-27",
+        "new": "2027-03-27",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0042",
+    "rawId": "2503978385",
+    "fullName": "MD Shohel",
+    "nameArb": "مد شاهيل",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": 1500.0,
+    "bank": "NCBK",
+    "bankAc": "SA0410000018600001798802",
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-04-02",
+    "renewals": [
+      {
+        "previous": "2027-01-02",
+        "new": "2027-04-02",
+        "cost": 9650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+      }
+    ],
+    "jobPosition": "Site Operations Technician",
+    "notes": "Name (Arabic): مد شاهيل | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA0410000018600001798802)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0111",
+    "rawId": "2565756398",
+    "fullName": "Rakibul Islam",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-06",
+    "renewals": [
+      {
+        "previous": "2026-10-08",
+        "new": "2027-01-06",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0112",
+    "rawId": "2565756554",
+    "fullName": "Liton Molla",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-06",
+    "renewals": [
+      {
+        "previous": "2026-10-08",
+        "new": "2027-01-06",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0195",
+    "rawId": "2643618735",
+    "fullName": "Ijaz Ahamed Imran",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "AL Houf",
+    "expiryDate": "2027-01-09",
+    "renewals": [],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0144",
+    "rawId": "2589049796",
+    "fullName": "Ethireesh Aly Abdul Rashid",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-01-28",
+    "renewals": [
+      {
+        "previous": "2026-08-01",
+        "new": "2027-01-28",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0101",
+    "rawId": "2551004456",
+    "fullName": "Hedayet Ullah",
+    "nameArb": "مد هديت الله مد شمس مياه",
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2027-02-10",
+    "renewals": [
+      {
+        "previous": "2026-08-14",
+        "new": "2027-02-10",
+        "cost": 9650.0,
+        "notes": "Previous renewal cycle processed on schedule."
+      }
+    ],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Name (Arabic): مد هديت الله مد شمس مياه",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-2004",
+    "rawId": "2528758390",
+    "fullName": "Harunur Rashid",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-03-08",
+    "renewals": [],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-2005",
+    "rawId": "2528758499",
+    "fullName": "Masud Alam",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf 2",
+    "expiryDate": "2027-03-15",
+    "renewals": [],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-2006",
+    "rawId": "2600742866",
+    "fullName": "Shohel Rana",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "AL Houf",
+    "expiryDate": "2026-12-02",
+    "renewals": [],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-2007",
+    "rawId": "2495465615",
+    "fullName": "Ishraq Khan",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "AL Houf",
+    "expiryDate": "2026-12-03",
+    "renewals": [],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-2008",
+    "rawId": "2618933846",
+    "fullName": "Shahbaz Din",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "AL Houf",
+    "expiryDate": "2026-11-30",
+    "renewals": [],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-2009",
+    "rawId": "2638386108",
+    "fullName": "Arafath Ali Yunus",
+    "nameArb": null,
+    "nationality": "India",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "AL Houf",
+    "expiryDate": "2027-01-27",
+    "renewals": [],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0130",
+    "rawId": "4456",
+    "fullName": "Hdt",
+    "nameArb": null,
+    "nationality": "Bangladesh",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2025-03-02",
+    "renewals": [],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0062-2",
+    "rawId": "1063241689",
+    "fullName": "Ohud Shadad Omar Alotaibi",
+    "nameArb": "عهود شداد عمر العتيبي",
+    "nationality": "Saudi Arabia",
+    "gender": "Female",
+    "salary": 3000.0,
+    "bank": "NCBK",
+    "bankAc": "SA0410000013800000833504",
+    "department": "Head Office",
+    "companyName": "Sidrat Al Khaleej",
+    "expiryDate": "2030-12-31",
+    "renewals": [],
+    "jobPosition": "HR & Talent Acquisition Specialist",
+    "notes": "Name (Arabic): عهود شداد عمر العتيبي | Base Salary: SAR 3,000.00 | Bank: NCBK (A/C: SA0410000013800000833504) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "isSaudi": true
+  },
+  {
+    "employeeCode": "EMP-0063",
+    "rawId": "2472044227",
+    "fullName": "Abdul Hadi Ibrahim",
+    "nameArb": "عبد الهادي ابراهيم",
+    "nationality": "India",
+    "gender": "Male",
+    "salary": 3500.0,
+    "bank": "RJHI",
+    "bankAc": "SA7780000377608016177730",
+    "department": "Ibra",
+    "companyName": "Alhouf",
+    "expiryDate": "2023-08-04",
+    "renewals": [],
+    "jobPosition": "Site Logistics & Equipment Supervisor",
+    "notes": "Name (Arabic): عبد الهادي ابراهيم | Base Salary: SAR 3,500.00 | Bank: RJHI (A/C: SA7780000377608016177730)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0080",
+    "rawId": "2510902105",
+    "fullName": "ربيع التوم عبدالله ابراهيم",
+    "nameArb": "ربيع التوم عبدالله ابراهيم",
+    "nationality": "Sudan",
+    "gender": "Male",
+    "salary": 2300.0,
+    "bank": "#N/A",
+    "bankAc": "#N/A",
+    "department": "Ibra",
+    "companyName": "Alhouf",
+    "expiryDate": "2023-10-26",
+    "renewals": [],
+    "jobPosition": "Senior Electrical Technician",
+    "notes": "Base Salary: SAR 2,300.00 | Bank: #N/A (A/C: #N/A)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0081",
+    "rawId": "2005060914",
+    "fullName": "فتحي رضوان احمد منصور",
+    "nameArb": "فتحي رضوان احمد منصور",
+    "nationality": "Egypt",
+    "gender": "Male",
+    "salary": null,
+    "bank": "#N/A",
+    "bankAc": "#N/A",
+    "department": "Head Office",
+    "companyName": "Alhouf",
+    "expiryDate": "2023-09-01",
+    "renewals": [],
+    "jobPosition": "Head Office Operations Coordinator",
+    "notes": "Bank: #N/A (A/C: #N/A)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0082",
+    "rawId": "2005088196",
+    "fullName": "محسن عبدالفتاح عبدالموجود المغربي",
+    "nameArb": "محسن عبدالفتاح عبدالموجود المغربي",
+    "nationality": "Egypt",
+    "gender": "Male",
+    "salary": null,
+    "bank": "#N/A",
+    "bankAc": "#N/A",
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2023-08-18",
+    "renewals": [],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Bank: #N/A (A/C: #N/A)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0083",
+    "rawId": "1052595681",
+    "fullName": "ابراهيم علي حسن القرني",
+    "nameArb": "ابراهيم علي حسن القرني",
+    "nationality": "Saudi Arabia",
+    "gender": "Male",
+    "salary": 4000.0,
+    "bank": "#N/A",
+    "bankAc": "#N/A",
+    "department": "Head Office",
+    "companyName": "Alhouf",
+    "expiryDate": "2030-12-31",
+    "renewals": [],
+    "jobPosition": "Government Relations Officer (GRO)",
+    "notes": "Base Salary: SAR 4,000.00 | Bank: #N/A (A/C: #N/A) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "isSaudi": true
+  },
+  {
+    "employeeCode": "EMP-0084",
+    "rawId": "1005250988",
+    "fullName": "انجى على ابن غالب اليماني",
+    "nameArb": "انجى على ابن غالب اليماني",
+    "nationality": "Saudi Arabia",
+    "gender": "Female",
+    "salary": null,
+    "bank": "RJHI",
+    "bankAc": "SA4080000634608010031460",
+    "department": "Head Office",
+    "companyName": "Alhouf",
+    "expiryDate": "2030-12-31",
+    "renewals": [],
+    "jobPosition": "HR & Talent Acquisition Specialist",
+    "notes": "Bank: RJHI (A/C: SA4080000634608010031460) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "isSaudi": true
+  },
+  {
+    "employeeCode": "EMP-0085",
+    "rawId": "2133556072",
+    "fullName": "مروان محمود موسى البشير",
+    "nameArb": "مروان محمود موسى البشير",
+    "nationality": "Sudan",
+    "gender": "Male",
+    "salary": 3000.0,
+    "bank": "NCBK",
+    "bankAc": "SA5010000011562771000110",
+    "department": "Head Office",
+    "companyName": "Alhouf",
+    "expiryDate": "2023-08-11",
+    "renewals": [],
+    "jobPosition": "Chief Financial Accountant",
+    "notes": "Base Salary: SAR 3,000.00 | Bank: NCBK (A/C: SA5010000011562771000110)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0086",
+    "rawId": "1063261182",
+    "fullName": "خاتمه احمد حسين طميحي",
+    "nameArb": "خاتمه احمد حسين طميحي",
+    "nationality": "Saudi Arabia",
+    "gender": "Female",
+    "salary": null,
+    "bank": "NCBK",
+    "bankAc": "SA0410000047459114000106",
+    "department": "Head Office",
+    "companyName": "Alhouf",
+    "expiryDate": "2030-12-31",
+    "renewals": [],
+    "jobPosition": "HR & Talent Acquisition Specialist",
+    "notes": "Bank: NCBK (A/C: SA0410000047459114000106) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "isSaudi": true
+  },
+  {
+    "employeeCode": "EMP-0087",
+    "rawId": "2372128260",
+    "fullName": "على محمد السيد اسماعيل",
+    "nameArb": "على محمد السيد اسماعيل",
+    "nationality": "Egypt",
+    "gender": "Male",
+    "salary": null,
+    "bank": "#N/A",
+    "bankAc": "#N/A",
+    "department": "Head Office",
+    "companyName": "Alhouf",
+    "expiryDate": "2021-01-13",
+    "renewals": [],
+    "jobPosition": "Head Office Operations Coordinator",
+    "notes": "Bank: #N/A (A/C: #N/A)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0088",
+    "rawId": "1065097543",
+    "fullName": "زهره عبده طالع عسيري",
+    "nameArb": "زهره عبده طالع عسيري",
+    "nationality": "Saudi Arabia",
+    "gender": "Female",
+    "salary": null,
+    "bank": "RIBL",
+    "bankAc": "SA2920000001363628989940",
+    "department": "Head Office",
+    "companyName": "Alhouf",
+    "expiryDate": "2030-12-31",
+    "renewals": [],
+    "jobPosition": "HR & Talent Acquisition Specialist",
+    "notes": "Bank: RIBL (A/C: SA2920000001363628989940) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "isSaudi": true
+  },
+  {
+    "employeeCode": "EMP-0089",
+    "rawId": "2190575908",
+    "fullName": "حافظ على محمد عبدالحفيظ",
+    "nameArb": "حافظ على محمد عبدالحفيظ",
+    "nationality": "Sudan",
+    "gender": "Male",
+    "salary": null,
+    "bank": "#N/A",
+    "bankAc": "#N/A",
+    "department": "Head Office",
+    "companyName": "Alhouf",
+    "expiryDate": "2022-08-29",
+    "renewals": [],
+    "jobPosition": "Head Office Operations Coordinator",
+    "notes": "Bank: #N/A (A/C: #N/A)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0090",
+    "rawId": "2180382463",
+    "fullName": "سليم محمد علي القيسي",
+    "nameArb": "سليم محمد علي القيسي",
+    "nationality": "Yemen",
+    "gender": "Male",
+    "salary": null,
+    "bank": "#N/A",
+    "bankAc": "#N/A",
+    "department": "Head Office",
+    "companyName": "Alhouf",
+    "expiryDate": "2023-03-10",
+    "renewals": [],
+    "jobPosition": "Head Office Operations Coordinator",
+    "notes": "Bank: #N/A (A/C: #N/A)",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0094",
+    "rawId": "1055646630",
+    "fullName": "ولاء علي يحي جاري",
+    "nameArb": "ولاء علي يحي جاري",
+    "nationality": "Saudi Arabia",
+    "gender": "Female",
+    "salary": 3000.0,
+    "bank": "NCBK",
+    "bankAc": "SA4210000011376892000110",
+    "department": "Head Office",
+    "companyName": "Alhouf",
+    "expiryDate": "2030-12-31",
+    "renewals": [],
+    "jobPosition": "HR & Talent Acquisition Specialist",
+    "notes": "Base Salary: SAR 3,000.00 | Bank: NCBK (A/C: SA4210000011376892000110) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "isSaudi": true
+  },
+  {
+    "employeeCode": "EMP-0095",
+    "rawId": "1077037891",
+    "fullName": "يسرى جابر علي مشيخي",
+    "nameArb": "يسرى جابر علي مشيخي",
+    "nationality": "Saudi Arabia",
+    "gender": "Male",
+    "salary": null,
+    "bank": "RJHI",
+    "bankAc": "SA8280000391608010100763",
+    "department": "Head Office",
+    "companyName": "Alhouf",
+    "expiryDate": "2030-12-31",
+    "renewals": [],
+    "jobPosition": "Government Relations Officer (GRO)",
+    "notes": "Bank: RJHI (A/C: SA8280000391608010100763) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "isSaudi": true
+  },
+  {
+    "employeeCode": "EMP-0184",
+    "rawId": "2625381583",
+    "fullName": "Sabir Hayat Ali",
+    "nameArb": null,
+    "nationality": "Pakistan",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2026-09-02",
+    "renewals": [],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0185",
+    "rawId": "2625452467",
+    "fullName": "Sardar Ali Khan",
+    "nameArb": null,
+    "nationality": "Pakistan",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2026-09-02",
+    "renewals": [],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  },
+  {
+    "employeeCode": "EMP-0178",
+    "rawId": "2626443598",
+    "fullName": "Zulqarnain Rahman",
+    "nameArb": null,
+    "nationality": "Pakistan",
+    "gender": "Male",
+    "salary": null,
+    "bank": null,
+    "bankAc": null,
+    "department": "Raja",
+    "companyName": "Alhouf",
+    "expiryDate": "2026-09-18",
+    "renewals": [],
+    "jobPosition": "Civil Site Specialist",
+    "notes": "Standard verified workforce record.",
+    "isSaudi": false
+  }
+]

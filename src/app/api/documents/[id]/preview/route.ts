@@ -23,7 +23,7 @@ export async function GET(
     return NextResponse.json({ error: "Document not found" }, { status: 404 });
   }
 
-  if (user.role !== "SUPER_ADMIN" && doc.employee.companyId !== user.companyId) {
+  if (user.role !== "SUPER_ADMIN" && user.role !== "HR_MANAGER" && doc.employee.companyId !== user.companyId) {
     return NextResponse.json({ error: "Forbidden access" }, { status: 403 });
   }
 
