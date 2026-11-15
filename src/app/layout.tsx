@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 
@@ -15,6 +15,12 @@ const inter = Inter({
   display: "swap",
   variable: "--font-inter",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   title: "AL HOUF Group | Enterprise Saudi Contracting & Workforce Management",
