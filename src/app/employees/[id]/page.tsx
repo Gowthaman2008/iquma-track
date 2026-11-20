@@ -107,32 +107,15 @@ function EmployeeProfileContent() {
   return (
     <AppLayout>
       <div className="max-w-5xl mx-auto space-y-6">
-        {/* Top Breadcrumb & Direct Navigation */}
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <div className="flex items-center gap-2 text-xs font-semibold text-gray-500">
-            <Link
-              href="/employees"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-gray-200 bg-white hover:bg-emerald-50 hover:text-[#006C35] hover:border-emerald-200 text-gray-700 shadow-2xs transition"
-            >
-              <ArrowLeft className="w-3.5 h-3.5" />
-              <span>Back to Employee Section</span>
-            </Link>
-            <Link
-              href="/dashboard"
-              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl border border-gray-200 bg-white hover:bg-emerald-50 hover:text-[#006C35] hover:border-emerald-200 text-gray-700 shadow-2xs transition"
-            >
-              <span>Dashboard</span>
-            </Link>
-            <span className="text-gray-300">/</span>
-            <Link
-              href="/employees"
-              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl border border-gray-200 bg-white hover:bg-emerald-50 hover:text-[#006C35] hover:border-emerald-200 text-gray-700 shadow-2xs transition"
-            >
-              <span>Employees Directory</span>
-            </Link>
-            <span className="text-gray-300">/</span>
-            <span className="text-gray-900 font-bold max-w-[180px] truncate">{employee.fullName}</span>
-          </div>
+        {/* Top Navigation */}
+        <div className="flex items-center justify-between">
+          <Link
+            href="/employees"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-600 hover:text-[#006C35] transition"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>Back to Employee Section</span>
+          </Link>
 
           <div className="flex items-center gap-2">
             <Link
