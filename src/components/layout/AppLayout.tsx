@@ -19,7 +19,6 @@ import {
   Menu,
   X,
   Clock,
-  Sparkles,
   ShieldCheck,
   CheckCircle2,
   AlertTriangle,
@@ -42,8 +41,6 @@ export default function AppLayout({ children }: AppLayoutProps) {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [riyadhTime, setRiyadhTime] = useState("");
-  const [isRunningCron, setIsRunningCron] = useState(false);
-  const [cronMessage, setCronMessage] = useState<string | null>(null);
   const [unreadAlerts, setUnreadAlerts] = useState<number>(0);
 
   // Fetch current user and unread alerts
@@ -106,25 +103,6 @@ export default function AppLayout({ children }: AppLayoutProps) {
     } catch (e) {
       console.error(e);
       router.push("/login");
-    }
-  };
-
-  const handleRunExpiryCheck = async () => {
-    setIsRunningCron(true);
-    setCronMessage(null);
-    try {
-      const res = await fetch("/api/cron/expiry-check", { method: "POST" });
-      const data = await res.json();
-      if (res.ok) {
-        setCronMessage(`Scanned ${data.report.totalScanned} employees. ${data.report.triggered} notices sent, ${data.report.skippedDuplicates} duplicates prevented.`);
-        setTimeout(() => setCronMessage(null), 5000);
-      } else {
-        setCronMessage(data.error || "Execution failed.");
-      }
-    } catch (err: any) {
-      setCronMessage("Network error triggering check.");
-    } finally {
-      setIsRunningCron(false);
     }
   };
 
@@ -249,18 +227,8 @@ export default function AppLayout({ children }: AppLayoutProps) {
           </div>
 
           <div className="flex items-center gap-2 sm:gap-3">
-            {/* Quick Run Expiry Check Engine Button */}
-            <button
-              onClick={handleRunExpiryCheck}
-              disabled={isRunningCron}
-              className="flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white transition shadow-xs disabled:opacity-50 cursor-pointer"
-            >
-              <Sparkles className={`w-3.5 h-3.5 ${isRunningCron ? "animate-spin" : "text-white"}`} />
-              <span className="hidden sm:inline">{isRunningCron ? "Checking..." : "Run Expiry Engine"}</span>
-            </button>
-
             {/* User Profile */}
-            <div className="flex items-center gap-2 pl-2 border-l border-slate-200">
+            <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full bg-emerald-600 text-white text-xs font-bold flex items-center justify-center shadow-xs">
                 {user?.name ? user.name.charAt(0).toUpperCase() : "U"}
               </div>
@@ -272,18 +240,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
           </div>
         </header>
 
-        {/* Global Alert Notification Banner if Cron Run */}
-        {cronMessage && (
-          <div className="bg-emerald-50 border-b border-emerald-200 px-4 sm:px-6 py-2.5 flex items-center justify-between text-xs text-emerald-800 animate-in fade-in">
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>{cronMessage}</span>
-            </div>
-            <button onClick={() => setCronMessage(null)} className="text-slate-400 hover:text-slate-700">
-              <X className="w-3.5 h-3.5" />
-            </button>
-          </div>
-        )}
+        {/* Scrollable Page Body */}
 
         {/* Scrollable Page Body */}
         <main className="flex-1 overflow-y-auto p-3 sm:p-5 md:p-6 lg:p-8 bg-[#F8FAFC]">
