@@ -190,6 +190,21 @@ export async function POST(request: Request) {
       );
     }
 
+    const notesParts: string[] = [];
+    const serialNo = body.no !== undefined ? body.no : (body.serialNo || "");
+    if (serialNo) notesParts.push(`NO: ${serialNo}`);
+    if (body.nameArb?.trim()) notesParts.push(`Name (Arabic): ${body.nameArb.trim()}`);
+    if (body.salary) notesParts.push(`Base Salary: SAR ${body.salary}`);
+    if (body.bank && body.bank !== "—" && body.bank.trim() !== "") {
+      notesParts.push(`Bank: ${body.bank.trim()} (A/C: ${body.bankAc?.trim() || "On file"})`);
+    }
+    if (body.internalNotes?.trim()) {
+      notesParts.push(body.internalNotes.trim());
+    } else if (notes && !notes.includes("NO:") && !notes.includes("Bank:")) {
+      notesParts.push(notes.trim());
+    }
+    const finalNotes = notesParts.length > 0 ? notesParts.join(" | ") : (notes || null);
+
     const encryptedIqama = encryptIqamaNumber(iqamaNumber.trim());
     const maskedIqama = maskIqamaNumber(iqamaNumber.trim());
     const targetCompanyId = (user.role === "SUPER_ADMIN" && companyId) ? companyId : (user.companyId || "cmvla9fqc0000r7tkb82ni1l4");
@@ -228,7 +243,7 @@ export async function POST(request: Request) {
           gender: gender || null,
           passportNumber: passportNumber || null,
           passportExpiryDate: passportExpiryDate ? new Date(passportExpiryDate) : null,
-          notes: notes || null,
+          notes: finalNotes,
         },
       });
 

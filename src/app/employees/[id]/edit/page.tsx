@@ -9,14 +9,16 @@ import {
   ArrowLeft,
   Calendar,
   CreditCard,
-  Mail,
-  Phone,
   Building,
   Briefcase,
   Globe,
   FileText,
   CheckCircle2,
   AlertCircle,
+  Hash,
+  Wallet,
+  Clock,
+  Sparkles,
 } from "lucide-react";
 
 function EditEmployeeContent() {
@@ -27,26 +29,44 @@ function EditEmployeeContent() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [companies, setCompanies] = useState<Array<{ id: string; companyName: string }>>([]);
 
   const [formData, setFormData] = useState({
-    fullName: "",
+    no: "",
     employeeId: "",
+    fullName: "",
+    nameArb: "",
     iqamaNumber: "",
+    nationality: "Bangladesh",
+    gender: "Male",
     iqamaIssueDate: "",
     iqamaExpiryDate: "",
-    dob: "",
-    nationality: "Saudi Arabia",
-    gender: "Male",
-    department: "Engineering",
-    jobPosition: "",
-    mobileNumber: "",
-    email: "",
-    passportNumber: "",
-    passportExpiryDate: "",
     status: "ACTIVE",
-    notes: "",
+    bank: "",
+    bankAc: "",
+    salary: "",
+    department: "Raja",
+    companyId: "",
+    jobPosition: "",
+    email: "",
+    mobileNumber: "",
+    passportNumber: "",
+    internalNotes: "",
   });
 
+  // Load companies
+  useEffect(() => {
+    fetch("/api/companies")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.companies) {
+          setCompanies(data.companies);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
+  // Load employee data
   useEffect(() => {
     if (!id) return;
     fetch(`/api/employees/${id}`)
@@ -55,32 +75,55 @@ function EditEmployeeContent() {
         if (data.employee) {
           const emp = data.employee;
           setFormData({
-            fullName: emp.fullName || "",
+            no: emp.no !== undefined && emp.no !== null ? String(emp.no) : (emp.serialNo ? String(emp.serialNo) : ""),
             employeeId: emp.employeeId || "",
-            iqamaNumber: emp.plainIqamaNumber || emp.iqamaNumberMasked || "",
+            fullName: emp.fullName || "",
+            nameArb: emp.nameArb || "",
+            iqamaNumber: emp.plainIqamaNumber || emp.rawId || emp.iqamaNumberMasked || "",
+            nationality: emp.nationality || "Bangladesh",
+            gender: emp.gender || "Male",
             iqamaIssueDate: emp.iqamaIssueDate ? emp.iqamaIssueDate.split("T")[0] : "",
             iqamaExpiryDate: emp.iqamaExpiryDate ? emp.iqamaExpiryDate.split("T")[0] : "",
-            dob: emp.dob ? emp.dob.split("T")[0] : "",
-            nationality: emp.nationality || "Saudi Arabia",
-            gender: emp.gender || "Male",
-            department: emp.department || "Engineering",
-            jobPosition: emp.jobPosition || "",
-            mobileNumber: emp.mobileNumber || "",
-            email: emp.email || "",
-            passportNumber: emp.passportNumber || "",
-            passportExpiryDate: emp.passportExpiryDate ? emp.passportExpiryDate.split("T")[0] : "",
             status: emp.status || "ACTIVE",
-            notes: emp.notes || "",
+            bank: emp.bank && emp.bank !== "—" ? emp.bank : "",
+            bankAc: emp.bankAc && emp.bankAc !== "—" ? emp.bankAc : "",
+            salary: emp.salary && emp.salary !== "—" ? String(emp.salary).replace(/[^0-9.]/g, "") : "",
+            department: emp.department || "Raja",
+            companyId: emp.companyId || (emp.company?.id || ""),
+            jobPosition: emp.jobPosition || "Civil Site Specialist",
+            email: emp.email || "",
+            mobileNumber: emp.mobileNumber || "",
+            passportNumber: emp.passportNumber || "",
+            internalNotes: emp.internalNotes || (emp.notes && !emp.notes.includes("NO:") ? emp.notes : ""),
           });
         }
       })
-      .catch((e) => setError("Failed to load employee."))
+      .catch(() => setError("Failed to load employee details."))
       .finally(() => setLoading(false));
   }, [id]);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
+
+  // Live Defrance (difference in days) calculation
+  const calculateDefrance = () => {
+    if (!formData.iqamaExpiryDate) return null;
+    const expiry = new Date(`${formData.iqamaExpiryDate}T00:00:00`);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const diffTime = expiry.getTime() - today.getTime();
+    return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  };
+
+  const defrance = calculateDefrance();
+  const todayFormatted = new Intl.DateTimeFormat("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  }).format(new Date());
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -108,15 +151,42 @@ function EditEmployeeContent() {
   };
 
   const nationalities = [
-    "Saudi Arabia", "Egypt", "India", "Pakistan", "Philippines", "Bangladesh",
-    "Jordan", "Lebanon", "Sudan", "Yemen", "Syria", "United Kingdom",
-    "United States", "Canada", "Singapore", "Other"
+    "Bangladesh",
+    "India",
+    "Pakistan",
+    "Sudan",
+    "Egypt",
+    "Morocco",
+    "Sri Lanka",
+    "Yemen",
+    "Saudi Arabia",
+    "Philippines",
+    "Jordan",
+    "Syria",
+    "Other",
   ];
 
   const departments = [
-    "Engineering", "Information Technology", "Human Resources", "Finance & Accounts",
-    "Operations", "Logistics & Supply", "Sales & Marketing", "Legal & Compliance",
-    "Executive Management"
+    "Raja",
+    "Head Office",
+    "Ibra",
+    "Operations",
+    "Maintenance",
+    "Civil Construction",
+  ];
+
+  const banks = [
+    "NCBK",
+    "RJHI",
+    "INMA",
+    "SABB",
+    "RIBL",
+    "ANBI",
+    "BSFR",
+    "SNB",
+    "ALBILAD",
+    "ALJAZIRA",
+    "Other",
   ];
 
   if (loading) {
@@ -132,6 +202,7 @@ function EditEmployeeContent() {
   return (
     <AppLayout>
       <div className="max-w-4xl mx-auto space-y-6">
+        {/* Navigation Breadcrumb */}
         <div className="flex items-center justify-between">
           <Link
             href={`/employees/${id}`}
@@ -140,18 +211,37 @@ function EditEmployeeContent() {
             <ArrowLeft className="w-4 h-4" />
             <span>Cancel and Return to Profile</span>
           </Link>
-          <span className="text-xs text-gray-400">Editing: {formData.employeeId}</span>
+          <div className="flex items-center gap-2 text-xs">
+            {formData.no && (
+              <span className="px-2 py-0.5 bg-gray-100 rounded-md font-bold text-gray-700">
+                NO: {formData.no}
+              </span>
+            )}
+            <span className="font-mono text-gray-400">{formData.employeeId}</span>
+          </div>
         </div>
 
+        {/* Edit Form Container */}
         <div className="bg-white rounded-3xl border border-[#E2ECE5] shadow-xs overflow-hidden">
+          {/* Header Banner */}
           <div className="bg-gradient-to-r from-[#004B28] to-[#006C35] p-6 text-white flex items-center justify-between">
             <div>
-              <h1 className="text-xl font-bold flex items-center gap-2">
+              <div className="flex items-center gap-2">
+                <span className="px-2 py-0.5 rounded bg-emerald-400/20 text-emerald-200 text-[10px] font-bold uppercase tracking-wider">
+                  Roster Record Editor
+                </span>
+                {formData.no && (
+                  <span className="px-2 py-0.5 rounded bg-white/20 text-white text-[10px] font-mono font-bold">
+                    Row #{formData.no}
+                  </span>
+                )}
+              </div>
+              <h1 className="text-xl font-bold flex items-center gap-2 mt-1">
                 <Edit className="w-5 h-5 text-emerald-300" />
                 <span>Edit Employee: {formData.fullName}</span>
               </h1>
               <p className="text-xs text-emerald-100 mt-1">
-                Update residence permit details, department assignment, or contact channels.
+                Update master workforce identity, banking coordinates, department, and residence permit details.
               </p>
             </div>
           </div>
@@ -164,47 +254,90 @@ function EditEmployeeContent() {
               </div>
             )}
 
+            {/* 1. MASTER WORKFORCE IDENTITY (Headers: NO, ID Number, Nationality, Name Eng, Name Arb) */}
             <div>
-              <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4 border-b pb-2">
-                1. Personal & Company Identity
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="flex items-center justify-between border-b pb-2 mb-4">
+                <h3 className="text-xs font-bold text-gray-800 uppercase tracking-wider flex items-center gap-2">
+                  <Hash className="w-4 h-4 text-[#006C35]" />
+                  <span>1. Workforce Identity & Roster Details</span>
+                </h3>
+                <span className="text-[10px] text-gray-400 uppercase font-semibold">
+                  Headers: NO &bull; ID Number &bull; Nationality &bull; Name Eng &bull; Name Arb
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-gray-700 mb-1">
-                    Employee Full Name *
+                  <label className="block text-xs font-bold text-gray-700 mb-1">
+                    NO (Roster Serial #)
+                  </label>
+                  <input
+                    type="number"
+                    name="no"
+                    placeholder="e.g. 172"
+                    value={formData.no}
+                    onChange={handleChange}
+                    className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm font-mono font-bold focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none"
+                  />
+                  <span className="text-[10px] text-gray-400 mt-0.5 block">Excel row sequence identifier</span>
+                </div>
+
+                <div className="md:col-span-2">
+                  <label className="block text-xs font-bold text-gray-700 mb-1">
+                    ID Number (10 Digits) *
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    maxLength={10}
+                    name="iqamaNumber"
+                    placeholder="e.g. 2619409580"
+                    value={formData.iqamaNumber}
+                    onChange={handleChange}
+                    className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm font-mono font-bold text-gray-900 focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none"
+                  />
+                  <span className="text-[10px] text-gray-400 mt-0.5 block">Saudi National ID or Expatriate Iqama Number</span>
+                </div>
+
+                <div className="md:col-span-2">
+                  <label className="block text-xs font-bold text-gray-700 mb-1">
+                    Name Eng (Employee Full Name - English) *
                   </label>
                   <input
                     type="text"
                     required
                     name="fullName"
+                    placeholder="e.g. YEASIN ARAFAT"
                     value={formData.fullName}
                     onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none"
+                    className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm font-semibold focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-gray-700 mb-1">
-                    Employee ID
+                  <label className="block text-xs font-bold text-gray-700 mb-1">
+                    Name Arb (الاسم باللغة العربية)
                   </label>
                   <input
                     type="text"
-                    disabled
-                    name="employeeId"
-                    value={formData.employeeId}
-                    className="w-full px-3.5 py-2.5 bg-gray-100 border border-gray-200 rounded-xl text-sm font-mono text-gray-500 cursor-not-allowed"
+                    dir="rtl"
+                    name="nameArb"
+                    placeholder="الاسم بالعربي"
+                    value={formData.nameArb}
+                    onChange={handleChange}
+                    className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm font-arabic focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none text-right"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-gray-700 mb-1">
-                    Nationality
+                  <label className="block text-xs font-bold text-gray-700 mb-1">
+                    Nationality *
                   </label>
                   <select
                     name="nationality"
                     value={formData.nationality}
                     onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none"
+                    className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm font-medium focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none"
                   >
                     {nationalities.map((n) => (
                       <option key={n} value={n}>
@@ -215,14 +348,29 @@ function EditEmployeeContent() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-gray-700 mb-1">
+                  <label className="block text-xs font-bold text-gray-700 mb-1">
+                    Gender
+                  </label>
+                  <select
+                    name="gender"
+                    value={formData.gender}
+                    onChange={handleChange}
+                    className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none"
+                  >
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-gray-700 mb-1">
                     Status *
                   </label>
                   <select
                     name="status"
                     value={formData.status}
                     onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none"
+                    className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm font-semibold focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none"
                   >
                     <option value="ACTIVE">Active (Working)</option>
                     <option value="VACATION">Annual Vacation</option>
@@ -233,28 +381,36 @@ function EditEmployeeContent() {
               </div>
             </div>
 
-            <div className="bg-[#EFF8F3] p-5 rounded-2xl border border-[#D0E5D8]">
-              <h3 className="text-xs font-bold text-[#004B28] uppercase tracking-wider mb-4 flex items-center gap-2">
-                <CreditCard className="w-4 h-4 text-[#006C35]" />
-                <span>2. Saudi Arabian Iqama Details</span>
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* 2. SAUDI IQAMA & EXPIRY DETAILS (Headers: Iqama End Date, Today, Defrance) */}
+            <div className="bg-[#EFF8F3] p-6 rounded-2xl border border-[#D0E5D8] space-y-4">
+              <div className="flex items-center justify-between border-b border-[#006C35]/15 pb-2">
+                <h3 className="text-xs font-bold text-[#004B28] uppercase tracking-wider flex items-center gap-2">
+                  <CreditCard className="w-4 h-4 text-[#006C35]" />
+                  <span>2. Iqama Validity & Expiry Tracking</span>
+                </h3>
+                <span className="text-[10px] text-[#004B28]/70 uppercase font-semibold">
+                  Headers: Iqama End Date &bull; Today &bull; Defrance
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-[#004B28] mb-1">
-                    Iqama Number (10 Digits)
+                  <label className="block text-xs font-bold text-[#004B28] mb-1">
+                    Iqama End Date (Expiry Date) *
                   </label>
                   <input
-                    type="text"
-                    maxLength={10}
-                    name="iqamaNumber"
-                    value={formData.iqamaNumber}
+                    type="date"
+                    required
+                    name="iqamaExpiryDate"
+                    value={formData.iqamaExpiryDate}
                     onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 bg-white border border-[#006C35]/30 rounded-xl text-sm font-mono font-bold focus:ring-2 focus:ring-[#006C35] focus:outline-none"
+                    className="w-full px-3.5 py-2.5 bg-white border border-[#006C35]/30 rounded-xl text-sm font-bold text-gray-900 focus:ring-2 focus:ring-[#006C35] focus:outline-none"
                   />
+                  <span className="text-[10px] text-gray-500 mt-0.5 block">Official expiration registered on Absher / Muqeem</span>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-[#004B28] mb-1">
+                  <label className="block text-xs font-bold text-[#004B28] mb-1">
                     Iqama Issue Date
                   </label>
                   <input
@@ -264,38 +420,142 @@ function EditEmployeeContent() {
                     onChange={handleChange}
                     className="w-full px-3.5 py-2.5 bg-white border border-[#006C35]/30 rounded-xl text-sm focus:ring-2 focus:ring-[#006C35] focus:outline-none"
                   />
+                  <span className="text-[10px] text-gray-500 mt-0.5 block">Permit issuance date</span>
+                </div>
+              </div>
+
+              {/* Live Defrance Preview Indicator */}
+              <div className="bg-white/90 backdrop-blur-xs rounded-xl p-3.5 border border-[#006C35]/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4 text-[#006C35]" />
+                  <div className="text-xs">
+                    <span className="text-gray-500 font-medium">Evaluation Date (Today): </span>
+                    <span className="font-mono font-bold text-gray-800">{todayFormatted}</span>
+                  </div>
                 </div>
 
-                <div>
-                  <label className="block text-xs font-semibold text-[#004B28] mb-1">
-                    Iqama Expiry Date *
-                  </label>
-                  <input
-                    type="date"
-                    required
-                    name="iqamaExpiryDate"
-                    value={formData.iqamaExpiryDate}
-                    onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 bg-white border border-red-300 rounded-xl text-sm font-bold text-red-900 focus:ring-2 focus:ring-[#006C35] focus:outline-none"
-                  />
+                <div className="flex items-center gap-2 text-xs">
+                  <span className="text-gray-500 font-semibold uppercase tracking-wider text-[10px]">
+                    Defrance (Days):
+                  </span>
+                  {defrance !== null ? (
+                    <span
+                      className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold font-mono ${
+                        defrance < 0
+                          ? "bg-rose-100 text-rose-800 border border-rose-300"
+                          : defrance <= 7
+                          ? "bg-red-100 text-red-800 border border-red-300"
+                          : defrance <= 30
+                          ? "bg-amber-100 text-amber-800 border border-amber-300"
+                          : "bg-emerald-100 text-emerald-800 border border-emerald-300"
+                      }`}
+                    >
+                      {defrance < 0 ? `${defrance}d (Overdue)` : `${defrance}d Remaining`}
+                    </span>
+                  ) : (
+                    <span className="text-gray-400 italic">Select expiry date</span>
+                  )}
                 </div>
               </div>
             </div>
 
+            {/* 3. BANKING & PAYROLL DETAILS (Headers: Bank, Bank A/C, Salary) */}
             <div>
-              <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4 border-b pb-2">
-                3. Job & Contact Information
-              </h3>
+              <div className="flex items-center justify-between border-b pb-2 mb-4">
+                <h3 className="text-xs font-bold text-gray-800 uppercase tracking-wider flex items-center gap-2">
+                  <Wallet className="w-4 h-4 text-[#006C35]" />
+                  <span>3. Banking & Payroll Details</span>
+                </h3>
+                <span className="text-[10px] text-gray-400 uppercase font-semibold">
+                  Headers: Bank &bull; Bank A/C &bull; Salary
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                  <label className="block text-xs font-bold text-gray-700 mb-1">
+                    Bank (Bank Name)
+                  </label>
+                  <input
+                    type="text"
+                    name="bank"
+                    placeholder="e.g. NCBK, RJHI, INMA"
+                    value={formData.bank}
+                    onChange={handleChange}
+                    className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm font-semibold uppercase focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none"
+                  />
+                  <div className="flex flex-wrap gap-1 mt-1.5">
+                    {banks.slice(0, 5).map((b) => (
+                      <button
+                        type="button"
+                        key={b}
+                        onClick={() => setFormData((prev) => ({ ...prev, bank: b }))}
+                        className="text-[10px] px-1.5 py-0.5 rounded bg-gray-100 text-gray-600 hover:bg-[#EFF8F3] hover:text-[#006C35] transition font-bold"
+                      >
+                        {b}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-gray-700 mb-1">
+                    Bank A/C (Account # / IBAN)
+                  </label>
+                  <input
+                    type="text"
+                    name="bankAc"
+                    placeholder="e.g. SA7410000066800000631908"
+                    value={formData.bankAc}
+                    onChange={handleChange}
+                    className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm font-mono font-medium focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none"
+                  />
+                  <span className="text-[10px] text-gray-400 mt-0.5 block">Official IBAN for wage protection (WPS)</span>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-gray-700 mb-1">
+                    Salary (Base Salary SAR)
+                  </label>
+                  <div className="relative">
+                    <span className="absolute left-3.5 top-2.5 text-xs font-bold text-gray-400">SAR</span>
+                    <input
+                      type="number"
+                      step="any"
+                      name="salary"
+                      placeholder="e.g. 2500"
+                      value={formData.salary}
+                      onChange={handleChange}
+                      className="w-full pl-12 pr-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm font-mono font-bold focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none"
+                    />
+                  </div>
+                  <span className="text-[10px] text-gray-400 mt-0.5 block">Monthly basic wage in SAR</span>
+                </div>
+              </div>
+            </div>
+
+            {/* 4. ORGANIZATION & CONTACT INFORMATION (Headers: department, Company Name) */}
+            <div>
+              <div className="flex items-center justify-between border-b pb-2 mb-4">
+                <h3 className="text-xs font-bold text-gray-800 uppercase tracking-wider flex items-center gap-2">
+                  <Building className="w-4 h-4 text-[#006C35]" />
+                  <span>4. Organization & Assignment</span>
+                </h3>
+                <span className="text-[10px] text-gray-400 uppercase font-semibold">
+                  Headers: department &bull; Company Name
+                </span>
+              </div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-gray-700 mb-1">
-                    Department *
+                  <label className="block text-xs font-bold text-gray-700 mb-1">
+                    department (Department / Division) *
                   </label>
                   <select
                     name="department"
                     value={formData.department}
                     onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none"
+                    className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm font-semibold focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none"
                   >
                     {departments.map((d) => (
                       <option key={d} value={d}>
@@ -306,13 +566,31 @@ function EditEmployeeContent() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-gray-700 mb-1">
-                    Job Title / Position *
+                  <label className="block text-xs font-bold text-gray-700 mb-1">
+                    Company Name (Sponsoring Entity) *
+                  </label>
+                  <select
+                    name="companyId"
+                    value={formData.companyId}
+                    onChange={handleChange}
+                    className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm font-semibold focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none"
+                  >
+                    {companies.map((c) => (
+                      <option key={c.id} value={c.id}>
+                        {c.companyName}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-gray-700 mb-1">
+                    Job Title / Position
                   </label>
                   <input
                     type="text"
-                    required
                     name="jobPosition"
+                    placeholder="e.g. Civil Site Specialist"
                     value={formData.jobPosition}
                     onChange={handleChange}
                     className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none"
@@ -320,47 +598,51 @@ function EditEmployeeContent() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-gray-700 mb-1">
-                    Corporate Email *
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-gray-700 mb-1">
+                  <label className="block text-xs font-bold text-gray-700 mb-1">
                     Saudi Mobile Number
                   </label>
                   <input
                     type="text"
                     name="mobileNumber"
+                    placeholder="+966 50 123 4567"
                     value={formData.mobileNumber}
                     onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none"
+                    className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm font-mono focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none"
+                  />
+                </div>
+
+                <div className="md:col-span-2">
+                  <label className="block text-xs font-bold text-gray-700 mb-1">
+                    Corporate Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="name@alhouf.sa"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm font-mono focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none"
                   />
                 </div>
               </div>
             </div>
 
+            {/* 5. INTERNAL NOTES */}
             <div>
-              <label className="block text-xs font-semibold text-gray-700 mb-1">
-                Internal Notes
+              <label className="block text-xs font-bold text-gray-700 mb-1">
+                Internal HR / Qiwa / Muqeem Notes
               </label>
               <textarea
-                name="notes"
-                rows={3}
-                value={formData.notes}
+                name="internalNotes"
+                rows={2}
+                placeholder="Additional administrative or sponsor notes..."
+                value={formData.internalNotes}
                 onChange={handleChange}
                 className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:ring-2 focus:ring-[#006C35] focus:outline-none resize-none"
               />
             </div>
 
+            {/* Action Buttons */}
             <div className="flex items-center justify-end gap-3 pt-4 border-t border-gray-100">
               <Link
                 href={`/employees/${id}`}
@@ -397,4 +679,3 @@ export default function EditEmployeePage() {
     </React.Suspense>
   );
 }
-

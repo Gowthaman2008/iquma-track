@@ -46,15 +46,25 @@ export async function GET(
       }
 
       const notes = employee.notes || "";
+      const noMatch = notes.match(/NO:\s*(\d+)/);
       const bankMatch = notes.match(/Bank:\s*([^\s(|]+)/);
       const acMatch = notes.match(/A\/C:\s*([^)|]+)/);
       const nameArbMatch = notes.match(/Name \(Arabic\):\s*([^|]+)/);
-      const salaryMatch = notes.match(/Base Salary:\s*([^|]+)/);
+      const salaryMatch = notes.match(/Base Salary:\s*(?:SAR\s*)?([^|]+)/);
 
-      const bank = bankMatch ? bankMatch[1].trim() : ((employee as any).bank || "—");
-      const bankAc = acMatch ? acMatch[1].trim() : ((employee as any).bankAccount || "—");
+      const serialNo = noMatch ? parseInt(noMatch[1], 10) : (parseInt(employee.employeeId?.replace(/\D/g, "") || "0", 10) || 0);
+      const bank = bankMatch ? bankMatch[1].trim() : ((employee as any).bank || "");
+      const bankAc = acMatch ? acMatch[1].trim() : ((employee as any).bankAccount || "");
       const nameArb = nameArbMatch ? nameArbMatch[1].trim() : "";
-      const salary = salaryMatch ? salaryMatch[1].trim() : "";
+      const salary = salaryMatch ? salaryMatch[1].trim().replace(/,/g, "") : "";
+
+      // Extract free-form internal notes
+      const internalNotes = notes
+        .split("|")
+        .map((s: string) => s.trim())
+        .filter((s: string) => !s.startsWith("NO:") && !s.startsWith("Name (Arabic):") && !s.startsWith("Base Salary:") && !s.startsWith("Bank:"))
+        .join(" | ");
+
       const todayFormatted = new Intl.DateTimeFormat("en-GB", {
         day: "2-digit",
         month: "short",
@@ -66,10 +76,13 @@ export async function GET(
           ...employee,
           plainIqamaNumber,
           rawId: plainIqamaNumber,
+          no: serialNo || "",
+          serialNo,
           bank,
           bankAc,
           nameArb,
           salary,
+          internalNotes,
           todayStr: todayFormatted,
           evaluation,
         },
@@ -125,6 +138,42 @@ export async function PUT(
         notes: body.notes !== undefined ? body.notes : existing.notes,
         passportNumber: body.passportNumber || existing.passportNumber,
       };
+
+      if (body.companyId) {
+        updateData.companyId = body.companyId;
+      }
+
+      if (body.no) {
+        const padded = String(body.no).padStart(4, "0");
+        const candidate = `EMP-${padded}`;
+        if (candidate !== existing.employeeId) {
+          try {
+            const conflict = await prisma.employee.findUnique({ where: { employeeId: candidate } });
+            if (!conflict) {
+              updateData.employeeId = candidate;
+            }
+          } catch {}
+        }
+      }
+
+      // Rebuild structured notes preserving NO, Arabic Name, Salary, Bank details
+      const notesParts: string[] = [];
+      const serialNo = body.no !== undefined ? body.no : (body.serialNo || "");
+      if (serialNo) notesParts.push(`NO: ${serialNo}`);
+      if (body.nameArb?.trim()) notesParts.push(`Name (Arabic): ${body.nameArb.trim()}`);
+      if (body.salary) notesParts.push(`Base Salary: SAR ${body.salary}`);
+      if (body.bank && body.bank !== "—" && body.bank.trim() !== "") {
+        notesParts.push(`Bank: ${body.bank.trim()} (A/C: ${body.bankAc?.trim() || "On file"})`);
+      }
+      if (body.internalNotes?.trim()) {
+        notesParts.push(body.internalNotes.trim());
+      } else if (body.notes && !body.notes.includes("NO:") && !body.notes.includes("Bank:")) {
+        notesParts.push(body.notes.trim());
+      }
+
+      if (notesParts.length > 0) {
+        updateData.notes = notesParts.join(" | ");
+      }
 
       if (body.iqamaNumber && body.iqamaNumber.trim().length >= 5) {
         updateData.iqamaNumberEncrypted = encryptIqamaNumber(body.iqamaNumber.trim());
