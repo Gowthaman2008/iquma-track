@@ -48,6 +48,56 @@ export default function RootLayout({
     <html lang="en" className="h-full" suppressHydrationWarning>
       <head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                function cleanNode(node) {
+                  if (!node || node.nodeType !== 1) return;
+                  for (var i = node.attributes.length - 1; i >= 0; i--) {
+                    var name = node.attributes[i].name;
+                    if (name.indexOf('bis_') === 0 || name.indexOf('__processed_') === 0) {
+                      node.removeAttribute(name);
+                    }
+                  }
+                  var children = node.querySelectorAll ? node.querySelectorAll('*') : [];
+                  for (var j = 0; j < children.length; j++) {
+                    var el = children[j];
+                    for (var k = el.attributes.length - 1; k >= 0; k--) {
+                      var attr = el.attributes[k].name;
+                      if (attr.indexOf('bis_') === 0 || attr.indexOf('__processed_') === 0) {
+                        el.removeAttribute(attr);
+                      }
+                    }
+                  }
+                }
+                cleanNode(document.documentElement);
+                if (typeof MutationObserver !== 'undefined') {
+                  var observer = new MutationObserver(function(mutations) {
+                    for (var i = 0; i < mutations.length; i++) {
+                      var m = mutations[i];
+                      if (m.type === 'attributes') {
+                        var attr = m.attributeName;
+                        if (attr && (attr.indexOf('bis_') === 0 || attr.indexOf('__processed_') === 0) && m.target.hasAttribute(attr)) {
+                          m.target.removeAttribute(attr);
+                        }
+                      } else if (m.addedNodes && m.addedNodes.length > 0) {
+                        for (var n = 0; n < m.addedNodes.length; n++) {
+                          cleanNode(m.addedNodes[n]);
+                        }
+                      }
+                    }
+                  });
+                  observer.observe(document.documentElement, {
+                    attributes: true,
+                    childList: true,
+                    subtree: true,
+                  });
+                }
+              })();
+            `,
+          }}
+        />
       </head>
       <body
         suppressHydrationWarning
