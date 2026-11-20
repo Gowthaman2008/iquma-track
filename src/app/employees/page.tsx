@@ -47,10 +47,6 @@ export default function EmployeesPage() {
   const [importFile, setImportFile] = useState<File | null>(null);
   const [importing, setImporting] = useState(false);
 
-  // Pagination state
-  const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize, setPageSize] = useState(25);
-
   useEffect(() => {
     fetch("/api/companies")
       .then((res) => res.json())
@@ -85,7 +81,6 @@ export default function EmployeesPage() {
   };
 
   useEffect(() => {
-    setCurrentPage(1);
     fetchEmployees();
   }, [companyFilter, departmentFilter, expiryFilter, statusFilter]);
 
@@ -240,13 +235,6 @@ export default function EmployeesPage() {
     }
   };
 
-  // Pagination slice
-  const totalPages = Math.ceil(employees.length / pageSize) || 1;
-  const paginatedEmployees = employees.slice(
-    (currentPage - 1) * pageSize,
-    currentPage * pageSize
-  );
-
   return (
     <AppLayout>
       <div className="space-y-6">
@@ -378,23 +366,6 @@ export default function EmployeesPage() {
               <option value="INACTIVE">Inactive</option>
               <option value="VACATION">Vacation</option>
             </select>
-
-            {/* Page Size */}
-            <select
-              value={pageSize}
-              onChange={(e) => {
-                setPageSize(Number(e.target.value));
-                setCurrentPage(1);
-              }}
-              className="px-2.5 py-2 bg-gray-50 border border-gray-200 rounded-xl text-xs text-gray-600 focus:outline-none focus:ring-2 focus:ring-[#006C35]"
-              title="Rows per page"
-            >
-              <option value={10}>10 / page</option>
-              <option value={25}>25 / page</option>
-              <option value={50}>50 / page</option>
-              <option value={100}>100 / page</option>
-              <option value={250}>250 / page</option>
-            </select>
           </div>
         </div>
 
@@ -453,14 +424,14 @@ export default function EmployeesPage() {
                       Loading employee directory...
                     </td>
                   </tr>
-                ) : paginatedEmployees.length === 0 ? (
+                ) : employees.length === 0 ? (
                   <tr>
                     <td colSpan={8} className="py-12 text-center text-gray-500">
                       No employees match your search or filter criteria.
                     </td>
                   </tr>
                 ) : (
-                  paginatedEmployees.map((emp) => {
+                  employees.map((emp) => {
                     const isSelected = selectedIds.includes(emp.id);
                     return (
                       <tr
@@ -621,31 +592,14 @@ export default function EmployeesPage() {
             </table>
           </div>
 
-          {/* Pagination Controls */}
+          {/* Table Single-Page Directory Footer */}
           <div className="p-4 border-t border-[#E2ECE5] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-600 text-center sm:text-left">
-            <span>
-              Showing {employees.length === 0 ? 0 : (currentPage - 1) * pageSize + 1} to{" "}
-              {Math.min(currentPage * pageSize, employees.length)} of {employees.length} employees
+            <span className="font-semibold text-slate-800">
+              Showing all <strong className="text-emerald-700 font-bold">{employees.length}</strong> employees on single page
             </span>
-            <div className="flex items-center gap-1">
-              <button
-                disabled={currentPage <= 1}
-                onClick={() => setCurrentPage((p) => p - 1)}
-                className="px-2.5 py-1 rounded-md border border-gray-300 disabled:opacity-40 hover:bg-gray-50"
-              >
-                Previous
-              </button>
-              <span className="px-3 py-1 font-semibold text-gray-800">
-                Page {currentPage} of {totalPages}
-              </span>
-              <button
-                disabled={currentPage >= totalPages}
-                onClick={() => setCurrentPage((p) => p + 1)}
-                className="px-2.5 py-1 rounded-md border border-gray-300 disabled:opacity-40 hover:bg-gray-50"
-              >
-                Next
-              </button>
-            </div>
+            <span className="text-[11px] text-slate-400">
+              Full directory view &bull; All records displayed
+            </span>
           </div>
         </div>
       </div>
