@@ -9,7 +9,6 @@ import {
   AlertTriangle,
   Clock,
   AlertCircle,
-  FileQuestion,
   TrendingUp,
   ArrowRight,
   ExternalLink,
@@ -77,8 +76,8 @@ export default function DashboardPage() {
       <AppLayout>
         <div className="space-y-6 animate-pulse">
           <div className="h-8 bg-slate-200 rounded-lg w-1/4" />
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-            {[1, 2, 3, 4, 5].map((i) => (
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            {[1, 2, 3, 4].map((i) => (
               <div key={i} className="h-32 bg-slate-200 rounded-2xl" />
             ))}
           </div>
@@ -144,16 +143,6 @@ export default function DashboardPage() {
       trend: metrics.expired > 0 ? "Action Required" : "Zero Expired",
       highlight: metrics.expired > 0,
     },
-    {
-      title: "Missing Info",
-      value: metrics.missingInfo,
-      desc: "Missing passport or details",
-      icon: FileQuestion,
-      accentGradient: "from-violet-500 to-purple-600",
-      bgIcon: "bg-violet-50 text-violet-600 border border-violet-100",
-      badgeStyle: "bg-violet-50 text-violet-700 border border-violet-200/60",
-      trend: "Needs Update",
-    },
   ];
 
   return (
@@ -171,8 +160,8 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        {/* 5 Modern Redesigned Statistic Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        {/* 4 Modern Redesigned Statistic Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {statCards.map((card, idx) => {
             const Icon = card.icon;
             return (
