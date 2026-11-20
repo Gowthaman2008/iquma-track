@@ -84,7 +84,7 @@ export async function GET(request: Request) {
           select: { id: true, fileName: true, mimeType: true, uploadedAt: true },
         },
       },
-      orderBy: { iqamaExpiryDate: "asc" },
+      orderBy: { createdAt: "asc" },
     });
 
     if (employees && employees.length > 0) {
