@@ -2,8 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import AppLayout from "@/components/layout/AppLayout";
-import { StatusBadge } from "@/components/ui/StatusBadge";
-import { RenewModal } from "@/components/modals/RenewModal";
 import Link from "next/link";
 import {
   Users,
@@ -14,9 +12,7 @@ import {
   FileQuestion,
   TrendingUp,
   ArrowRight,
-  RefreshCw,
   ExternalLink,
-  ChevronRight,
 } from "lucide-react";
 import {
   ResponsiveContainer,
@@ -57,7 +53,6 @@ const CustomChartTooltip = ({ active, payload, label }: any) => {
 export default function DashboardPage() {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
-  const [renewTarget, setRenewTarget] = useState<{ id: string; name: string; expiry: string } | null>(null);
 
   const fetchDashboardData = async () => {
     try {
@@ -303,166 +298,7 @@ export default function DashboardPage() {
             </div>
           </div>
         </div>
-
-        {/* Department Breakdown & Immediate Expiry Watchlist */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Department Distribution Chart */}
-          <div className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs lg:col-span-1">
-            <h3 className="font-bold text-sm text-slate-900 mb-0.5">Employees by Department</h3>
-            <p className="text-xs text-slate-500 mb-4">Workforce distribution across divisions</p>
-            <div className="h-60 w-full">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart
-                  data={data?.departmentData || []}
-                  layout="vertical"
-                  margin={{ top: 5, right: 10, left: 10, bottom: 5 }}
-                >
-                  <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#F1F5F9" />
-                  <XAxis type="number" allowDecimals={false} tick={{ fontSize: 10, fill: "#64748B" }} stroke="#E2E8F0" />
-                  <YAxis dataKey="department" type="category" tick={{ fontSize: 10, fill: "#64748B" }} width={90} stroke="#E2E8F0" />
-                  <Tooltip content={<CustomChartTooltip />} />
-                  <Bar dataKey="count" name="Staff" fill="#059669" radius={[0, 6, 6, 0]} />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-          </div>
-
-          {/* Immediate Expiry Watchlist Table */}
-          <div className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs lg:col-span-2">
-            <div className="flex items-center justify-between mb-4">
-              <div>
-                <h3 className="font-bold text-sm text-slate-900">Immediate Expiry Watchlist</h3>
-                <p className="text-xs text-slate-500">Iqamas requiring renewal or notification action</p>
-              </div>
-              <Link
-                href="/employees"
-                className="text-xs font-semibold text-emerald-600 hover:text-emerald-700 hover:underline flex items-center gap-1"
-              >
-                <span>View all</span>
-                <ChevronRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-
-            <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs">
-                <thead>
-                  <tr className="border-b border-slate-100 text-slate-400 uppercase tracking-wider text-[10px] bg-slate-50/70 font-semibold">
-                    <th className="py-2.5 px-3 rounded-l-lg">Employee</th>
-                    <th className="py-2.5 px-3">Iqama No.</th>
-                    <th className="py-2.5 px-3">Expiry Date</th>
-                    <th className="py-2.5 px-3">Status</th>
-                    <th className="py-2.5 px-3 text-right rounded-r-lg">Actions</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-100">
-                  {data?.urgentEmployees?.length === 0 ? (
-                    <tr>
-                      <td colSpan={5} className="py-8 text-center text-slate-400">
-                        All employee Iqamas are currently valid with &gt; 30 days remaining!
-                      </td>
-                    </tr>
-                  ) : (
-                    data?.urgentEmployees?.map((emp: any) => (
-                      <tr key={emp.id} className="hover:bg-slate-50/70 transition-colors">
-                        <td className="py-3 px-3">
-                          <Link href={`/employees/${emp.id}`} className="font-semibold text-slate-900 hover:text-emerald-600 transition-colors">
-                            {emp.fullName}
-                          </Link>
-                          <div className="text-[10px] text-slate-400">{emp.department} &bull; {emp.employeeId}</div>
-                        </td>
-                        <td className="py-3 px-3 font-mono text-slate-600">
-                          {emp.iqamaNumberMasked}
-                        </td>
-                        <td className="py-3 px-3 font-medium text-slate-800">
-                          {emp.evaluation.formattedDate}
-                        </td>
-                        <td className="py-3 px-3">
-                          <StatusBadge
-                            status={emp.evaluation.status}
-                            daysRemaining={emp.evaluation.daysRemaining}
-                          />
-                        </td>
-                        <td className="py-3 px-3 text-right space-x-1.5">
-                          <button
-                            onClick={() =>
-                              setRenewTarget({
-                                id: emp.id,
-                                name: emp.fullName,
-                                expiry: emp.evaluation.formattedDate,
-                              })
-                            }
-                            className="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-emerald-600 text-white hover:bg-emerald-700 transition shadow-xs cursor-pointer"
-                          >
-                            Renew
-                          </button>
-                          <Link
-                            href={`/employees/${emp.id}`}
-                            className="px-2.5 py-1 rounded-lg text-[11px] font-semibold border border-slate-200 text-slate-700 hover:bg-slate-100 inline-block transition"
-                          >
-                            View
-                          </Link>
-                        </td>
-                      </tr>
-                    ))
-                  )}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        {/* Recent Renewals */}
-        <div className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs">
-          <div className="flex items-center justify-between mb-3.5">
-            <h3 className="font-bold text-sm text-slate-900 flex items-center gap-2">
-              <RefreshCw className="w-4 h-4 text-emerald-600" />
-              <span>Recently Renewed Iqamas</span>
-            </h3>
-            <Link href="/renewals" className="text-xs font-semibold text-emerald-600 hover:underline">
-              View history
-            </Link>
-          </div>
-          <div className="space-y-2">
-            {data?.recentRenewals?.length === 0 ? (
-              <p className="text-xs text-slate-400 py-4">No recent renewal history recorded yet.</p>
-            ) : (
-              data?.recentRenewals?.map((r: any) => (
-                <div
-                  key={r.id}
-                  className="p-3 rounded-xl bg-slate-50/70 border border-slate-200/60 flex items-center justify-between text-xs hover:bg-slate-100/60 transition-colors"
-                >
-                  <div>
-                    <p className="font-semibold text-slate-900">{r.employee?.fullName}</p>
-                    <p className="text-[11px] text-slate-400">
-                      Updated by {r.updatedByName || "HR"} &bull; {new Date(r.renewalDate).toLocaleDateString()}
-                    </p>
-                  </div>
-                  <div className="text-right">
-                    <span className="font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/50">
-                      {r.cost ? `SAR ${r.cost.toLocaleString()}` : "SAR 9,650"}
-                    </span>
-                    <p className="text-[10px] text-slate-400 mt-0.5">
-                      New Expiry: {new Date(r.newExpiryDate).toLocaleDateString()}
-                    </p>
-                  </div>
-                </div>
-              ))
-            )}
-          </div>
-        </div>
       </div>
-
-      {/* Renew Modal */}
-      {renewTarget && (
-        <RenewModal
-          isOpen={true}
-          onClose={() => setRenewTarget(null)}
-          employeeId={renewTarget.id}
-          employeeName={renewTarget.name}
-          currentExpiryStr={renewTarget.expiry}
-          onSuccess={fetchDashboardData}
-        />
-      )}
     </AppLayout>
   );
 }
