@@ -22,7 +22,6 @@ import {
   CheckCircle2,
   AlertTriangle,
   HelpCircle,
-  Home,
 } from "lucide-react";
 
 export default function EmployeePortalPage() {
@@ -35,7 +34,7 @@ export default function EmployeePortalPage() {
     fetch("/api/portal/my-info")
       .then((res) => {
         if (!res.ok) {
-          router.push("/?openLogin=true");
+          router.push("/login");
           return null;
         }
         return res.json();
@@ -45,13 +44,13 @@ export default function EmployeePortalPage() {
           setData(json.employee);
         }
       })
-      .catch(() => router.push("/?openLogin=true"))
+      .catch(() => router.push("/login"))
       .finally(() => setLoading(false));
   }, [router]);
 
   const handleLogout = async () => {
     await fetch("/api/auth/logout", { method: "POST" });
-    router.push("/");
+    router.push("/login");
   };
 
   const handleNotifyHr = () => {
@@ -77,8 +76,8 @@ export default function EmployeePortalPage() {
       <div className="min-h-screen bg-[#F5F8F6] flex items-center justify-center p-4">
         <div className="text-center space-y-4 max-w-md bg-white p-8 rounded-3xl border border-gray-200">
           <p className="text-xs text-gray-600">No active employee record found linked to your session.</p>
-          <Link href="/" className="inline-block px-4 py-2 bg-[#006C35] text-white text-xs font-bold rounded-xl">
-            Return to AL Houf Homepage
+          <Link href="/login" className="inline-block px-4 py-2 bg-[#006C35] text-white text-xs font-bold rounded-xl">
+            Sign In to Portal
           </Link>
         </div>
       </div>
@@ -92,7 +91,7 @@ export default function EmployeePortalPage() {
       {/* Top Header */}
       <header className="h-16 bg-[#004B28] text-white border-b border-[#00381E] flex items-center justify-between px-4 sm:px-8 shrink-0 shadow-md">
         <div className="flex items-center gap-3">
-          <Link href="/" className="flex items-center gap-2.5 group">
+          <Link href="/portal" className="flex items-center gap-2.5 group">
             <div className="w-9 h-9 rounded-xl overflow-hidden border border-emerald-500/40 bg-black flex items-center justify-center shadow-md shrink-0">
               <img
                 src="/logo/arabic-logo.png"
@@ -114,13 +113,6 @@ export default function EmployeePortalPage() {
         </div>
 
         <div className="flex items-center gap-3">
-          <Link
-            href="/"
-            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-emerald-100 hover:text-white hover:bg-white/10 transition"
-          >
-            <Home className="w-3.5 h-3.5" />
-            <span>AL Houf Website</span>
-          </Link>
           <div className="flex items-center gap-2 pl-2 border-l border-emerald-800">
             <div className="w-8 h-8 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-xs ring-2 ring-emerald-400/40">
               {data.fullName.charAt(0)}

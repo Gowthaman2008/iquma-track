@@ -9,7 +9,7 @@ import { ImageSlider } from "@/components/ui/image-slider";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Shield, ArrowLeft, AlertCircle, Building2, UserCircle2 } from "lucide-react";
+import { Shield, AlertCircle, Building2, UserCircle2 } from "lucide-react";
 
 const GoogleIcon = ({ className = "w-3.5 h-3.5" }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none">
@@ -42,6 +42,18 @@ export default function LoginPage() {
   const [rememberMe, setRememberMe] = useState(true);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // Auto-redirect if already logged in
+  React.useEffect(() => {
+    fetch("/api/auth/me")
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (data?.authenticated && data?.user) {
+          router.replace(data.user.role === "EMPLOYEE" ? "/portal" : "/dashboard");
+        }
+      })
+      .catch(() => {});
+  }, [router]);
 
   // Reliable local corporate Saudi images for the left-side slider (100% guaranteed uptime, zero latency)
   const sliderImages = [
@@ -150,17 +162,6 @@ export default function LoginPage() {
 
   return (
     <div className="w-full min-h-screen min-h-[100svh] flex flex-col items-center justify-center bg-background p-3 sm:p-6">
-      {/* Return to Home link */}
-      <div className="w-full max-w-5xl mb-3 flex items-center justify-start">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary/80 border border-border text-xs font-medium text-foreground/80 hover:text-foreground hover:bg-secondary transition backdrop-blur-md shadow-xs"
-        >
-          <ArrowLeft className="w-3.5 h-3.5" />
-          <span>Return to AL Houf Homepage</span>
-        </Link>
-      </div>
-
       <motion.div 
         className="w-full max-w-5xl h-auto min-h-0 sm:min-h-[580px] lg:h-[720px] grid grid-cols-1 lg:grid-cols-2 rounded-2xl overflow-hidden shadow-2xl border border-border bg-card"
         initial={{ opacity: 0, scale: 0.95 }}
