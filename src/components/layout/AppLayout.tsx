@@ -131,14 +131,8 @@ export default function AppLayout({ children }: AppLayoutProps) {
   const navItems = [
     { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
     { label: "Employees", href: "/employees", icon: Users },
-    { label: "Add Employee", href: "/employees/new", icon: UserPlus },
-    { label: "Expiry Calendar", href: "/calendar", icon: Calendar },
     { label: "Renewal History", href: "/renewals", icon: RefreshCw },
-    { label: "Notification Center", href: "/notifications", icon: Bell, badge: unreadAlerts > 0 ? unreadAlerts : undefined },
-    { label: "Email Logs", href: "/email-logs", icon: MailCheck },
-    { label: "Reports & Export", href: "/reports", icon: FileBarChart2 },
     { label: "User Management", href: "/users", icon: UserCog, showOnly: ["SUPER_ADMIN"] },
-    { label: "Company Settings", href: "/settings/company", icon: Building2 },
     { label: "Profile Settings", href: "/settings/profile", icon: Settings },
   ];
 
@@ -262,18 +256,6 @@ export default function AppLayout({ children }: AppLayoutProps) {
               <Sparkles className={`w-3.5 h-3.5 ${isRunningCron ? "animate-spin" : "text-white"}`} />
               <span className="hidden sm:inline">{isRunningCron ? "Checking..." : "Run Expiry Engine"}</span>
             </button>
-
-            {/* Notifications Button */}
-            <Link
-              href="/notifications"
-              className="relative p-2 rounded-xl text-slate-500 hover:bg-slate-100 hover:text-slate-900 transition"
-              title="Notifications"
-            >
-              <Bell className="w-5 h-5" />
-              {unreadAlerts > 0 && (
-                <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-rose-500 ring-2 ring-white" />
-              )}
-            </Link>
 
             {/* User Profile */}
             <div className="flex items-center gap-2 pl-2 border-l border-slate-200">

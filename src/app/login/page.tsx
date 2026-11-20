@@ -29,7 +29,7 @@ export default function LoginPage() {
           router.replace("/dashboard");
         }
       })
-      .catch(() => {});
+      .catch(() => { });
   }, [router]);
 
   // Reliable local corporate Saudi images for the left-side slider
@@ -107,7 +107,7 @@ export default function LoginPage() {
 
   return (
     <div className="w-full min-h-screen min-h-[100svh] flex flex-col items-center justify-center bg-background p-3 sm:p-6">
-      <motion.div 
+      <motion.div
         className="w-full max-w-5xl h-auto min-h-0 sm:min-h-[580px] lg:h-[720px] grid grid-cols-1 lg:grid-cols-2 rounded-2xl overflow-hidden shadow-2xl border border-border bg-card"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -116,7 +116,7 @@ export default function LoginPage() {
         {/* Left side: Image Slider with Brand Overlay */}
         <div className="hidden lg:block relative w-full h-full">
           <ImageSlider images={sliderImages} interval={4500} className="w-full h-full" />
-          
+
           {/* Subtle gradient vignette & Corporate badge */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/40 pointer-events-none flex flex-col justify-between p-8 text-white">
             <div className="flex items-center gap-3">
@@ -149,7 +149,7 @@ export default function LoginPage() {
 
         {/* Right side: Login Form */}
         <div className="w-full h-full bg-card text-card-foreground flex flex-col items-center justify-center p-4 sm:p-8 lg:p-12 overflow-y-auto">
-          <motion.div 
+          <motion.div
             className="w-full max-w-sm"
             variants={containerVariants}
             initial="hidden"
@@ -177,7 +177,7 @@ export default function LoginPage() {
 
             {/* Error Message */}
             {error && (
-              <motion.div 
+              <motion.div
                 variants={itemVariants}
                 className="mb-4 p-3 rounded-lg bg-destructive/15 border border-destructive/30 text-destructive text-xs flex items-center gap-2"
               >
@@ -190,11 +190,11 @@ export default function LoginPage() {
             <motion.form variants={itemVariants} onSubmit={handleCredentialsSubmit} className="space-y-4">
               <div className="space-y-1.5">
                 <Label htmlFor="email">Admin Email</Label>
-                <Input 
-                  id="email" 
-                  type="email" 
-                  placeholder="admin@iqamatrack.sa" 
-                  required 
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="admin@iqamatrack.sa"
+                  required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="bg-secondary/40"
@@ -204,17 +204,17 @@ export default function LoginPage() {
               <div className="space-y-1.5">
                 <div className="flex items-center justify-between">
                   <Label htmlFor="password">Password</Label>
-                  <Link 
-                    href="/forgot-password" 
+                  <Link
+                    href="/forgot-password"
                     className="text-xs text-muted-foreground hover:text-primary transition-colors"
                   >
                     Forgot password?
                   </Link>
                 </div>
-                <Input 
-                  id="password" 
-                  type="password" 
-                  required 
+                <Input
+                  id="password"
+                  type="password"
+                  required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   className="bg-secondary/40 font-mono"

@@ -15,9 +15,6 @@ import {
   TrendingUp,
   ArrowRight,
   RefreshCw,
-  Mail,
-  UserPlus,
-  Calendar,
   ExternalLink,
   ChevronRight,
 } from "lucide-react";
@@ -167,32 +164,15 @@ export default function DashboardPage() {
   return (
     <AppLayout>
       <div className="space-y-6">
-        {/* Welcome & Quick Header */}
+        {/* Welcome Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h1 className="text-2xl font-black text-slate-900 tracking-tight font-['Plus_Jakarta_Sans',sans-serif]">
               Executive Iqama Intelligence
             </h1>
             <p className="text-xs text-slate-500 mt-1">
-              Real-time Saudi labor compliance, Muqeem expiry monitoring, and automated notices.
+              Real-time Saudi labor compliance, Muqeem expiry monitoring, and employee record tracking.
             </p>
-          </div>
-
-          <div className="flex items-center gap-2.5">
-            <Link
-              href="/employees/new"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white transition shadow-xs cursor-pointer"
-            >
-              <UserPlus className="w-4 h-4" />
-              <span>Add Employee</span>
-            </Link>
-            <Link
-              href="/calendar"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold bg-white hover:bg-slate-50 text-slate-700 border border-slate-200/90 transition shadow-xs cursor-pointer"
-            >
-              <Calendar className="w-4 h-4 text-emerald-600" />
-              <span>Expiry Calendar</span>
-            </Link>
           </div>
         </div>
 
@@ -431,91 +411,43 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        {/* Recent Renewals & Recent Notifications */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Recent Renewals */}
-          <div className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs">
-            <div className="flex items-center justify-between mb-3.5">
-              <h3 className="font-bold text-sm text-slate-900 flex items-center gap-2">
-                <RefreshCw className="w-4 h-4 text-emerald-600" />
-                <span>Recently Renewed Iqamas</span>
-              </h3>
-              <Link href="/renewals" className="text-xs font-semibold text-emerald-600 hover:underline">
-                View history
-              </Link>
-            </div>
-            <div className="space-y-2">
-              {data?.recentRenewals?.length === 0 ? (
-                <p className="text-xs text-slate-400 py-4">No recent renewal history recorded yet.</p>
-              ) : (
-                data?.recentRenewals?.map((r: any) => (
-                  <div
-                    key={r.id}
-                    className="p-3 rounded-xl bg-slate-50/70 border border-slate-200/60 flex items-center justify-between text-xs hover:bg-slate-100/60 transition-colors"
-                  >
-                    <div>
-                      <p className="font-semibold text-slate-900">{r.employee?.fullName}</p>
-                      <p className="text-[11px] text-slate-400">
-                        Updated by {r.updatedByName || "HR"} &bull; {new Date(r.renewalDate).toLocaleDateString()}
-                      </p>
-                    </div>
-                    <div className="text-right">
-                      <span className="font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/50">
-                        {r.cost ? `SAR ${r.cost.toLocaleString()}` : "SAR 9,650"}
-                      </span>
-                      <p className="text-[10px] text-slate-400 mt-0.5">
-                        New Expiry: {new Date(r.newExpiryDate).toLocaleDateString()}
-                      </p>
-                    </div>
-                  </div>
-                ))
-              )}
-            </div>
+        {/* Recent Renewals */}
+        <div className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs">
+          <div className="flex items-center justify-between mb-3.5">
+            <h3 className="font-bold text-sm text-slate-900 flex items-center gap-2">
+              <RefreshCw className="w-4 h-4 text-emerald-600" />
+              <span>Recently Renewed Iqamas</span>
+            </h3>
+            <Link href="/renewals" className="text-xs font-semibold text-emerald-600 hover:underline">
+              View history
+            </Link>
           </div>
-
-          {/* Recently Dispatched Notifications */}
-          <div className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs">
-            <div className="flex items-center justify-between mb-3.5">
-              <h3 className="font-bold text-sm text-slate-900 flex items-center gap-2">
-                <Mail className="w-4 h-4 text-emerald-600" />
-                <span>Recent Expiry Email Reminders</span>
-              </h3>
-              <Link href="/email-logs" className="text-xs font-semibold text-emerald-600 hover:underline">
-                View email logs
-              </Link>
-            </div>
-            <div className="space-y-2">
-              {data?.recentNotifications?.length === 0 ? (
-                <p className="text-xs text-slate-400 py-4">No notification logs recorded yet.</p>
-              ) : (
-                data?.recentNotifications?.map((n: any) => (
-                  <div
-                    key={n.id}
-                    className="p-3 rounded-xl bg-slate-50/70 border border-slate-200/60 flex items-center justify-between text-xs hover:bg-slate-100/60 transition-colors"
-                  >
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <span className="font-semibold text-slate-900">{n.employee?.fullName}</span>
-                        <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100/80 text-emerald-800">
-                          {n.notificationType}
-                        </span>
-                      </div>
-                      <p className="text-[11px] text-slate-400 mt-0.5 truncate max-w-xs">{n.recipient}</p>
-                    </div>
-                    <div className="text-right">
-                      <span className={`inline-block px-2 py-0.5 rounded text-[10px] font-bold ${
-                        n.status === "SENT" ? "bg-emerald-100 text-emerald-800" : "bg-rose-100 text-rose-800"
-                      }`}>
-                        {n.status}
-                      </span>
-                      <p className="text-[10px] text-slate-400 mt-0.5">
-                        {n.sentAt ? new Date(n.sentAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : "Pending"}
-                      </p>
-                    </div>
+          <div className="space-y-2">
+            {data?.recentRenewals?.length === 0 ? (
+              <p className="text-xs text-slate-400 py-4">No recent renewal history recorded yet.</p>
+            ) : (
+              data?.recentRenewals?.map((r: any) => (
+                <div
+                  key={r.id}
+                  className="p-3 rounded-xl bg-slate-50/70 border border-slate-200/60 flex items-center justify-between text-xs hover:bg-slate-100/60 transition-colors"
+                >
+                  <div>
+                    <p className="font-semibold text-slate-900">{r.employee?.fullName}</p>
+                    <p className="text-[11px] text-slate-400">
+                      Updated by {r.updatedByName || "HR"} &bull; {new Date(r.renewalDate).toLocaleDateString()}
+                    </p>
                   </div>
-                ))
-              )}
-            </div>
+                  <div className="text-right">
+                    <span className="font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/50">
+                      {r.cost ? `SAR ${r.cost.toLocaleString()}` : "SAR 9,650"}
+                    </span>
+                    <p className="text-[10px] text-slate-400 mt-0.5">
+                      New Expiry: {new Date(r.newExpiryDate).toLocaleDateString()}
+                    </p>
+                  </div>
+                </div>
+              ))
+            )}
           </div>
         </div>
       </div>
