@@ -88,30 +88,7 @@ export async function GET(request: Request) {
     failedCount = await prisma.notificationLog.count({ where: { status: "FAILED" } }).catch(() => 0);
     pendingCount = await prisma.notificationLog.count({ where: { status: "PENDING" } }).catch(() => 0);
   } catch (e) {
-    console.warn("Notifications query failed, using demo fallback:", e);
-  }
-
-  if (alerts.length === 0) {
-    const fallbackList = getFallbackEmployees({
-      userRole: user.role,
-      userCompanyId: user.companyId,
-    });
-    alerts = fallbackList
-      .filter((e) => e.evaluation.isActionRequired)
-      .map((e) => ({
-        id: `alert-${e.id}`,
-        employeeId: e.id,
-        employeeCode: e.employeeId,
-        fullName: e.fullName,
-        department: e.department,
-        maskedIqama: e.iqamaNumberMasked,
-        expiryDate: e.evaluation.formattedDate,
-        daysRemaining: e.evaluation.daysRemaining,
-        status: e.evaluation.status,
-        statusLabel: e.evaluation.statusLabel,
-        isActionRequired: e.evaluation.isActionRequired,
-      }))
-      .sort((a, b) => a.daysRemaining - b.daysRemaining);
+    console.warn("Notifications query failed:", e);
   }
 
   return NextResponse.json({
@@ -121,7 +98,7 @@ export async function GET(request: Request) {
       criticalAlerts: alerts.filter((a: any) => a.status === "CRITICAL" || a.status === "EXPIRES_TODAY").length,
       expiringSoonAlerts: alerts.filter((a: any) => a.status === "EXPIRING_SOON").length,
       expiredAlerts: alerts.filter((a: any) => a.status === "EXPIRED").length,
-      sentCount: sentCount || 24,
+      sentCount: sentCount || 0,
       failedCount,
       pendingCount,
     },

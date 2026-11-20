@@ -233,34 +233,43 @@ export default function DashboardPage() {
                 <p className="text-xs text-slate-500">Breakdown of active residence permits by urgency</p>
               </div>
             </div>
-            <div className="h-64 w-full">
-              <ResponsiveContainer width="100%" height="100%">
-                <PieChart>
-                  <Pie
-                    data={data?.statusDistribution || []}
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={58}
-                    outerRadius={88}
-                    paddingAngle={4}
-                    cornerRadius={6}
-                    dataKey="value"
-                  >
-                    {(data?.statusDistribution || []).map((entry: any, index: number) => {
-                      // Modern vibrant palette mapping
-                      let fill = entry.color;
-                      if (entry.name?.includes("Valid")) fill = "#10B981";
-                      else if (entry.name?.includes("Expiring Soon")) fill = "#F59E0B";
-                      else if (entry.name?.includes("Critical")) fill = "#F97316";
-                      else if (entry.name?.includes("Expired")) fill = "#F43F5E";
-                      return <Cell key={`cell-${index}`} fill={fill} stroke="transparent" />;
-                    })}
-                  </Pie>
-                  <Tooltip content={<CustomChartTooltip />} />
-                  <Legend verticalAlign="bottom" height={36} wrapperStyle={{ fontSize: "11px", paddingTop: "8px" }} />
-                </PieChart>
-              </ResponsiveContainer>
-            </div>
+            {(!data?.statusDistribution || data.statusDistribution.length === 0 || metrics.totalEmployees === 0) ? (
+              <div className="h-64 flex flex-col items-center justify-center text-center p-6 bg-slate-50/60 rounded-xl border border-dashed border-slate-200">
+                <Users className="w-8 h-8 text-slate-300 mb-2" />
+                <p className="text-xs font-semibold text-slate-600">No active Iqama records</p>
+                <p className="text-[11px] text-slate-400 mt-0.5 max-w-xs">
+                  Register employees or import your roster to see live status breakdown.
+                </p>
+              </div>
+            ) : (
+              <div className="h-64 w-full">
+                <ResponsiveContainer width="100%" height="100%">
+                  <PieChart>
+                    <Pie
+                      data={data?.statusDistribution || []}
+                      cx="50%"
+                      cy="50%"
+                      innerRadius={58}
+                      outerRadius={88}
+                      paddingAngle={4}
+                      cornerRadius={6}
+                      dataKey="value"
+                    >
+                      {(data?.statusDistribution || []).map((entry: any, index: number) => {
+                        let fill = entry.color;
+                        if (entry.name?.includes("Valid")) fill = "#10B981";
+                        else if (entry.name?.includes("Expiring Soon")) fill = "#F59E0B";
+                        else if (entry.name?.includes("Critical")) fill = "#F97316";
+                        else if (entry.name?.includes("Expired")) fill = "#F43F5E";
+                        return <Cell key={`cell-${index}`} fill={fill} stroke="transparent" />;
+                      })}
+                    </Pie>
+                    <Tooltip content={<CustomChartTooltip />} />
+                    <Legend verticalAlign="bottom" height={36} wrapperStyle={{ fontSize: "11px", paddingTop: "8px" }} />
+                  </PieChart>
+                </ResponsiveContainer>
+              </div>
+            )}
           </div>
 
           {/* Chart 2: Monthly Expiry Forecast (Bar Chart with Soft Curves) */}
@@ -271,20 +280,30 @@ export default function DashboardPage() {
                 <p className="text-xs text-slate-500">Upcoming renewals timeline and workload</p>
               </div>
             </div>
-            <div className="h-64 w-full">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={data?.trendData || []}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" vertical={false} />
-                  <XAxis dataKey="month" tick={{ fontSize: 11, fill: "#64748B" }} stroke="#E2E8F0" />
-                  <YAxis allowDecimals={false} tick={{ fontSize: 11, fill: "#64748B" }} stroke="#E2E8F0" />
-                  <Tooltip content={<CustomChartTooltip />} />
-                  <Legend verticalAlign="bottom" wrapperStyle={{ fontSize: "11px", paddingTop: "8px" }} />
-                  <Bar dataKey="valid" name="Valid" fill="#10B981" radius={[6, 6, 0, 0]} />
-                  <Bar dataKey="expiring" name="Expiring Soon" fill="#F59E0B" radius={[6, 6, 0, 0]} />
-                  <Bar dataKey="expired" name="Expired" fill="#F43F5E" radius={[6, 6, 0, 0]} />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
+            {(!data?.trendData || data.trendData.length === 0 || metrics.totalEmployees === 0) ? (
+              <div className="h-64 flex flex-col items-center justify-center text-center p-6 bg-slate-50/60 rounded-xl border border-dashed border-slate-200">
+                <Clock className="w-8 h-8 text-slate-300 mb-2" />
+                <p className="text-xs font-semibold text-slate-600">No upcoming renewals</p>
+                <p className="text-[11px] text-slate-400 mt-0.5 max-w-xs">
+                  Forecast timeline will update automatically as Iqama records are added.
+                </p>
+              </div>
+            ) : (
+              <div className="h-64 w-full">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={data?.trendData || []}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" vertical={false} />
+                    <XAxis dataKey="month" tick={{ fontSize: 11, fill: "#64748B" }} stroke="#E2E8F0" />
+                    <YAxis allowDecimals={false} tick={{ fontSize: 11, fill: "#64748B" }} stroke="#E2E8F0" />
+                    <Tooltip content={<CustomChartTooltip />} />
+                    <Legend verticalAlign="bottom" wrapperStyle={{ fontSize: "11px", paddingTop: "8px" }} />
+                    <Bar dataKey="valid" name="Valid" fill="#10B981" radius={[6, 6, 0, 0]} />
+                    <Bar dataKey="expiring" name="Expiring Soon" fill="#F59E0B" radius={[6, 6, 0, 0]} />
+                    <Bar dataKey="expired" name="Expired" fill="#F43F5E" radius={[6, 6, 0, 0]} />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            )}
           </div>
         </div>
       </div>

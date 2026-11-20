@@ -136,30 +136,9 @@ export async function GET(request: Request) {
       if (expiryFilter && expiryFilter !== "ALL") {
         enriched = enriched.filter((e: any) => e.evaluation.status === expiryFilter);
       }
-    } else {
-      // Check if DB is genuinely empty (0 employees in database table)
-      const count = await prisma.employee.count().catch(() => 0);
-      if (count === 0) {
-        dbFailedOrEmpty = true;
-      }
     }
   } catch (dbErr) {
-    console.warn("Prisma query failed in /api/employees, falling back to demo store:", dbErr);
-    dbFailedOrEmpty = true;
-  }
-
-  // Guaranteed fallback for Vercel serverless when database is unattached, empty, or fails
-  if (dbFailedOrEmpty || (enriched.length === 0 && !search && department === "" && expiryFilter === "")) {
-    enriched = getFallbackEmployees({
-      search,
-      companyId: companyFilter,
-      department,
-      nationality,
-      status: statusFilter,
-      expiryStatus: expiryFilter,
-      userRole: user.role,
-      userCompanyId: user.companyId,
-    });
+    console.warn("Prisma query failed in /api/employees:", dbErr);
   }
 
   return NextResponse.json({

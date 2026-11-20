@@ -58,14 +58,18 @@ export async function GET(request: Request) {
         events,
       });
     }
-  } catch (e) {
-    console.warn("Calendar query failed, using demo fallback:", e);
-  }
 
-  const fallbackEvents = getFallbackCalendarEvents(year, month);
-  return NextResponse.json({
-    year,
-    month,
-    events: fallbackEvents,
-  });
+    return NextResponse.json({
+      year,
+      month,
+      events: [],
+    });
+  } catch (e) {
+    console.warn("Calendar query failed:", e);
+    return NextResponse.json({
+      year,
+      month,
+      events: [],
+    });
+  }
 }

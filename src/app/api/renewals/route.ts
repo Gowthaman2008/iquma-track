@@ -47,16 +47,18 @@ export async function GET() {
         totalCost,
       });
     }
+
+    return NextResponse.json({
+      renewals: [],
+      totalCount: 0,
+      totalCost: 0,
+    });
   } catch (e) {
-    console.warn("Renewals query failed, using demo fallback:", e);
+    console.warn("Renewals query failed:", e);
+    return NextResponse.json({
+      renewals: [],
+      totalCount: 0,
+      totalCost: 0,
+    });
   }
-
-  const fallbackRenewals = getFallbackRenewals();
-  const totalCost = fallbackRenewals.reduce((acc: number, r: any) => acc + (r.cost || 9650), 0);
-
-  return NextResponse.json({
-    renewals: fallbackRenewals,
-    totalCount: fallbackRenewals.length,
-    totalCost,
-  });
 }

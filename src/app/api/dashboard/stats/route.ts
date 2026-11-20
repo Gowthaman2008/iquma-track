@@ -31,9 +31,22 @@ export async function GET() {
     });
 
     if (!employees || employees.length === 0) {
-      // Fallback to demo store if DB is empty on Vercel
-      const fallback = getFallbackDashboardStats(user);
-      return NextResponse.json(fallback);
+      return NextResponse.json({
+        metrics: {
+          totalEmployees: 0,
+          activeIqamas: 0,
+          expiringSoon: 0,
+          critical: 0,
+          expiresToday: 0,
+          expired: 0,
+          missingInfo: 0,
+        },
+        statusDistribution: [],
+        departmentData: [],
+        trendData: [],
+        urgentEmployees: [],
+        recentRenewals: [],
+      });
     }
 
     // Calculate statistics using the Riyadh Expiry Engine

@@ -99,12 +99,6 @@ export default function LoginPage() {
     }
   };
 
-  const setCredentials = (roleEmail: string, rolePass: string) => {
-    setEmail(roleEmail);
-    setPassword(rolePass);
-    setError(null);
-  };
-
   return (
     <div className="w-full min-h-screen min-h-[100svh] flex flex-col items-center justify-center bg-background p-3 sm:p-6" suppressHydrationWarning>
       <motion.div
@@ -238,36 +232,6 @@ export default function LoginPage() {
                 {loading ? "Authenticating..." : "Log In to Admin Console"}
               </Button>
             </motion.form>
-
-            {/* Quick Demo Test Credential Chips */}
-            <motion.div variants={itemVariants} className="pt-5 border-t border-border mt-5">
-              <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mb-2 text-center">
-                Admin Quick Fill Credentials
-              </p>
-              <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
-                <button
-                  type="button"
-                  onClick={() => setCredentials("admin@iqamatrack.sa", "Admin@123456")}
-                  className="px-1.5 sm:px-2 py-1.5 rounded-md border border-border bg-secondary/60 text-[10px] sm:text-[11px] font-medium text-foreground hover:border-primary/50 hover:text-primary transition-colors cursor-pointer text-center truncate"
-                >
-                  Super Admin
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setCredentials("hr@iqamatrack.sa", "Hr@123456")}
-                  className="px-1.5 sm:px-2 py-1.5 rounded-md border border-border bg-secondary/60 text-[10px] sm:text-[11px] font-medium text-foreground hover:border-primary/50 hover:text-primary transition-colors cursor-pointer text-center truncate"
-                >
-                  HR Manager
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setCredentials("admin@alhouf.sa", "Admin@123456")}
-                  className="px-1.5 sm:px-2 py-1.5 rounded-md border border-border bg-secondary/60 text-[10px] sm:text-[11px] font-medium text-foreground hover:border-primary/50 hover:text-primary transition-colors cursor-pointer text-center truncate"
-                >
-                  AL Houf Admin
-                </button>
-              </div>
-            </motion.div>
 
             <motion.p variants={itemVariants} className="text-center text-xs text-muted-foreground mt-6">
               Need platform access?{" "}
