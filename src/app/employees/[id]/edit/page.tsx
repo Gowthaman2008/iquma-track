@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import AppLayout from "@/components/layout/AppLayout";
-import { useRouter, useParams } from "next/navigation";
+import { useRouter, useParams, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import {
   Edit,
@@ -24,7 +24,9 @@ import {
 function EditEmployeeContent() {
   const router = useRouter();
   const params = useParams();
+  const searchParams = useSearchParams();
   const id = params?.id as string;
+  const from = searchParams?.get("from") || "directory";
 
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -142,7 +144,12 @@ function EditEmployeeContent() {
         throw new Error(data.error || "Failed to update employee.");
       }
 
-      router.push(`/employees/${id}`);
+      // Replace history entry so browser back button never re-opens the edit page!
+      if (from === "profile") {
+        router.replace(`/employees/${id}`);
+      } else {
+        router.replace("/employees");
+      }
     } catch (err: any) {
       setError(err.message);
     } finally {
@@ -202,15 +209,52 @@ function EditEmployeeContent() {
   return (
     <AppLayout>
       <div className="max-w-4xl mx-auto space-y-6">
-        {/* Navigation Breadcrumb */}
-        <div className="flex items-center justify-between">
-          <Link
-            href={`/employees/${id}`}
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-600 hover:text-[#006C35] transition"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            <span>Cancel and Return to Profile</span>
-          </Link>
+        {/* Navigation Breadcrumb with Direct Dashboard / Directory Links */}
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-2 text-xs font-semibold text-gray-500">
+            <button
+              type="button"
+              onClick={() => {
+                if (typeof window !== "undefined" && window.history.length > 1) {
+                  router.back();
+                } else {
+                  router.replace(from === "profile" ? `/employees/${id}` : "/employees");
+                }
+              }}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-gray-200 bg-white hover:bg-gray-50 text-gray-700 shadow-2xs transition cursor-pointer"
+              title="Go Back"
+            >
+              <ArrowLeft className="w-3.5 h-3.5" />
+              <span>Back</span>
+            </button>
+            <Link
+              href="/dashboard"
+              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl border border-gray-200 bg-white hover:bg-emerald-50 hover:text-[#006C35] hover:border-emerald-200 text-gray-700 shadow-2xs transition"
+            >
+              <span>Dashboard</span>
+            </Link>
+            <span className="text-gray-300">/</span>
+            <Link
+              href="/employees"
+              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl border border-gray-200 bg-white hover:bg-emerald-50 hover:text-[#006C35] hover:border-emerald-200 text-gray-700 shadow-2xs transition"
+            >
+              <span>Employees Directory</span>
+            </Link>
+            {from === "profile" && (
+              <>
+                <span className="text-gray-300">/</span>
+                <Link
+                  href={`/employees/${id}`}
+                  className="hover:text-[#006C35] transition"
+                >
+                  Profile
+                </Link>
+              </>
+            )}
+            <span className="text-gray-300">/</span>
+            <span className="text-gray-900 font-bold">Edit Details</span>
+          </div>
+
           <div className="flex items-center gap-2 text-xs">
             {formData.no && (
               <span className="px-2 py-0.5 bg-gray-100 rounded-md font-bold text-gray-700">
@@ -644,16 +688,23 @@ function EditEmployeeContent() {
 
             {/* Action Buttons */}
             <div className="flex items-center justify-end gap-3 pt-4 border-t border-gray-100">
-              <Link
-                href={`/employees/${id}`}
-                className="px-5 py-2.5 rounded-xl border border-gray-300 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition"
+              <button
+                type="button"
+                onClick={() => {
+                  if (typeof window !== "undefined" && window.history.length > 1) {
+                    router.back();
+                  } else {
+                    router.replace(from === "profile" ? `/employees/${id}` : "/employees");
+                  }
+                }}
+                className="px-5 py-2.5 rounded-xl border border-gray-300 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition cursor-pointer"
               >
                 Cancel
-              </Link>
+              </button>
               <button
                 type="submit"
                 disabled={saving}
-                className="px-6 py-2.5 rounded-xl text-sm font-bold bg-[#006C35] text-white hover:bg-[#004B28] transition shadow-md shadow-[#006C35]/20 flex items-center gap-2 disabled:opacity-50"
+                className="px-6 py-2.5 rounded-xl text-sm font-bold bg-[#006C35] text-white hover:bg-[#004B28] transition shadow-md shadow-[#006C35]/20 flex items-center gap-2 disabled:opacity-50 cursor-pointer"
               >
                 <CheckCircle2 className="w-4 h-4" />
                 <span>{saving ? "Saving Changes..." : "Update Employee"}</span>

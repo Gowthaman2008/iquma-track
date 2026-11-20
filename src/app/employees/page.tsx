@@ -576,7 +576,7 @@ export default function EmployeesPage() {
 
                             {/* Edit */}
                             <Link
-                              href={`/employees/${emp.id}/edit`}
+                              href={`/employees/${emp.id}/edit?from=directory`}
                               title="Edit Employee"
                               className="p-1.5 rounded-lg text-gray-700 bg-gray-100 hover:bg-gray-200 transition"
                             >

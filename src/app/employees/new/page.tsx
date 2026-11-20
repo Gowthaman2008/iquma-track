@@ -128,7 +128,8 @@ export default function NewEmployeePage() {
         throw new Error(data.error || "Failed to create employee.");
       }
 
-      router.push(`/employees/${data.employee.id}`);
+      // Replace history entry so browser back button does not re-open the intake form!
+      router.replace("/employees");
     } catch (err: any) {
       setError(err.message);
     } finally {
@@ -178,16 +179,42 @@ export default function NewEmployeePage() {
   return (
     <AppLayout>
       <div className="max-w-4xl mx-auto space-y-6">
-        {/* Navigation Breadcrumb */}
-        <div className="flex items-center justify-between">
-          <Link
-            href="/employees"
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-600 hover:text-[#006C35] transition"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            <span>Cancel and Return to Employees</span>
-          </Link>
-          <span className="text-xs text-gray-400">Master Roster Intake</span>
+        {/* Navigation Breadcrumb with Direct Dashboard / Directory Links */}
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-2 text-xs font-semibold text-gray-500">
+            <button
+              type="button"
+              onClick={() => {
+                if (typeof window !== "undefined" && window.history.length > 1) {
+                  router.back();
+                } else {
+                  router.replace("/employees");
+                }
+              }}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-gray-200 bg-white hover:bg-gray-50 text-gray-700 shadow-2xs transition cursor-pointer"
+              title="Go Back"
+            >
+              <ArrowLeft className="w-3.5 h-3.5" />
+              <span>Back</span>
+            </button>
+            <Link
+              href="/dashboard"
+              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl border border-gray-200 bg-white hover:bg-emerald-50 hover:text-[#006C35] hover:border-emerald-200 text-gray-700 shadow-2xs transition"
+            >
+              <span>Dashboard</span>
+            </Link>
+            <span className="text-gray-300">/</span>
+            <Link
+              href="/employees"
+              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl border border-gray-200 bg-white hover:bg-emerald-50 hover:text-[#006C35] hover:border-emerald-200 text-gray-700 shadow-2xs transition"
+            >
+              <span>Employees Directory</span>
+            </Link>
+            <span className="text-gray-300">/</span>
+            <span className="text-gray-900 font-bold">New Employee</span>
+          </div>
+
+          <span className="text-xs text-gray-400 font-medium">Master Roster Intake</span>
         </div>
 
         {/* New Employee Container */}
@@ -608,16 +635,23 @@ export default function NewEmployeePage() {
 
             {/* Action Buttons */}
             <div className="flex items-center justify-end gap-3 pt-4 border-t border-gray-100">
-              <Link
-                href="/employees"
-                className="px-5 py-2.5 rounded-xl border border-gray-300 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition"
+              <button
+                type="button"
+                onClick={() => {
+                  if (typeof window !== "undefined" && window.history.length > 1) {
+                    router.back();
+                  } else {
+                    router.replace("/employees");
+                  }
+                }}
+                className="px-5 py-2.5 rounded-xl border border-gray-300 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition cursor-pointer"
               >
                 Cancel
-              </Link>
+              </button>
               <button
                 type="submit"
                 disabled={loading}
-                className="px-6 py-2.5 rounded-xl text-sm font-bold bg-[#006C35] text-white hover:bg-[#004B28] transition shadow-md shadow-[#006C35]/20 flex items-center gap-2 disabled:opacity-50"
+                className="px-6 py-2.5 rounded-xl text-sm font-bold bg-[#006C35] text-white hover:bg-[#004B28] transition shadow-md shadow-[#006C35]/20 flex items-center gap-2 disabled:opacity-50 cursor-pointer"
               >
                 <CheckCircle2 className="w-4 h-4" />
                 <span>{loading ? "Creating Employee..." : "Save to Roster"}</span>

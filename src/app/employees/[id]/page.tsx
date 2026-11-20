@@ -107,18 +107,44 @@ function EmployeeProfileContent() {
   return (
     <AppLayout>
       <div className="max-w-5xl mx-auto space-y-6">
-        {/* Top Breadcrumb */}
-        <div className="flex items-center justify-between">
-          <Link
-            href="/employees"
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-600 hover:text-[#006C35] transition"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            <span>Back to Directory</span>
-          </Link>
+        {/* Top Breadcrumb & Direct Navigation */}
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-2 text-xs font-semibold text-gray-500">
+            <button
+              type="button"
+              onClick={() => {
+                if (typeof window !== "undefined" && window.history.length > 1) {
+                  router.back();
+                } else {
+                  router.push("/dashboard");
+                }
+              }}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-gray-200 bg-white hover:bg-gray-50 text-gray-700 shadow-2xs transition cursor-pointer"
+              title="Go Back"
+            >
+              <ArrowLeft className="w-3.5 h-3.5" />
+              <span>Back</span>
+            </button>
+            <Link
+              href="/dashboard"
+              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl border border-gray-200 bg-white hover:bg-emerald-50 hover:text-[#006C35] hover:border-emerald-200 text-gray-700 shadow-2xs transition"
+            >
+              <span>Dashboard</span>
+            </Link>
+            <span className="text-gray-300">/</span>
+            <Link
+              href="/employees"
+              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl border border-gray-200 bg-white hover:bg-emerald-50 hover:text-[#006C35] hover:border-emerald-200 text-gray-700 shadow-2xs transition"
+            >
+              <span>Employees Directory</span>
+            </Link>
+            <span className="text-gray-300">/</span>
+            <span className="text-gray-900 font-bold max-w-[180px] truncate">{employee.fullName}</span>
+          </div>
+
           <div className="flex items-center gap-2">
             <Link
-              href={`/employees/${id}/edit`}
+              href={`/employees/${id}/edit?from=profile`}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold border border-gray-300 bg-white hover:bg-gray-50 text-gray-700 shadow-xs transition"
             >
               <Edit className="w-3.5 h-3.5" />
@@ -126,7 +152,7 @@ function EmployeeProfileContent() {
             </Link>
             <button
               onClick={() => setRenewModalOpen(true)}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold bg-[#006C35] text-white hover:bg-[#004B28] shadow-sm transition"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold bg-[#006C35] text-white hover:bg-[#004B28] shadow-sm transition cursor-pointer"
             >
               <RefreshCw className="w-3.5 h-3.5" />
               <span>Renew Iqama</span>
