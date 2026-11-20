@@ -128,7 +128,14 @@ export default function AppLayout({ children }: AppLayoutProps) {
     }
   };
 
-  const navItems = [
+  interface NavItem {
+    label: string;
+    href: string;
+    icon: any;
+    showOnly?: string[];
+  }
+
+  const navItems: NavItem[] = [
     { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
     { label: "Employees", href: "/employees", icon: Users },
     { label: "Renewal History", href: "/renewals", icon: RefreshCw },
