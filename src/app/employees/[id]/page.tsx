@@ -110,21 +110,13 @@ function EmployeeProfileContent() {
         {/* Top Breadcrumb & Direct Navigation */}
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-2 text-xs font-semibold text-gray-500">
-            <button
-              type="button"
-              onClick={() => {
-                if (typeof window !== "undefined" && window.history.length > 1) {
-                  router.back();
-                } else {
-                  router.push("/dashboard");
-                }
-              }}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-gray-200 bg-white hover:bg-gray-50 text-gray-700 shadow-2xs transition cursor-pointer"
-              title="Go Back"
+            <Link
+              href="/employees"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-gray-200 bg-white hover:bg-emerald-50 hover:text-[#006C35] hover:border-emerald-200 text-gray-700 shadow-2xs transition"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
-              <span>Back</span>
-            </button>
+              <span>Back to Employee Section</span>
+            </Link>
             <Link
               href="/dashboard"
               className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl border border-gray-200 bg-white hover:bg-emerald-50 hover:text-[#006C35] hover:border-emerald-200 text-gray-700 shadow-2xs transition"

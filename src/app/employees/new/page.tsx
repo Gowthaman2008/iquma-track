@@ -61,7 +61,7 @@ export default function NewEmployeePage() {
           }
         }
       })
-      .catch(() => {});
+      .catch(() => { });
   }, []);
 
   const handleChange = (
@@ -179,24 +179,17 @@ export default function NewEmployeePage() {
   return (
     <AppLayout>
       <div className="max-w-4xl mx-auto space-y-6">
-        {/* Navigation Breadcrumb with Direct Dashboard / Directory Links */}
+        {/* Navigation Breadcrumb with Direct Return to Employee Section */}
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-2 text-xs font-semibold text-gray-500">
-            <button
-              type="button"
-              onClick={() => {
-                if (typeof window !== "undefined" && window.history.length > 1) {
-                  router.back();
-                } else {
-                  router.replace("/employees");
-                }
-              }}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-gray-200 bg-white hover:bg-gray-50 text-gray-700 shadow-2xs transition cursor-pointer"
-              title="Go Back"
+            <Link
+              href="/employees"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-gray-200 bg-white hover:bg-emerald-50 hover:text-[#006C35] hover:border-emerald-200 text-gray-700 shadow-2xs transition"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
-              <span>Back</span>
-            </button>
+              <span>Cancel and Return to Employee Section</span>
+            </Link>
+            <span className="text-gray-300">|</span>
             <Link
               href="/dashboard"
               className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl border border-gray-200 bg-white hover:bg-emerald-50 hover:text-[#006C35] hover:border-emerald-200 text-gray-700 shadow-2xs transition"
@@ -208,7 +201,7 @@ export default function NewEmployeePage() {
               href="/employees"
               className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl border border-gray-200 bg-white hover:bg-emerald-50 hover:text-[#006C35] hover:border-emerald-200 text-gray-700 shadow-2xs transition"
             >
-              <span>Employees Directory</span>
+              <span>Employee Section</span>
             </Link>
             <span className="text-gray-300">/</span>
             <span className="text-gray-900 font-bold">New Employee</span>
@@ -431,15 +424,14 @@ export default function NewEmployeePage() {
                   </span>
                   {defrance !== null ? (
                     <span
-                      className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold font-mono ${
-                        defrance < 0
+                      className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold font-mono ${defrance < 0
                           ? "bg-rose-100 text-rose-800 border border-rose-300"
                           : defrance <= 7
-                          ? "bg-red-100 text-red-800 border border-red-300"
-                          : defrance <= 30
-                          ? "bg-amber-100 text-amber-800 border border-amber-300"
-                          : "bg-emerald-100 text-emerald-800 border border-emerald-300"
-                      }`}
+                            ? "bg-red-100 text-red-800 border border-red-300"
+                            : defrance <= 30
+                              ? "bg-amber-100 text-amber-800 border border-amber-300"
+                              : "bg-emerald-100 text-emerald-800 border border-emerald-300"
+                        }`}
                     >
                       {defrance < 0 ? `${defrance}d (Overdue)` : `${defrance}d Remaining`}
                     </span>
@@ -635,19 +627,12 @@ export default function NewEmployeePage() {
 
             {/* Action Buttons */}
             <div className="flex items-center justify-end gap-3 pt-4 border-t border-gray-100">
-              <button
-                type="button"
-                onClick={() => {
-                  if (typeof window !== "undefined" && window.history.length > 1) {
-                    router.back();
-                  } else {
-                    router.replace("/employees");
-                  }
-                }}
-                className="px-5 py-2.5 rounded-xl border border-gray-300 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition cursor-pointer"
+              <Link
+                href="/employees"
+                className="px-5 py-2.5 rounded-xl border border-gray-300 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition cursor-pointer inline-flex items-center justify-center"
               >
                 Cancel
-              </button>
+              </Link>
               <button
                 type="submit"
                 disabled={loading}
