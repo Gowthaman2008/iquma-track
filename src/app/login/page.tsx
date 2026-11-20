@@ -77,19 +77,23 @@ export default function LoginPage() {
         body: JSON.stringify({ email, password, rememberMe }),
       });
 
-      const data = await res.json();
+      const data = await res.json().catch(() => null);
       if (!res.ok) {
-        throw new Error(data.error || "Login failed");
+        throw new Error(data?.error || `Login failed (${res.status})`);
       }
 
       // Check that role is an administrator or HR manager
-      if (data.user?.role === "EMPLOYEE") {
+      if (data?.user?.role === "EMPLOYEE") {
         throw new Error("Access restricted. This system is for administrators and HR managers only.");
       }
 
       router.push("/dashboard");
     } catch (err: any) {
-      setError(err.message);
+      if (err.name === "TypeError" && err.message?.includes("fetch")) {
+        setError("Network error connecting to the server. Please check your connection or reload.");
+      } else {
+        setError(err.message || "An unexpected error occurred during login.");
+      }
     } finally {
       setLoading(false);
     }

@@ -63,6 +63,13 @@ export const seedData = {
       "companyId": "cmvla9fqc0000r7tkb82ni1l4"
     },
     {
+      "id": "cmvla9g0z0007r7tkvd1qm749",
+      "name": "Ibrahim Al-Houf",
+      "email": "admin@alhouf.sa",
+      "role": "HR_MANAGER",
+      "companyId": "cmvla9fqc0000r7tkb82ni1l4"
+    },
+    {
       "id": "cmvlaq99a0003r7p05u331pg7",
       "name": "Ahmed Khan",
       "email": "ahmed.khan@alhouf.sa",
