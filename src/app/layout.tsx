@@ -45,11 +45,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className="h-full" suppressHydrationWarning>
       <head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
-      <body className={`${jakarta.variable} ${inter.variable} ${jakarta.className} min-h-screen flex flex-col bg-[#000000] text-[#FFFFFF] antialiased selection:bg-[#10b981] selection:text-black`}>
+      <body
+        suppressHydrationWarning
+        className={`${jakarta.variable} ${inter.variable} ${jakarta.className} min-h-screen flex flex-col bg-[#000000] text-[#FFFFFF] antialiased selection:bg-[#10b981] selection:text-black`}
+      >
         {children}
       </body>
     </html>

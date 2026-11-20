@@ -137,7 +137,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
   ];
 
   return (
-    <div className="flex h-screen bg-[#F8FAFC] text-[#0F172A] overflow-hidden font-['Inter',sans-serif]">
+    <div className="flex h-screen bg-[#F8FAFC] text-[#0F172A] overflow-hidden font-['Inter',sans-serif]" suppressHydrationWarning>
       {/* Sidebar Desktop - Modern Enterprise Light (Linear / Stripe style) */}
       <aside className="hidden lg:flex flex-col w-64 bg-white text-slate-700 shrink-0 border-r border-slate-200/80 z-20 shadow-xs">
         {/* Brand Header */}
@@ -229,7 +229,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
             <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100/80 border border-slate-200/80 text-xs text-slate-700 font-semibold">
               <Clock className="w-3.5 h-3.5 text-emerald-600" />
               <span>Riyadh (KSA):</span>
-              <span className="font-mono text-emerald-700">{riyadhTime || "00:00:00"}</span>
+              <span className="font-mono text-emerald-700" suppressHydrationWarning>{riyadhTime || "00:00:00"}</span>
             </div>
 
             {/* Active Company Badge */}

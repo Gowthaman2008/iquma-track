@@ -106,7 +106,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="w-full min-h-screen min-h-[100svh] flex flex-col items-center justify-center bg-background p-3 sm:p-6">
+    <div className="w-full min-h-screen min-h-[100svh] flex flex-col items-center justify-center bg-background p-3 sm:p-6" suppressHydrationWarning>
       <motion.div
         className="w-full max-w-5xl h-auto min-h-0 sm:min-h-[580px] lg:h-[720px] grid grid-cols-1 lg:grid-cols-2 rounded-2xl overflow-hidden shadow-2xl border border-border bg-card"
         initial={{ opacity: 0, scale: 0.95 }}
