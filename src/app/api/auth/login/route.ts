@@ -12,7 +12,7 @@ const DEMO_ACCOUNTS: Record<
     id: string;
     name: string;
     password: string;
-    role: "SUPER_ADMIN" | "HR_MANAGER" | "EMPLOYEE";
+    role: "SUPER_ADMIN" | "HR_MANAGER";
     companyId: string;
     companyName: string;
   }
@@ -33,21 +33,21 @@ const DEMO_ACCOUNTS: Record<
     companyId: "cmvla9fqc0000r7tkb82ni1l4",
     companyName: "AL Houf Trading & Contracting Group",
   },
-  "ahmed.khan@alhouf.sa": {
-    id: "cmvlaq99a0003r7p05u331pg7",
-    name: "Ahmed Khan",
-    password: "Employee@123456",
-    role: "EMPLOYEE",
+  "admin@alhouf.sa": {
+    id: "cmvla9g0z0007r7tkvd1qm749",
+    name: "Ibrahim Al-Houf",
+    password: "Admin@123456",
+    role: "HR_MANAGER",
     companyId: "cmvla9fqc0000r7tkb82ni1l4",
     companyName: "AL Houf Trading & Contracting Group",
   },
-  "ahmed.khan@iqamatrack.sa": {
-    id: "cmvla9g2t000br7tkv09ufvy2",
-    name: "Ahmed Khan",
-    password: "Employee@123456",
-    role: "EMPLOYEE",
-    companyId: "cmvla9fqc0000r7tkb82ni1l4",
-    companyName: "AL Houf Trading & Contracting Group",
+  "admin@sidrat.sa": {
+    id: "cmvla9g0z0007r7tkvd1qm750",
+    name: "Mansour Al-Sidrat",
+    password: "Admin@123456",
+    role: "HR_MANAGER",
+    companyId: "cmvla9fqc0000r7tkb82ni1l1",
+    companyName: "Sidrat Al Khaleej General Contracting Co.",
   },
 };
 
@@ -115,6 +115,13 @@ export async function POST(request: Request) {
       return NextResponse.json(
         { error: "Invalid credentials. Please verify your email and password." },
         { status: 401 }
+      );
+    }
+
+    if (sessionPayload.role === "EMPLOYEE") {
+      return NextResponse.json(
+        { error: "Access restricted. This system is for administrators and HR management only." },
+        { status: 403 }
       );
     }
 

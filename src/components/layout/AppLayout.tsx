@@ -58,6 +58,10 @@ export default function AppLayout({ children }: AppLayoutProps) {
       })
       .then((data) => {
         if (data?.authenticated) {
+          if (data.user?.role === "EMPLOYEE") {
+            fetch("/api/auth/logout", { method: "POST" }).finally(() => router.push("/login"));
+            return;
+          }
           setUser(data.user);
         }
       })
@@ -127,14 +131,14 @@ export default function AppLayout({ children }: AppLayoutProps) {
   const navItems = [
     { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
     { label: "Employees", href: "/employees", icon: Users },
-    { label: "Add Employee", href: "/employees/new", icon: UserPlus, hideFor: ["EMPLOYEE"] },
+    { label: "Add Employee", href: "/employees/new", icon: UserPlus },
     { label: "Expiry Calendar", href: "/calendar", icon: Calendar },
     { label: "Renewal History", href: "/renewals", icon: RefreshCw },
     { label: "Notification Center", href: "/notifications", icon: Bell, badge: unreadAlerts > 0 ? unreadAlerts : undefined },
-    { label: "Email Logs", href: "/email-logs", icon: MailCheck, hideFor: ["EMPLOYEE"] },
+    { label: "Email Logs", href: "/email-logs", icon: MailCheck },
     { label: "Reports & Export", href: "/reports", icon: FileBarChart2 },
     { label: "User Management", href: "/users", icon: UserCog, showOnly: ["SUPER_ADMIN"] },
-    { label: "Company Settings", href: "/settings/company", icon: Building2, hideFor: ["EMPLOYEE"] },
+    { label: "Company Settings", href: "/settings/company", icon: Building2 },
     { label: "Profile Settings", href: "/settings/profile", icon: Settings },
   ];
 
@@ -168,7 +172,6 @@ export default function AppLayout({ children }: AppLayoutProps) {
         <div className="flex-1 py-4 px-3 overflow-y-auto space-y-1">
           {navItems.map((item) => {
             if (item.showOnly && user && !item.showOnly.includes(user.role)) return null;
-            if (item.hideFor && user && item.hideFor.includes(user.role)) return null;
 
             const isActive = pathname === item.href || (item.href !== "/dashboard" && pathname.startsWith(item.href));
             const Icon = item.icon;
@@ -328,7 +331,6 @@ export default function AppLayout({ children }: AppLayoutProps) {
             <div className="flex-1 py-3 space-y-1 overflow-y-auto">
               {navItems.map((item) => {
                 if (item.showOnly && user && !item.showOnly.includes(user.role)) return null;
-                if (item.hideFor && user && item.hideFor.includes(user.role)) return null;
                 const Icon = item.icon;
                 const isActive = pathname === item.href;
                 return (

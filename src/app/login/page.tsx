@@ -14,19 +14,19 @@ import { AlertCircle } from "lucide-react";
 export default function LoginPage() {
   const router = useRouter();
 
-  const [email, setEmail] = useState("ahmed.khan@alhouf.sa");
-  const [password, setPassword] = useState("Employee@123456");
+  const [email, setEmail] = useState("admin@iqamatrack.sa");
+  const [password, setPassword] = useState("Admin@123456");
   const [rememberMe, setRememberMe] = useState(true);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Auto-redirect if already logged in
+  // Auto-redirect to dashboard if already logged in as admin
   React.useEffect(() => {
     fetch("/api/auth/me")
       .then((res) => (res.ok ? res.json() : null))
       .then((data) => {
         if (data?.authenticated && data?.user) {
-          router.replace(data.user.role === "EMPLOYEE" ? "/portal" : "/dashboard");
+          router.replace("/dashboard");
         }
       })
       .catch(() => {});
@@ -64,7 +64,7 @@ export default function LoginPage() {
     },
   };
 
-  // Standard Credentials submit handler (for both Admins and Employees)
+  // Administrator credentials submit handler
   const handleCredentialsSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -82,12 +82,12 @@ export default function LoginPage() {
         throw new Error(data.error || "Login failed");
       }
 
-      // Route according to role: employees go to /portal, admins go to /dashboard
+      // Check that role is an administrator or HR manager
       if (data.user?.role === "EMPLOYEE") {
-        router.push("/portal");
-      } else {
-        router.push("/dashboard");
+        throw new Error("Access restricted. This system is for administrators and HR managers only.");
       }
+
+      router.push("/dashboard");
     } catch (err: any) {
       setError(err.message);
     } finally {
@@ -137,7 +137,7 @@ export default function LoginPage() {
                 Unified Workforce &amp; Iqama Intelligence
               </h2>
               <p className="text-xs text-gray-300/90 leading-relaxed max-w-sm">
-                Secure access for corporate staff, HR executives, and site engineers across Saudi Arabia.
+                Secure administrator access for corporate HR and GRO operations across Saudi Arabia.
               </p>
             </div>
           </div>
@@ -162,13 +162,13 @@ export default function LoginPage() {
               </div>
               <div>
                 <motion.h1 className="text-2xl sm:text-3xl font-bold tracking-tight">
-                  Welcome Back
+                  Admin Sign In
                 </motion.h1>
               </div>
             </motion.div>
 
             <motion.p variants={itemVariants} className="text-sm text-muted-foreground mb-6">
-              Enter your credentials to access your employee or admin workspace.
+              Enter your administrator credentials to access the Iqama Track management console.
             </motion.p>
 
             {/* Error Message */}
@@ -185,11 +185,11 @@ export default function LoginPage() {
             {/* Credentials Form */}
             <motion.form variants={itemVariants} onSubmit={handleCredentialsSubmit} className="space-y-4">
               <div className="space-y-1.5">
-                <Label htmlFor="email">Work Email</Label>
+                <Label htmlFor="email">Admin Email</Label>
                 <Input 
                   id="email" 
                   type="email" 
-                  placeholder="name@alhouf.sa" 
+                  placeholder="admin@iqamatrack.sa" 
                   required 
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -231,22 +231,22 @@ export default function LoginPage() {
               </div>
 
               <Button type="submit" disabled={loading} className="w-full mt-2">
-                {loading ? "Authenticating..." : "Log In to Workspace"}
+                {loading ? "Authenticating..." : "Log In to Admin Console"}
               </Button>
             </motion.form>
 
             {/* Quick Demo Test Credential Chips */}
             <motion.div variants={itemVariants} className="pt-5 border-t border-border mt-5">
               <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mb-2 text-center">
-                Quick Test Credentials
+                Admin Quick Fill Credentials
               </p>
               <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
                 <button
                   type="button"
-                  onClick={() => setCredentials("ahmed.khan@alhouf.sa", "Employee@123456")}
+                  onClick={() => setCredentials("admin@iqamatrack.sa", "Admin@123456")}
                   className="px-1.5 sm:px-2 py-1.5 rounded-md border border-border bg-secondary/60 text-[10px] sm:text-[11px] font-medium text-foreground hover:border-primary/50 hover:text-primary transition-colors cursor-pointer text-center truncate"
                 >
-                  Employee
+                  Super Admin
                 </button>
                 <button
                   type="button"
@@ -257,10 +257,10 @@ export default function LoginPage() {
                 </button>
                 <button
                   type="button"
-                  onClick={() => setCredentials("admin@iqamatrack.sa", "Admin@123456")}
+                  onClick={() => setCredentials("admin@alhouf.sa", "Admin@123456")}
                   className="px-1.5 sm:px-2 py-1.5 rounded-md border border-border bg-secondary/60 text-[10px] sm:text-[11px] font-medium text-foreground hover:border-primary/50 hover:text-primary transition-colors cursor-pointer text-center truncate"
                 >
-                  Super Admin
+                  AL Houf Admin
                 </button>
               </div>
             </motion.div>
