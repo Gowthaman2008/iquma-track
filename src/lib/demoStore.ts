@@ -1,6 +1,6 @@
 import seedData from "../data/seedData";
 import { evaluateIqamaExpiry } from "./expiryEngine";
-import { maskIqamaNumber } from "./crypto";
+import { maskIqamaNumber, decryptIqamaNumber } from "./crypto";
 
 export interface DemoCompany {
   id: string;
@@ -91,10 +91,29 @@ export function getFallbackEmployees(filters: {
   }
 
   // Live evaluation
-  let evaluated = list.map((emp) => {
+  const todayFormatted = new Intl.DateTimeFormat("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  }).format(new Date());
+
+  let evaluated = list.map((emp, index) => {
     const evaluation = evaluateIqamaExpiry(emp.iqamaExpiryDate, emp.iqamaIssueDate);
+    const notes = emp.notes || "";
+    const bankMatch = notes.match(/Bank:\s*([^\s(|]+)/);
+    const acMatch = notes.match(/A\/C:\s*([^)|]+)/);
+    const nameArbMatch = notes.match(/Name \(Arabic\):\s*([^|]+)/);
+    const salaryMatch = notes.match(/Base Salary:\s*([^|]+)/);
+
     return {
       ...emp,
+      serialNo: index + 1,
+      rawId: (emp as any).rawId || emp.iqamaNumberMasked,
+      bank: bankMatch ? bankMatch[1].trim() : ((emp as any).bank || "—"),
+      bankAc: acMatch ? acMatch[1].trim() : ((emp as any).bankAc || "—"),
+      nameArb: nameArbMatch ? nameArbMatch[1].trim() : ((emp as any).nameArb || ""),
+      salary: salaryMatch ? salaryMatch[1].trim() : "",
+      todayStr: todayFormatted,
       evaluation,
     };
   });

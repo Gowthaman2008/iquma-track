@@ -375,6 +375,32 @@ function EmployeeProfileContent() {
                   </div>
                 </div>
 
+                {/* Banking & Master Registry Details */}
+                <div className="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-xs space-y-4">
+                  <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wider flex items-center gap-2">
+                    <Building className="w-4 h-4 text-emerald-600" />
+                    <span>Banking & Master Registry Details</span>
+                  </h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+                    <div className="p-3 bg-slate-50 rounded-xl border border-slate-200/70">
+                      <span className="text-[10px] uppercase font-bold text-slate-400 block">Bank Name</span>
+                      <span className="font-bold text-slate-900 mt-1 block">{employee.bank || "—"}</span>
+                    </div>
+                    <div className="p-3 bg-slate-50 rounded-xl border border-slate-200/70">
+                      <span className="text-[10px] uppercase font-bold text-slate-400 block">Bank A/C / IBAN</span>
+                      <span className="font-mono font-bold text-slate-900 mt-1 block truncate">{employee.bankAc || "—"}</span>
+                    </div>
+                    <div className="p-3 bg-slate-50 rounded-xl border border-slate-200/70">
+                      <span className="text-[10px] uppercase font-bold text-slate-400 block">Base Salary</span>
+                      <span className="font-bold text-emerald-700 mt-1 block">{employee.salary || "—"}</span>
+                    </div>
+                    <div className="p-3 bg-slate-50 rounded-xl border border-slate-200/70">
+                      <span className="text-[10px] uppercase font-bold text-slate-400 block">Evaluation Date (Today)</span>
+                      <span className="font-mono text-slate-700 mt-1 block">{employee.todayStr || new Date().toLocaleDateString("en-GB")}</span>
+                    </div>
+                  </div>
+                </div>
+
                 {/* Internal Notes */}
                 {employee.notes && (
                   <div className="bg-white rounded-2xl p-5 border border-gray-200">

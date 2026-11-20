@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
 import { getCurrentUser } from "@/lib/auth";
-import { encryptIqamaNumber, maskIqamaNumber } from "@/lib/crypto";
+import { encryptIqamaNumber, decryptIqamaNumber, maskIqamaNumber } from "@/lib/crypto";
 import { evaluateIqamaExpiry } from "@/lib/expiryEngine";
 import { logAuditEvent } from "@/lib/audit";
 import { getFallbackEmployees, addFallbackEmployee } from "@/lib/demoStore";
@@ -88,10 +88,47 @@ export async function GET(request: Request) {
     });
 
     if (employees && employees.length > 0) {
-      enriched = (employees as any[]).map((emp: any) => {
+      const todayFormatted = new Intl.DateTimeFormat("en-GB", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      }).format(new Date());
+
+      enriched = (employees as any[]).map((emp: any, index: number) => {
         const evaluation = evaluateIqamaExpiry(emp.iqamaExpiryDate, emp.iqamaIssueDate);
+
+        // Decrypt plain ID Number for authorized administrators
+        let rawId = emp.iqamaNumberMasked;
+        if (emp.iqamaNumberEncrypted) {
+          try {
+            const dec = decryptIqamaNumber(emp.iqamaNumberEncrypted);
+            if (dec && dec !== "DECRYPTION_ERROR") {
+              rawId = dec;
+            }
+          } catch (e) {}
+        }
+
+        // Extract banking details and Arabic name from notes
+        const notes = emp.notes || "";
+        const bankMatch = notes.match(/Bank:\s*([^\s(|]+)/);
+        const acMatch = notes.match(/A\/C:\s*([^)|]+)/);
+        const nameArbMatch = notes.match(/Name \(Arabic\):\s*([^|]+)/);
+        const salaryMatch = notes.match(/Base Salary:\s*([^|]+)/);
+
+        const bank = bankMatch ? bankMatch[1].trim() : (emp.bank || "—");
+        const bankAc = acMatch ? acMatch[1].trim() : (emp.bankAccount || "—");
+        const nameArb = nameArbMatch ? nameArbMatch[1].trim() : "";
+        const salary = salaryMatch ? salaryMatch[1].trim() : "";
+
         return {
           ...emp,
+          serialNo: index + 1,
+          rawId,
+          bank,
+          bankAc,
+          nameArb,
+          salary,
+          todayStr: todayFormatted,
           evaluation,
         };
       });

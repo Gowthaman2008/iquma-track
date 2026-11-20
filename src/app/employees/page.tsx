@@ -397,9 +397,9 @@ export default function EmployeesPage() {
         <div className="bg-white rounded-2xl border border-[#E2ECE5] shadow-xs overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs min-w-[760px]">
-              <thead className="bg-[#F8FAF9] border-b border-[#E2ECE5] text-gray-600 font-bold uppercase tracking-wider text-[11px]">
+              <thead className="bg-[#F8FAF9] border-b border-[#E2ECE5] text-gray-700 font-bold uppercase tracking-wider text-[10px]">
                 <tr>
-                  <th className="py-3 px-4 w-10 text-center">
+                  <th className="py-3 px-3 w-8 text-center">
                     <button onClick={handleSelectAll} className="p-0.5 text-gray-500 hover:text-gray-800">
                       {selectedIds.length === employees.length && employees.length > 0 ? (
                         <CheckSquare className="w-4 h-4 text-[#006C35]" />
@@ -408,30 +408,35 @@ export default function EmployeesPage() {
                       )}
                     </button>
                   </th>
-                  <th className="py-3 px-4">Employee</th>
-                  <th className="py-3 px-4">Iqama Number</th>
-                  <th className="py-3 px-4">Expiry Date</th>
-                  <th className="py-3 px-4">Remaining</th>
-                  <th className="py-3 px-4">Department</th>
-                  <th className="py-3 px-4">Status</th>
-                  <th className="py-3 px-4 text-right">Actions</th>
+                  <th className="py-3 px-2 text-center font-bold">NO</th>
+                  <th className="py-3 px-3">ID Number</th>
+                  <th className="py-3 px-3">Nationality</th>
+                  <th className="py-3 px-3">Name Eng</th>
+                  <th className="py-3 px-3">Bank</th>
+                  <th className="py-3 px-3">Bank A/C</th>
+                  <th className="py-3 px-3">department</th>
+                  <th className="py-3 px-3">Company Name</th>
+                  <th className="py-3 px-3">Iqama End Date</th>
+                  <th className="py-3 px-3">Today</th>
+                  <th className="py-3 px-3 text-center">Defrance</th>
+                  <th className="py-3 px-3 text-right">Actions</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {loading ? (
                   <tr>
-                    <td colSpan={8} className="py-12 text-center text-gray-400">
+                    <td colSpan={13} className="py-12 text-center text-gray-400">
                       Loading employee directory...
                     </td>
                   </tr>
                 ) : employees.length === 0 ? (
                   <tr>
-                    <td colSpan={8} className="py-12 text-center text-gray-500">
+                    <td colSpan={13} className="py-12 text-center text-gray-500">
                       No employees match your search or filter criteria.
                     </td>
                   </tr>
                 ) : (
-                  employees.map((emp) => {
+                  employees.map((emp, index) => {
                     const isSelected = selectedIds.includes(emp.id);
                     return (
                       <tr
@@ -440,7 +445,7 @@ export default function EmployeesPage() {
                           isSelected ? "bg-[#EFF8F3]/60" : ""
                         }`}
                       >
-                        <td className="py-3 px-4 text-center">
+                        <td className="py-3 px-3 text-center">
                           <button
                             onClick={() => handleToggleSelect(emp.id)}
                             className="p-0.5 text-gray-500 hover:text-gray-800"
@@ -453,70 +458,83 @@ export default function EmployeesPage() {
                           </button>
                         </td>
 
-                        <td className="py-3 px-4">
+                        <td className="py-3 px-2 text-center font-bold text-gray-500 text-xs">
+                          {emp.serialNo || index + 1}
+                        </td>
+
+                        <td className="py-3 px-3 font-mono font-bold text-gray-800 text-xs whitespace-nowrap">
+                          {emp.rawId || emp.iqamaNumberMasked}
+                        </td>
+
+                        <td className="py-3 px-3 text-gray-700 text-xs font-medium whitespace-nowrap">
+                          {emp.nationality}
+                        </td>
+
+                        <td className="py-3 px-3">
                           <Link
                             href={`/employees/${emp.id}`}
-                            className="font-bold text-gray-900 hover:text-[#006C35] transition"
+                            className="font-bold text-gray-900 hover:text-[#006C35] transition text-xs block"
                           >
                             {emp.fullName}
                           </Link>
-                          <div className="text-[10px] text-gray-500 flex items-center gap-1.5 mt-0.5">
-                            <span className="font-mono bg-gray-100 px-1.5 py-0.2 rounded font-semibold text-gray-700">
+                          {emp.nameArb ? (
+                            <span className="text-[10px] text-gray-400 block font-normal mt-0.5">
+                              {emp.nameArb}
+                            </span>
+                          ) : (
+                            <span className="text-[10px] text-gray-400 block font-mono">
                               {emp.employeeId}
                             </span>
-                            <span>&bull;</span>
-                            <span>{emp.nationality}</span>
-                            {emp.company && (
-                              <>
-                                <span>&bull;</span>
-                                <span className="text-gray-400 font-medium">{emp.company.companyName}</span>
-                              </>
-                            )}
-                          </div>
+                          )}
                         </td>
 
-                        <td className="py-3 px-4 font-mono font-bold text-gray-800">
-                          {emp.iqamaNumberMasked}
+                        <td className="py-3 px-3 text-gray-700 text-xs font-semibold whitespace-nowrap">
+                          {emp.bank || "—"}
                         </td>
 
-                        <td className="py-3 px-4 font-medium text-gray-800">
-                          {emp.evaluation.formattedDate}
+                        <td className="py-3 px-3 font-mono text-[11px] text-gray-600 whitespace-nowrap">
+                          {emp.bankAc || "—"}
                         </td>
 
-                        <td className="py-3 px-4 font-bold">
+                        <td className="py-3 px-3 text-gray-700 text-xs whitespace-nowrap">
+                          <span className="px-2 py-0.5 bg-gray-100 rounded-md text-[11px] font-medium">
+                            {emp.department || "Head Office"}
+                          </span>
+                        </td>
+
+                        <td className="py-3 px-3 text-gray-600 text-xs whitespace-nowrap font-medium">
+                          {emp.company?.companyName || "Sidrat Al Khaleej"}
+                        </td>
+
+                        <td className="py-3 px-3 font-medium text-gray-800 text-xs whitespace-nowrap">
+                          {emp.evaluation?.formattedDate || new Date(emp.iqamaExpiryDate).toLocaleDateString("en-GB")}
+                        </td>
+
+                        <td className="py-3 px-3 font-mono text-gray-500 text-xs whitespace-nowrap">
+                          {emp.todayStr || new Date().toLocaleDateString("en-GB")}
+                        </td>
+
+                        <td className="py-3 px-3 text-center whitespace-nowrap">
                           <span
-                            className={
+                            className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold ${
                               emp.evaluation.daysRemaining < 0
-                                ? "text-red-700"
+                                ? "bg-rose-50 text-rose-700 border border-rose-200"
                                 : emp.evaluation.daysRemaining <= 7
-                                ? "text-rose-600"
+                                ? "bg-orange-50 text-orange-700 border border-orange-200"
                                 : emp.evaluation.daysRemaining <= 30
-                                ? "text-amber-600"
-                                : "text-emerald-700"
-                            }
+                                ? "bg-amber-50 text-amber-700 border border-amber-200"
+                                : "bg-emerald-50 text-emerald-700 border border-emerald-200"
+                            }`}
                           >
                             {emp.evaluation.daysRemaining < 0
-                              ? `${Math.abs(emp.evaluation.daysRemaining)}d overdue`
+                              ? `${emp.evaluation.daysRemaining}d`
                               : emp.evaluation.daysRemaining === 0
-                              ? "Today!"
-                              : `${emp.evaluation.daysRemaining} days`}
+                              ? "0d"
+                              : `+${emp.evaluation.daysRemaining}d`}
                           </span>
                         </td>
 
-                        <td className="py-3 px-4 text-gray-700">
-                          <span className="px-2 py-0.5 bg-gray-100 rounded-md text-[11px] font-medium">
-                            {emp.department}
-                          </span>
-                        </td>
-
-                        <td className="py-3 px-4">
-                          <StatusBadge
-                            status={emp.evaluation.status}
-                            daysRemaining={emp.evaluation.daysRemaining}
-                          />
-                        </td>
-
-                        <td className="py-3 px-4 text-right">
+                        <td className="py-3 px-3 text-right whitespace-nowrap">
                           <div className="flex items-center justify-end gap-1.5">
                             {/* Renew Modal Trigger */}
                             <button
@@ -528,7 +546,7 @@ export default function EmployeesPage() {
                                 })
                               }
                               title="Renew Iqama"
-                              className="p-1.5 rounded-lg text-emerald-700 bg-emerald-50 hover:bg-emerald-100 transition"
+                              className="p-1.5 rounded-lg text-emerald-700 bg-emerald-50 hover:bg-emerald-100 transition cursor-pointer"
                             >
                               <RefreshCw className="w-3.5 h-3.5" />
                             </button>
@@ -541,19 +559,10 @@ export default function EmployeesPage() {
                                   name: emp.fullName,
                                 })
                               }
-                              title="Upload Iqama Document"
-                              className="p-1.5 rounded-lg text-blue-700 bg-blue-50 hover:bg-blue-100 transition"
+                              title="Upload Document"
+                              className="p-1.5 rounded-lg text-blue-700 bg-blue-50 hover:bg-blue-100 transition cursor-pointer"
                             >
                               <Upload className="w-3.5 h-3.5" />
-                            </button>
-
-                            {/* Send Manual Reminder Email */}
-                            <button
-                              onClick={() => handleSendReminder(emp.id, emp.fullName)}
-                              title="Send Reminder Email"
-                              className="p-1.5 rounded-lg text-amber-700 bg-amber-50 hover:bg-amber-100 transition"
-                            >
-                              <Mail className="w-3.5 h-3.5" />
                             </button>
 
                             {/* View Profile */}
@@ -568,7 +577,7 @@ export default function EmployeesPage() {
                             {/* Edit */}
                             <Link
                               href={`/employees/${emp.id}/edit`}
-                              title="Edit Details"
+                              title="Edit Employee"
                               className="p-1.5 rounded-lg text-gray-700 bg-gray-100 hover:bg-gray-200 transition"
                             >
                               <Edit className="w-3.5 h-3.5" />
@@ -577,8 +586,8 @@ export default function EmployeesPage() {
                             {/* Delete */}
                             <button
                               onClick={() => handleDelete(emp.id, emp.fullName)}
-                              title="Delete Record"
-                              className="p-1.5 rounded-lg text-red-600 bg-red-50 hover:bg-red-100 transition"
+                              title="Delete Employee"
+                              className="p-1.5 rounded-lg text-red-600 bg-red-50 hover:bg-red-100 transition cursor-pointer"
                             >
                               <Trash2 className="w-3.5 h-3.5" />
                             </button>

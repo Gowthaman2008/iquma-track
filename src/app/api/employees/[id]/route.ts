@@ -45,10 +45,32 @@ export async function GET(
         }
       }
 
+      const notes = employee.notes || "";
+      const bankMatch = notes.match(/Bank:\s*([^\s(|]+)/);
+      const acMatch = notes.match(/A\/C:\s*([^)|]+)/);
+      const nameArbMatch = notes.match(/Name \(Arabic\):\s*([^|]+)/);
+      const salaryMatch = notes.match(/Base Salary:\s*([^|]+)/);
+
+      const bank = bankMatch ? bankMatch[1].trim() : ((employee as any).bank || "—");
+      const bankAc = acMatch ? acMatch[1].trim() : ((employee as any).bankAccount || "—");
+      const nameArb = nameArbMatch ? nameArbMatch[1].trim() : "";
+      const salary = salaryMatch ? salaryMatch[1].trim() : "";
+      const todayFormatted = new Intl.DateTimeFormat("en-GB", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      }).format(new Date());
+
       return NextResponse.json({
         employee: {
           ...employee,
           plainIqamaNumber,
+          rawId: plainIqamaNumber,
+          bank,
+          bankAc,
+          nameArb,
+          salary,
+          todayStr: todayFormatted,
           evaluation,
         },
       });
