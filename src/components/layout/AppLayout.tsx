@@ -132,7 +132,7 @@ export default function AppLayout({ children }: AppLayoutProps) {
     { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
     { label: "Employees", href: "/employees", icon: Users },
     { label: "Renewal History", href: "/renewals", icon: RefreshCw },
-    { label: "User Management", href: "/users", icon: UserCog, showOnly: ["SUPER_ADMIN"] },
+    { label: "Admin Management", href: "/users", icon: UserCog },
     { label: "Profile Settings", href: "/settings/profile", icon: Settings },
   ];
 

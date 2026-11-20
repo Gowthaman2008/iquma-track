@@ -2,9 +2,23 @@
 
 import React, { useState, useEffect } from "react";
 import AppLayout from "@/components/layout/AppLayout";
-import { UserCog, UserPlus, Shield, Trash2, Edit, CheckCircle2, AlertCircle, X } from "lucide-react";
+import {
+  ShieldCheck,
+  UserPlus,
+  Shield,
+  Trash2,
+  Edit,
+  CheckCircle2,
+  AlertCircle,
+  X,
+  Lock,
+  Mail,
+  User,
+  KeyRound,
+  Info,
+} from "lucide-react";
 
-export default function UsersPage() {
+export default function AdminManagementPage() {
   const [users, setUsers] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [modalOpen, setModalOpen] = useState(false);
@@ -76,7 +90,7 @@ export default function UsersPage() {
   };
 
   const handleDelete = async (userId: string, userName: string) => {
-    if (!confirm(`Are you sure you want to delete user account "${userName}"?`)) return;
+    if (!confirm(`Are you sure you want to revoke dashboard access for administrator "${userName}"?`)) return;
 
     try {
       const res = await fetch(`/api/users/${userId}`, { method: "DELETE" });
@@ -99,113 +113,143 @@ export default function UsersPage() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <h1 className="text-2xl font-black text-gray-900 tracking-tight flex items-center gap-2">
-              <UserCog className="w-6 h-6 text-[#006C35]" />
-              <span>User & Role-Based Access Control</span>
+            <div className="flex items-center gap-2">
+              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-200 uppercase tracking-wider">
+                Dashboard Access Control
+              </span>
+            </div>
+            <h1 className="text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2 mt-1">
+              <ShieldCheck className="w-6 h-6 text-emerald-600" />
+              <span>Admin Management</span>
             </h1>
-            <p className="text-xs text-[#6B7C72] mt-0.5">
-              Manage system administrators, HR managers, and employee self-service accounts.
+            <p className="text-xs text-slate-500 mt-0.5">
+              Authorize and manage administrator accounts permitted to access the Iqama Track management console.
             </p>
           </div>
 
           <button
             onClick={handleOpenAdd}
-            className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold bg-[#006C35] text-white hover:bg-[#004B28] transition shadow-sm"
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold bg-emerald-600 text-white hover:bg-emerald-700 transition shadow-xs hover:shadow-md cursor-pointer"
           >
             <UserPlus className="w-4 h-4" />
-            <span>Create User Account</span>
+            <span>Add New Admin</span>
           </button>
         </div>
 
-        {/* Message */}
+        {/* Security Notice Banner */}
+        <div className="bg-slate-50 border border-slate-200/90 rounded-2xl p-4 flex items-start sm:items-center gap-3">
+          <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-200/60 flex items-center justify-center shrink-0">
+            <Lock className="w-4 h-4" />
+          </div>
+          <div className="text-xs text-slate-600">
+            <span className="font-semibold text-slate-900">Restricted Console Access:</span> Only administrators registered in this section are authorized to sign in and monitor employee records, Iqama expiry dates, and renewal operations.
+          </div>
+        </div>
+
+        {/* Status Message */}
         {message && (
           <div
-            className={`p-3 rounded-xl border text-xs flex items-center justify-between animate-in fade-in ${
+            className={`p-3.5 rounded-xl border text-xs flex items-center justify-between animate-in fade-in ${
               message.type === "success"
                 ? "bg-emerald-50 border-emerald-200 text-emerald-800"
                 : "bg-red-50 border-red-200 text-red-800"
             }`}
           >
-            <span>{message.text}</span>
-            <button onClick={() => setMessage(null)}>&times;</button>
+            <div className="flex items-center gap-2">
+              {message.type === "success" ? (
+                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+              ) : (
+                <AlertCircle className="w-4 h-4 text-red-600" />
+              )}
+              <span className="font-medium">{message.text}</span>
+            </div>
+            <button onClick={() => setMessage(null)} className="p-1 hover:opacity-75 font-bold">
+              &times;
+            </button>
           </div>
         )}
 
-        {/* Users Table */}
-        <div className="bg-white rounded-2xl border border-[#E2ECE5] shadow-xs overflow-hidden">
+        {/* Admin Accounts Table */}
+        <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
-              <thead className="bg-[#F8FAF9] border-b border-[#E2ECE5] text-gray-600 font-bold uppercase tracking-wider text-[11px]">
+              <thead className="bg-slate-50/80 border-b border-slate-200/70 text-slate-600 font-bold uppercase tracking-wider text-[10px]">
                 <tr>
-                  <th className="py-3 px-4">User</th>
-                  <th className="py-3 px-4">Email</th>
-                  <th className="py-3 px-4">Role</th>
-                  <th className="py-3 px-4">Associated Entity</th>
-                  <th className="py-3 px-4">Registered Date</th>
+                  <th className="py-3 px-4">Administrator</th>
+                  <th className="py-3 px-4">Email / Sign-In ID</th>
+                  <th className="py-3 px-4">Admin Role</th>
+                  <th className="py-3 px-4">Entity Access</th>
+                  <th className="py-3 px-4">Created Date</th>
                   <th className="py-3 px-4 text-right">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-100">
+              <tbody className="divide-y divide-slate-100">
                 {loading ? (
                   <tr>
-                    <td colSpan={6} className="py-12 text-center text-gray-400">
-                      Loading user accounts...
+                    <td colSpan={6} className="py-12 text-center text-slate-400">
+                      Loading administrator accounts...
+                    </td>
+                  </tr>
+                ) : users.length === 0 ? (
+                  <tr>
+                    <td colSpan={6} className="py-12 text-center text-slate-400">
+                      No admin accounts found. Click "Add New Admin" to authorize an administrator.
                     </td>
                   </tr>
                 ) : (
                   users.map((u) => (
-                    <tr key={u.id} className="hover:bg-[#F9FCFA] transition">
-                      <td className="py-3 px-4">
-                        <div className="flex items-center gap-2.5">
-                          <div className="w-8 h-8 rounded-full bg-[#006C35] text-white text-xs font-bold flex items-center justify-center">
+                    <tr key={u.id} className="hover:bg-slate-50/70 transition-colors">
+                      <td className="py-3.5 px-4">
+                        <div className="flex items-center gap-3">
+                          <div className="w-8 h-8 rounded-full bg-emerald-600 text-white text-xs font-bold flex items-center justify-center shadow-xs">
                             {u.name.charAt(0).toUpperCase()}
                           </div>
                           <div>
-                            <span className="font-bold text-gray-900">{u.name}</span>
+                            <span className="font-bold text-slate-900">{u.name}</span>
+                            <div className="text-[10px] text-slate-400">ID: {u.id.slice(-6)}</div>
                           </div>
                         </div>
                       </td>
 
-                      <td className="py-3 px-4 font-mono text-gray-700">
+                      <td className="py-3.5 px-4 font-mono text-slate-700">
                         {u.email}
                       </td>
 
-                      <td className="py-3 px-4">
+                      <td className="py-3.5 px-4">
                         <span
-                          className={`inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold ${
+                          className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold ${
                             u.role === "SUPER_ADMIN"
-                              ? "bg-purple-100 text-purple-800 border border-purple-200"
-                              : u.role === "HR_MANAGER"
-                              ? "bg-emerald-100 text-emerald-800 border border-emerald-200"
-                              : "bg-gray-100 text-gray-700 border border-gray-200"
+                              ? "bg-purple-50 text-purple-700 border border-purple-200"
+                              : "bg-emerald-50 text-emerald-700 border border-emerald-200"
                           }`}
                         >
-                          {u.role.replace("_", " ")}
+                          <Shield className="w-3 h-3" />
+                          <span>{u.role === "SUPER_ADMIN" ? "Super Admin" : "HR Manager / Admin"}</span>
                         </span>
                       </td>
 
-                      <td className="py-3 px-4 text-gray-600">
-                        {u.company?.companyName || "Global / Multi-tenant"}
+                      <td className="py-3.5 px-4 text-slate-600 font-medium">
+                        {u.company?.companyName || "AL Houf Trading & Contracting Group"}
                       </td>
 
-                      <td className="py-3 px-4 text-gray-500">
+                      <td className="py-3.5 px-4 text-slate-500">
                         {new Date(u.createdAt).toLocaleDateString()}
                       </td>
 
-                      <td className="py-3 px-4 text-right space-x-1.5">
+                      <td className="py-3.5 px-4 text-right space-x-1.5">
                         <button
                           onClick={() => handleOpenEdit(u)}
-                          className="p-1.5 rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200 transition"
-                          title="Edit User"
+                          className="px-2.5 py-1 rounded-lg text-[11px] font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 transition cursor-pointer"
+                          title="Edit Admin"
                         >
-                          <Edit className="w-3.5 h-3.5" />
+                          Edit
                         </button>
                         <button
                           onClick={() => handleDelete(u.id, u.name)}
-                          className="p-1.5 rounded-md text-red-600 bg-red-50 hover:bg-red-100 transition"
-                          title="Delete User"
+                          className="px-2.5 py-1 rounded-lg text-[11px] font-semibold text-rose-600 bg-rose-50 hover:bg-rose-100 transition cursor-pointer"
+                          title="Revoke Admin Access"
                         >
-                          <Trash2 className="w-3.5 h-3.5" />
+                          Revoke
                         </button>
                       </td>
                     </tr>
@@ -217,53 +261,64 @@ export default function UsersPage() {
         </div>
       </div>
 
-      {/* User Create / Edit Modal */}
+      {/* Admin Create / Edit Modal */}
       {modalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in">
-          <div className="bg-white rounded-2xl max-w-md w-full shadow-2xl border border-gray-100 overflow-hidden">
-            <div className="bg-gradient-to-r from-[#004B28] to-[#006C35] px-6 py-4 text-white flex items-center justify-between">
+          <div className="bg-white rounded-2xl max-w-md w-full shadow-2xl border border-slate-200 overflow-hidden">
+            <div className="bg-emerald-600 px-6 py-4 text-white flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <UserCog className="w-5 h-5 text-emerald-300" />
-                <h3 className="font-bold text-base">
-                  {editingUser ? "Edit User Account" : "Create New User"}
-                </h3>
+                <ShieldCheck className="w-5 h-5 text-emerald-200" />
+                <div>
+                  <h3 className="font-bold text-base leading-tight">
+                    {editingUser ? "Edit Admin Account" : "Add New Administrator"}
+                  </h3>
+                  <p className="text-[11px] text-emerald-100">
+                    Grant manual access to the Iqama Track dashboard
+                  </p>
+                </div>
               </div>
-              <button onClick={() => setModalOpen(false)} className="p-1 rounded-md text-emerald-100 hover:text-white">
+              <button
+                onClick={() => setModalOpen(false)}
+                className="p-1 rounded-md text-emerald-100 hover:text-white transition cursor-pointer"
+              >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
             <form onSubmit={handleSubmit} className="p-6 space-y-4">
               <div>
-                <label className="block text-xs font-semibold text-gray-700 mb-1">
-                  Full Name *
+                <label className="block text-xs font-semibold text-slate-700 mb-1">
+                  Administrator Full Name *
                 </label>
                 <input
                   type="text"
                   required
+                  placeholder="e.g. Tariq Al-Mansoor"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-[#006C35] focus:outline-none"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:ring-2 focus:ring-emerald-500 focus:outline-none"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-gray-700 mb-1">
-                  Email Address *
+                <label className="block text-xs font-semibold text-slate-700 mb-1">
+                  Admin Sign-In Email *
                 </label>
                 <input
                   type="email"
                   required
                   disabled={!!editingUser}
+                  placeholder="admin@alhouf.sa"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm disabled:bg-gray-100 focus:ring-2 focus:ring-[#006C35] focus:outline-none"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 disabled:bg-slate-100 focus:ring-2 focus:ring-emerald-500 focus:outline-none"
                 />
+                <p className="text-[10px] text-slate-400 mt-1">This email will be used to log in at the admin portal.</p>
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-gray-700 mb-1">
-                  {editingUser ? "New Password (Leave blank to keep unchanged)" : "Password *"}
+                <label className="block text-xs font-semibold text-slate-700 mb-1">
+                  {editingUser ? "New Password (Leave blank to keep unchanged)" : "Admin Password *"}
                 </label>
                 <input
                   type="password"
@@ -271,38 +326,40 @@ export default function UsersPage() {
                   placeholder={editingUser ? "••••••••" : "At least 6 characters"}
                   value={formData.password}
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-[#006C35] focus:outline-none"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 focus:ring-2 focus:ring-emerald-500 focus:outline-none"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-gray-700 mb-1">
-                  System Role *
+                <label className="block text-xs font-semibold text-slate-700 mb-1">
+                  Administrative Privilege Level *
                 </label>
                 <select
                   value={formData.role}
                   onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-[#006C35] focus:outline-none"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm text-slate-900 bg-white focus:ring-2 focus:ring-emerald-500 focus:outline-none"
                 >
-                  <option value="SUPER_ADMIN">Super Admin (Full Platform Control)</option>
-                  <option value="HR_MANAGER">HR Manager (Employee CRUD & Renewals)</option>
-                  <option value="EMPLOYEE">Employee (Self-Service Profile View)</option>
+                  <option value="SUPER_ADMIN">Super Admin (Full System & Access Control)</option>
+                  <option value="HR_MANAGER">HR Admin / Manager (Iqama Expiry & Renewals)</option>
                 </select>
+                <p className="text-[10px] text-slate-400 mt-1">
+                  Controls permissions across the Iqama tracking console.
+                </p>
               </div>
 
-              <div className="flex items-center justify-end gap-3 pt-3 border-t border-gray-100">
+              <div className="flex items-center justify-end gap-3 pt-3 border-t border-slate-100">
                 <button
                   type="button"
                   onClick={() => setModalOpen(false)}
-                  className="px-4 py-2 border border-gray-300 rounded-lg text-sm text-gray-700 hover:bg-gray-50"
+                  className="px-4 py-2 border border-slate-300 rounded-lg text-xs font-semibold text-slate-700 hover:bg-slate-50 transition cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2 rounded-lg text-sm font-semibold bg-[#006C35] text-white hover:bg-[#004B28] transition"
+                  className="px-5 py-2 rounded-lg text-xs font-bold bg-emerald-600 text-white hover:bg-emerald-700 transition shadow-xs cursor-pointer"
                 >
-                  {editingUser ? "Save Changes" : "Create User"}
+                  {editingUser ? "Save Admin Changes" : "Grant Dashboard Access"}
                 </button>
               </div>
             </form>

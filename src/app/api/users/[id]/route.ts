@@ -8,8 +8,8 @@ export async function PUT(
   { params }: { params: Promise<{ id: string }> }
 ) {
   const user = await getCurrentUser();
-  if (!user || user.role !== "SUPER_ADMIN") {
-    return NextResponse.json({ error: "Forbidden: Super Admin access required." }, { status: 403 });
+  if (!user || (user.role !== "SUPER_ADMIN" && user.role !== "HR_MANAGER")) {
+    return NextResponse.json({ error: "Forbidden: Admin access required." }, { status: 403 });
   }
 
   const { id } = await params;
@@ -20,12 +20,15 @@ export async function PUT(
   });
 
   if (!existing) {
-    return NextResponse.json({ error: "User not found." }, { status: 404 });
+    return NextResponse.json({ error: "Admin account not found." }, { status: 404 });
   }
+
+  const validRoles = ["SUPER_ADMIN", "HR_MANAGER"];
+  const targetRole = body.role && validRoles.includes(body.role) ? body.role : existing.role;
 
   const updateData: any = {
     name: body.name?.trim() || existing.name,
-    role: body.role || existing.role,
+    role: targetRole,
   };
 
   if (body.password && body.password.length >= 6) {
@@ -51,13 +54,13 @@ export async function PUT(
     action: "UPDATE",
     entityType: "SETTINGS",
     entityId: id,
-    details: `Updated user profile/role for ${updated.email} to ${updated.role}`,
-  });
+    details: `Updated admin profile/role for ${updated.email} to ${updated.role}`,
+  }).catch(() => {});
 
   return NextResponse.json({
     success: true,
     user: updated,
-    message: "User updated successfully.",
+    message: "Admin account updated successfully.",
   });
 }
 
@@ -66,8 +69,8 @@ export async function DELETE(
   { params }: { params: Promise<{ id: string }> }
 ) {
   const user = await getCurrentUser();
-  if (!user || user.role !== "SUPER_ADMIN") {
-    return NextResponse.json({ error: "Forbidden: Super Admin access required." }, { status: 403 });
+  if (!user || (user.role !== "SUPER_ADMIN" && user.role !== "HR_MANAGER")) {
+    return NextResponse.json({ error: "Forbidden: Admin access required." }, { status: 403 });
   }
 
   const { id } = await params;
@@ -81,15 +84,25 @@ export async function DELETE(
   });
 
   if (!existing) {
-    return NextResponse.json({ error: "User not found." }, { status: 404 });
+    return NextResponse.json({ error: "Admin account not found." }, { status: 404 });
   }
 
   await prisma.user.delete({
     where: { id },
   });
 
+  await logAuditEvent({
+    companyId: existing.companyId,
+    userId: user.id,
+    userName: user.name,
+    action: "DELETE",
+    entityType: "SETTINGS",
+    entityId: id,
+    details: `Deleted admin account: ${existing.email}`,
+  }).catch(() => {});
+
   return NextResponse.json({
     success: true,
-    message: `User ${existing.email} deleted successfully.`,
+    message: `Admin account ${existing.email} removed successfully.`,
   });
 }
