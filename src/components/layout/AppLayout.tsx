@@ -184,11 +184,6 @@ export default function AppLayout({ children }: AppLayoutProps) {
                   <Icon className={`w-4 h-4 ${isActive ? "text-emerald-600" : "text-slate-400 group-hover:text-slate-600"}`} />
                   <span>{item.label}</span>
                 </div>
-                {item.badge && (
-                  <span className="px-2 py-0.5 text-[10px] font-bold rounded-full bg-rose-500 text-white shadow-xs">
-                    {item.badge}
-                  </span>
-                )}
               </Link>
             );
           })}
@@ -328,11 +323,6 @@ export default function AppLayout({ children }: AppLayoutProps) {
                       <Icon className="w-4 h-4" />
                       <span>{item.label}</span>
                     </div>
-                    {item.badge && (
-                      <span className="px-2 py-0.5 text-[10px] font-bold rounded-full bg-rose-500 text-white">
-                        {item.badge}
-                      </span>
-                    )}
                   </Link>
                 );
               })}
