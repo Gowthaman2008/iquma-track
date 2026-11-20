@@ -14,7 +14,7 @@
     "expiryDate": "2023-05-15",
     "renewals": [],
     "jobPosition": "Senior Administrative Specialist",
-    "notes": "Name (Arabic): ابراهيم عبد المنعم ابراهيم محمدنور | Base Salary: SAR 2,500.00 | Bank: NCBK (A/C: SA9610000011100279534905)",
+    "notes": "NO: 1 | Name (Arabic): ابراهيم عبد المنعم ابراهيم محمدنور | Base Salary: SAR 2,500.00 | Bank: NCBK (A/C: SA9610000011100279534905)",
     "isSaudi": false
   },
   {
@@ -32,7 +32,7 @@
     "expiryDate": "2024-01-21",
     "renewals": [],
     "jobPosition": "Chief Financial Accountant",
-    "notes": "Name (Arabic): احمد فراج محمد شاهين | Base Salary: SAR 3,000.00 | Bank: NCBK (A/C: SA6810000010300000610009)",
+    "notes": "NO: 3 | Name (Arabic): احمد فراج محمد شاهين | Base Salary: SAR 3,000.00 | Bank: NCBK (A/C: SA6810000010300000610009)",
     "isSaudi": false
   },
   {
@@ -50,7 +50,7 @@
     "expiryDate": "2023-09-06",
     "renewals": [],
     "jobPosition": "Senior Civil Construction Lead",
-    "notes": "Name (Arabic): احمد محمد عثمان أحمد | Base Salary: SAR 2,500.00 | Bank: NCBK (A/C: SA9810000011100251785109)",
+    "notes": "NO: 5 | Name (Arabic): احمد محمد عثمان أحمد | Base Salary: SAR 2,500.00 | Bank: NCBK (A/C: SA9810000011100251785109)",
     "isSaudi": false
   },
   {
@@ -70,12 +70,12 @@
       {
         "previous": "2023-05-15",
         "new": "2026-07-28",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Senior Civil Construction Lead",
-    "notes": "Name (Arabic): ابراهيم عبد المنعم ابراهيم محمدنور | Base Salary: SAR 2,500.00 | Bank: NCBK (A/C: SA9610000011100279534905)",
+    "notes": "NO: 151 | Name (Arabic): ابراهيم عبد المنعم ابراهيم محمدنور | Base Salary: SAR 2,500.00 | Bank: NCBK (A/C: SA9610000011100279534905)",
     "isSaudi": false
   },
   {
@@ -93,7 +93,7 @@
     "expiryDate": "2023-09-18",
     "renewals": [],
     "jobPosition": "Site Logistics & Equipment Supervisor",
-    "notes": "Name (Arabic): سانتاسيلان كوبو سامي | Base Salary: SAR 2,500.00 | Bank: RJHI (A/C: SA6280000158608016121147)",
+    "notes": "NO: 12 | Name (Arabic): سانتاسيلان كوبو سامي | Base Salary: SAR 2,500.00 | Bank: RJHI (A/C: SA6280000158608016121147)",
     "isSaudi": false
   },
   {
@@ -113,12 +113,12 @@
       {
         "previous": "2026-07-31",
         "new": "2027-01-27",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Mechanical & Systems Foreman",
-    "notes": "Name (Arabic): سليم احمد محمد فرقان | Base Salary: SAR 2,400.00 | Bank: NCBK (A/C: SA5410000018100001184208)",
+    "notes": "NO: 14 | Name (Arabic): سليم احمد محمد فرقان | Base Salary: SAR 2,400.00 | Bank: NCBK (A/C: SA5410000018100001184208)",
     "isSaudi": false
   },
   {
@@ -136,7 +136,7 @@
     "expiryDate": "2023-10-23",
     "renewals": [],
     "jobPosition": "Site Maintenance Lead",
-    "notes": "Name (Arabic): شوهل محمد شفيق | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA9210000015900000706006)",
+    "notes": "NO: 16 | Name (Arabic): شوهل محمد شفيق | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA9210000015900000706006)",
     "isSaudi": false
   },
   {
@@ -154,7 +154,7 @@
     "expiryDate": "2023-12-21",
     "renewals": [],
     "jobPosition": "Site Logistics & Equipment Supervisor",
-    "notes": "Name (Arabic): عبد الرشيد بيشاتكاني | Base Salary: SAR 2,500.00 | Bank: RJHI (A/C: SA6780000158608016121154)",
+    "notes": "NO: 18 | Name (Arabic): عبد الرشيد بيشاتكاني | Base Salary: SAR 2,500.00 | Bank: RJHI (A/C: SA6780000158608016121154)",
     "isSaudi": false
   },
   {
@@ -172,7 +172,7 @@
     "expiryDate": "2023-04-06",
     "renewals": [],
     "jobPosition": "Mechanical & Systems Foreman",
-    "notes": "Name (Arabic): على ادم ابراهيم عبدالله | Base Salary: SAR 2,300.00 | Bank: NCBK (A/C: SA6410000011100208139407)",
+    "notes": "NO: 20 | Name (Arabic): على ادم ابراهيم عبدالله | Base Salary: SAR 2,300.00 | Bank: NCBK (A/C: SA6410000011100208139407)",
     "isSaudi": false
   },
   {
@@ -192,12 +192,12 @@
       {
         "previous": "2026-08-02",
         "new": "2027-01-29",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Mechanical & Systems Foreman",
-    "notes": "Name (Arabic): محمد يونس تاليبي دومان ميدين | Base Salary: SAR 2,400.00 | Bank: INMA (A/C: SA6605000068204028762000)",
+    "notes": "NO: 39 | Name (Arabic): محمد يونس تاليبي دومان ميدين | Base Salary: SAR 2,400.00 | Bank: INMA (A/C: SA6605000068204028762000)",
     "isSaudi": false
   },
   {
@@ -215,7 +215,7 @@
     "expiryDate": "2026-08-08",
     "renewals": [],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 146",
     "isSaudi": false
   },
   {
@@ -233,7 +233,7 @@
     "expiryDate": "2026-09-06",
     "renewals": [],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 160",
     "isSaudi": false
   },
   {
@@ -253,12 +253,12 @@
       {
         "previous": "2026-09-10",
         "new": "2026-12-09",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Mechanical & Systems Foreman",
-    "notes": "Name (Arabic): عشيق احمد احمدمين | Base Salary: SAR 2,400.00 | Bank: NCBK (A/C: SA7610000016700001354602)",
+    "notes": "NO: 19 | Name (Arabic): عشيق احمد احمدمين | Base Salary: SAR 2,400.00 | Bank: NCBK (A/C: SA7610000016700001354602)",
     "isSaudi": false
   },
   {
@@ -278,12 +278,12 @@
       {
         "previous": "2026-09-10",
         "new": "2026-12-09",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Mechanical & Systems Foreman",
-    "notes": "Name (Arabic): نور محمد يعقوب | Base Salary: SAR 2,400.00 | Bank: NCBK (A/C: SA2110000016700001371500)",
+    "notes": "NO: 48 | Name (Arabic): نور محمد يعقوب | Base Salary: SAR 2,400.00 | Bank: NCBK (A/C: SA2110000016700001371500)",
     "isSaudi": false
   },
   {
@@ -301,7 +301,7 @@
     "expiryDate": "2023-09-13",
     "renewals": [],
     "jobPosition": "Senior Electrical Technician",
-    "notes": "Name (Arabic): كبير حسين عبد الغفار | Base Salary: SAR 2,400.00 | Bank: INMA (A/C: SA1205000068204554709000)",
+    "notes": "NO: 26 | Name (Arabic): كبير حسين عبد الغفار | Base Salary: SAR 2,400.00 | Bank: INMA (A/C: SA1205000068204554709000)",
     "isSaudi": false
   },
   {
@@ -321,12 +321,12 @@
       {
         "previous": "2026-09-10",
         "new": "2026-12-09",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 172",
     "isSaudi": false
   },
   {
@@ -346,12 +346,12 @@
       {
         "previous": "2026-09-11",
         "new": "2026-12-10",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 124",
     "isSaudi": false
   },
   {
@@ -371,12 +371,12 @@
       {
         "previous": "2026-09-12",
         "new": "2026-12-11",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 133",
     "isSaudi": false
   },
   {
@@ -396,12 +396,12 @@
       {
         "previous": "2026-09-13",
         "new": "2026-12-12",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 4",
     "isSaudi": false
   },
   {
@@ -421,12 +421,12 @@
       {
         "previous": "2026-09-13",
         "new": "2026-12-12",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 34",
     "isSaudi": false
   },
   {
@@ -446,12 +446,12 @@
       {
         "previous": "2026-09-13",
         "new": "2026-12-12",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 47",
     "isSaudi": false
   },
   {
@@ -471,12 +471,12 @@
       {
         "previous": "2026-09-13",
         "new": "2026-12-12",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 79",
     "isSaudi": false
   },
   {
@@ -496,12 +496,12 @@
       {
         "previous": "2026-09-13",
         "new": "2026-12-12",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 229",
     "isSaudi": false
   },
   {
@@ -521,12 +521,12 @@
       {
         "previous": "2026-09-15",
         "new": "2026-12-14",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Site Operations Technician",
-    "notes": "Name (Arabic): حسن الدين مندل | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA5410000018600001872107)",
+    "notes": "NO: 11 | Name (Arabic): حسن الدين مندل | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA5410000018600001872107)",
     "isSaudi": false
   },
   {
@@ -546,12 +546,12 @@
       {
         "previous": "2026-09-15",
         "new": "2026-12-14",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 174",
     "isSaudi": false
   },
   {
@@ -571,12 +571,12 @@
       {
         "previous": "2026-09-16",
         "new": "2026-12-15",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Name (Arabic): محمد رمضان منصور أحمد | Bank: NCBK (A/C: SA7410000066800000631908)",
+    "notes": "NO: 75 | Name (Arabic): محمد رمضان منصور أحمد | Bank: NCBK (A/C: SA7410000066800000631908)",
     "isSaudi": false
   },
   {
@@ -596,12 +596,12 @@
       {
         "previous": "2026-09-17",
         "new": "2026-12-16",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 175",
     "isSaudi": false
   },
   {
@@ -619,7 +619,7 @@
     "expiryDate": "2026-09-19",
     "renewals": [],
     "jobPosition": "Site Operations Technician",
-    "notes": "Name (Arabic): منير مولا | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA0610000018100001164605)",
+    "notes": "NO: 43 | Name (Arabic): منير مولا | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA0610000018100001164605)",
     "isSaudi": false
   },
   {
@@ -639,12 +639,12 @@
       {
         "previous": "2026-09-19",
         "new": "2026-12-18",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Site Operations Technician",
-    "notes": "Name (Arabic): نبير شيشو مياه | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA4910000018100001164801)",
+    "notes": "NO: 51 | Name (Arabic): نبير شيشو مياه | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA4910000018100001164801)",
     "isSaudi": false
   },
   {
@@ -662,7 +662,7 @@
     "expiryDate": "2023-08-28",
     "renewals": [],
     "jobPosition": "Senior Administrative Specialist",
-    "notes": "Name (Arabic): ميرغنى الفاتح ميرغنى عثمان | Base Salary: SAR 2,500.00 | Bank: RIBL (A/C: SA6720000009325998359940)",
+    "notes": "NO: 46 | Name (Arabic): ميرغنى الفاتح ميرغنى عثمان | Base Salary: SAR 2,500.00 | Bank: RIBL (A/C: SA6720000009325998359940)",
     "isSaudi": false
   },
   {
@@ -682,12 +682,12 @@
       {
         "previous": "2026-09-19",
         "new": "2026-12-18",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 155",
     "isSaudi": false
   },
   {
@@ -707,12 +707,12 @@
       {
         "previous": "2026-09-19",
         "new": "2026-12-18",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 156",
     "isSaudi": false
   },
   {
@@ -730,7 +730,7 @@
     "expiryDate": "2023-12-30",
     "renewals": [],
     "jobPosition": "Head Office Operations Coordinator",
-    "notes": "Name (Arabic): يوسف حارض | Bank: #N/A (A/C: #N/A)",
+    "notes": "NO: 49 | Name (Arabic): يوسف حارض | Bank: #N/A (A/C: #N/A)",
     "isSaudi": false
   },
   {
@@ -750,12 +750,12 @@
       {
         "previous": "2026-06-23",
         "new": "2026-12-20",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Site Operations Technician",
-    "notes": "Base Salary: SAR 1,500.00",
+    "notes": "NO: 104 | Base Salary: SAR 1,500.00",
     "isSaudi": false
   },
   {
@@ -775,12 +775,12 @@
       {
         "previous": "2026-09-22",
         "new": "2026-12-21",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 105",
     "isSaudi": false
   },
   {
@@ -800,12 +800,12 @@
       {
         "previous": "2026-09-23",
         "new": "2027-03-22",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Mechanical & Systems Foreman",
-    "notes": "Name (Arabic): محمد مد كارام راجول | Base Salary: SAR 2,400.00 | Bank: NCBK (A/C: SA2010000018100001256600)",
+    "notes": "NO: 36 | Name (Arabic): محمد مد كارام راجول | Base Salary: SAR 2,400.00 | Bank: NCBK (A/C: SA2010000018100001256600)",
     "isSaudi": false
   },
   {
@@ -823,7 +823,7 @@
     "expiryDate": "2030-12-31",
     "renewals": [],
     "jobPosition": "Government Relations Officer (GRO)",
-    "notes": "Name (Arabic): تركي علي حسن القرني | Base Salary: SAR 2,000.00 | Bank: RJHI (A/C: SA1580000222608010003913) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "notes": "NO: 53 | Name (Arabic): تركي علي حسن القرني | Base Salary: SAR 2,000.00 | Bank: RJHI (A/C: SA1580000222608010003913) | Saudi National Citizen ID. Registered under GOSI / Absher.",
     "isSaudi": true
   },
   {
@@ -841,7 +841,7 @@
     "expiryDate": "2030-12-31",
     "renewals": [],
     "jobPosition": "Government Relations Officer (GRO)",
-    "notes": "Name (Arabic): عبدالرحمن عبدالله محمد بن سلمان | Base Salary: SAR 3,000.00 | Bank: NCBK (A/C: SA5510000012978066000108) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "notes": "NO: 54 | Name (Arabic): عبدالرحمن عبدالله محمد بن سلمان | Base Salary: SAR 3,000.00 | Bank: NCBK (A/C: SA5510000012978066000108) | Saudi National Citizen ID. Registered under GOSI / Absher.",
     "isSaudi": true
   },
   {
@@ -859,7 +859,7 @@
     "expiryDate": "2030-12-31",
     "renewals": [],
     "jobPosition": "HR & Talent Acquisition Specialist",
-    "notes": "Name (Arabic): أحلام عبدالله محمد القرني | Base Salary: SAR 2,000.00 | Bank: RJHI (A/C: SA6880000222608016018220) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "notes": "NO: 55 | Name (Arabic): أحلام عبدالله محمد القرني | Base Salary: SAR 2,000.00 | Bank: RJHI (A/C: SA6880000222608016018220) | Saudi National Citizen ID. Registered under GOSI / Absher.",
     "isSaudi": true
   },
   {
@@ -877,7 +877,7 @@
     "expiryDate": "2030-12-31",
     "renewals": [],
     "jobPosition": "HR & Talent Acquisition Specialist",
-    "notes": "Name (Arabic): تهاني محمد علي طميحي | Base Salary: SAR 2,000.00 | Bank: #N/A (A/C: #N/A) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "notes": "NO: 56 | Name (Arabic): تهاني محمد علي طميحي | Base Salary: SAR 2,000.00 | Bank: #N/A (A/C: #N/A) | Saudi National Citizen ID. Registered under GOSI / Absher.",
     "isSaudi": true
   },
   {
@@ -895,7 +895,7 @@
     "expiryDate": "2030-12-31",
     "renewals": [],
     "jobPosition": "Government Relations Officer (GRO)",
-    "notes": "Name (Arabic): حسن بلغيث حسن القرني | Base Salary: SAR 2,000.00 | Bank: RJHI (A/C: SA2380000176608016185066) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "notes": "NO: 57 | Name (Arabic): حسن بلغيث حسن القرني | Base Salary: SAR 2,000.00 | Bank: RJHI (A/C: SA2380000176608016185066) | Saudi National Citizen ID. Registered under GOSI / Absher.",
     "isSaudi": true
   },
   {
@@ -913,7 +913,7 @@
     "expiryDate": "2030-12-31",
     "renewals": [],
     "jobPosition": "HR & Talent Acquisition Specialist",
-    "notes": "Name (Arabic): حنان محمد محمد القرني | Base Salary: SAR 2,000.00 | Bank: RJHI (A/C: SA3580000334608010198064) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "notes": "NO: 58 | Name (Arabic): حنان محمد محمد القرني | Base Salary: SAR 2,000.00 | Bank: RJHI (A/C: SA3580000334608010198064) | Saudi National Citizen ID. Registered under GOSI / Absher.",
     "isSaudi": true
   },
   {
@@ -931,7 +931,7 @@
     "expiryDate": "2030-12-31",
     "renewals": [],
     "jobPosition": "HR & Talent Acquisition Specialist",
-    "notes": "Name (Arabic): نورا فايز بن محمد الشهري | Base Salary: SAR 2,000.00 | Bank: RJHI (A/C: SA9180000458608010168158) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "notes": "NO: 59 | Name (Arabic): نورا فايز بن محمد الشهري | Base Salary: SAR 2,000.00 | Bank: RJHI (A/C: SA9180000458608010168158) | Saudi National Citizen ID. Registered under GOSI / Absher.",
     "isSaudi": true
   },
   {
@@ -949,7 +949,7 @@
     "expiryDate": "2030-12-31",
     "renewals": [],
     "jobPosition": "HR & Talent Acquisition Specialist",
-    "notes": "Name (Arabic): رازحه علي حسن القرني | Base Salary: SAR 2,000.00 | Bank: NCBK (A/C: SA7110000013867689000109) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "notes": "NO: 60 | Name (Arabic): رازحه علي حسن القرني | Base Salary: SAR 2,000.00 | Bank: NCBK (A/C: SA7110000013867689000109) | Saudi National Citizen ID. Registered under GOSI / Absher.",
     "isSaudi": true
   },
   {
@@ -967,7 +967,7 @@
     "expiryDate": "2030-12-31",
     "renewals": [],
     "jobPosition": "Government Relations Officer (GRO)",
-    "notes": "Name (Arabic): حسن علي محمد الشهري | Base Salary: SAR 3,000.00 | Bank: #N/A (A/C: #N/A) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "notes": "NO: 61 | Name (Arabic): حسن علي محمد الشهري | Base Salary: SAR 3,000.00 | Bank: #N/A (A/C: #N/A) | Saudi National Citizen ID. Registered under GOSI / Absher.",
     "isSaudi": true
   },
   {
@@ -985,7 +985,7 @@
     "expiryDate": "2030-12-31",
     "renewals": [],
     "jobPosition": "HR & Talent Acquisition Specialist",
-    "notes": "Name (Arabic): عهود شداد عمر العتيبي | Base Salary: SAR 3,000.00 | Bank: NCBK (A/C: SA0410000013800000833504) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "notes": "NO: 62 | Name (Arabic): عهود شداد عمر العتيبي | Base Salary: SAR 3,000.00 | Bank: NCBK (A/C: SA0410000013800000833504) | Saudi National Citizen ID. Registered under GOSI / Absher.",
     "isSaudi": true
   },
   {
@@ -1005,12 +1005,12 @@
       {
         "previous": "2026-09-23",
         "new": "2026-12-22",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Mechanical & Systems Foreman",
-    "notes": "Name (Arabic): محمد منيرول مد اسلام | Base Salary: SAR 2,400.00 | Bank: NCBK (A/C: SA2310000018100001274200)",
+    "notes": "NO: 37 | Name (Arabic): محمد منيرول مد اسلام | Base Salary: SAR 2,400.00 | Bank: NCBK (A/C: SA2310000018100001274200)",
     "isSaudi": false
   },
   {
@@ -1030,12 +1030,12 @@
       {
         "previous": "2026-09-24",
         "new": "2027-03-23",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Site Operations Technician",
-    "notes": "Name (Arabic): مد زوبيد بلال مياه | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA5010000018100001526108)",
+    "notes": "NO: 41 | Name (Arabic): مد زوبيد بلال مياه | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA5010000018100001526108)",
     "isSaudi": false
   },
   {
@@ -1055,12 +1055,12 @@
       {
         "previous": "2026-09-24",
         "new": "2026-12-23",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Name (Arabic): عبد الوهاب حاجاني بفدين | Bank: NCBK (A/C: SA7410000066800000521910)",
+    "notes": "NO: 64 | Name (Arabic): عبد الوهاب حاجاني بفدين | Bank: NCBK (A/C: SA7410000066800000521910)",
     "isSaudi": false
   },
   {
@@ -1080,12 +1080,12 @@
       {
         "previous": "2026-09-24",
         "new": "2026-12-23",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 110",
     "isSaudi": false
   },
   {
@@ -1105,12 +1105,12 @@
       {
         "previous": "2026-09-26",
         "new": "2026-12-25",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 230",
     "isSaudi": false
   },
   {
@@ -1130,12 +1130,12 @@
       {
         "previous": "2026-09-28",
         "new": "2026-12-27",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 107",
     "isSaudi": false
   },
   {
@@ -1155,12 +1155,12 @@
       {
         "previous": "2026-09-28",
         "new": "2026-12-27",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 150",
     "isSaudi": false
   },
   {
@@ -1180,12 +1180,12 @@
       {
         "previous": "2026-09-29",
         "new": "2026-12-28",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 106",
     "isSaudi": false
   },
   {
@@ -1205,12 +1205,12 @@
       {
         "previous": "2026-09-29",
         "new": "2026-12-28",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 109",
     "isSaudi": false
   },
   {
@@ -1230,12 +1230,12 @@
       {
         "previous": "2026-09-30",
         "new": "2026-12-29",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 134",
     "isSaudi": false
   },
   {
@@ -1255,12 +1255,12 @@
       {
         "previous": "2026-12-29",
         "new": "2027-03-29",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 176",
     "isSaudi": false
   },
   {
@@ -1280,12 +1280,12 @@
       {
         "previous": "2026-10-01",
         "new": "2026-12-30",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Name (Arabic): عبد المطيليف - - علي | Bank: #N/A (A/C: #N/A)",
+    "notes": "NO: 66 | Name (Arabic): عبد المطيليف - - علي | Bank: #N/A (A/C: #N/A)",
     "isSaudi": false
   },
   {
@@ -1305,12 +1305,12 @@
       {
         "previous": "2026-10-01",
         "new": "2026-12-30",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 114",
     "isSaudi": false
   },
   {
@@ -1330,12 +1330,12 @@
       {
         "previous": "2026-10-01",
         "new": "2026-12-30",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 187",
     "isSaudi": false
   },
   {
@@ -1355,12 +1355,12 @@
       {
         "previous": "2026-10-01",
         "new": "2026-12-30",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 188",
     "isSaudi": false
   },
   {
@@ -1380,12 +1380,12 @@
       {
         "previous": "2026-10-04",
         "new": "2027-01-02",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Site Operations Technician",
-    "notes": "Name (Arabic): موتين ميا | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA7410000018600001798900)",
+    "notes": "NO: 45 | Name (Arabic): موتين ميا | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA7410000018600001798900)",
     "isSaudi": false
   },
   {
@@ -1405,12 +1405,12 @@
       {
         "previous": "2027-01-05",
         "new": "2027-04-05",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 157",
     "isSaudi": false
   },
   {
@@ -1430,12 +1430,12 @@
       {
         "previous": "2026-10-07",
         "new": "2027-01-05",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 179",
     "isSaudi": false
   },
   {
@@ -1455,12 +1455,12 @@
       {
         "previous": "2026-10-08",
         "new": "2027-01-06",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Senior Civil Construction Lead",
-    "notes": "Name (Arabic): محمد سجاد غلام حسن | Base Salary: SAR 2,600.00 | Bank: NCBK (A/C: SA4410000018100001513509)",
+    "notes": "NO: 31 | Name (Arabic): محمد سجاد غلام حسن | Base Salary: SAR 2,600.00 | Bank: NCBK (A/C: SA4410000018100001513509)",
     "isSaudi": false
   },
   {
@@ -1480,12 +1480,12 @@
       {
         "previous": "2026-10-08",
         "new": "2027-01-06",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Name (Arabic): الشيخ علاء الدين جاهر حسين | Bank: NCBK (A/C: SA5110000018100000209800)",
+    "notes": "NO: 78 | Name (Arabic): الشيخ علاء الدين جاهر حسين | Bank: NCBK (A/C: SA5110000018100000209800)",
     "isSaudi": false
   },
   {
@@ -1503,7 +1503,7 @@
     "expiryDate": "2026-10-08",
     "renewals": [],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 113",
     "isSaudi": false
   },
   {
@@ -1523,12 +1523,12 @@
       {
         "previous": "2026-10-09",
         "new": "2027-01-07",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Site Operations Technician",
-    "notes": "Name (Arabic): ابراهيم ميا مياه خليل | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA6410000018600001801602)",
+    "notes": "NO: 2 | Name (Arabic): ابراهيم ميا مياه خليل | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA6410000018600001801602)",
     "isSaudi": false
   },
   {
@@ -1546,7 +1546,7 @@
     "expiryDate": "2026-10-09",
     "renewals": [],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 141",
     "isSaudi": false
   },
   {
@@ -1566,12 +1566,12 @@
       {
         "previous": "2026-10-11",
         "new": "2027-01-09",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Name (Arabic): محمد بلال يوسف بوته محمد يوسف بوته | Bank: NCBK (A/C: SA8510000066800000518705)",
+    "notes": "NO: 74 | Name (Arabic): محمد بلال يوسف بوته محمد يوسف بوته | Bank: NCBK (A/C: SA8510000066800000518705)",
     "isSaudi": false
   },
   {
@@ -1589,7 +1589,7 @@
     "expiryDate": "2027-01-11",
     "renewals": [],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 189",
     "isSaudi": false
   },
   {
@@ -1609,12 +1609,12 @@
       {
         "previous": "2026-10-14",
         "new": "2027-01-12",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Site Operations Technician",
-    "notes": "Name (Arabic): قمر ال حسن عبد ال عبد الشهيد | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA3810000018600001865702)",
+    "notes": "NO: 24 | Name (Arabic): قمر ال حسن عبد ال عبد الشهيد | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA3810000018600001865702)",
     "isSaudi": false
   },
   {
@@ -1634,12 +1634,12 @@
       {
         "previous": "2027-01-13",
         "new": "2027-04-13",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 135",
     "isSaudi": false
   },
   {
@@ -1659,12 +1659,12 @@
       {
         "previous": "2026-10-16",
         "new": "2027-01-14",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Name (Arabic): بارفيج لام محمد صفيق | Bank: NCBK (A/C: SA7510000066800000531107)",
+    "notes": "NO: 77 | Name (Arabic): بارفيج لام محمد صفيق | Bank: NCBK (A/C: SA7510000066800000531107)",
     "isSaudi": false
   },
   {
@@ -1684,12 +1684,12 @@
       {
         "previous": "2026-10-16",
         "new": "2027-01-14",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Name (Arabic): باراري عبد القادر | Bank: #N/A (A/C: #N/A)",
+    "notes": "NO: 99 | Name (Arabic): باراري عبد القادر | Bank: #N/A (A/C: #N/A)",
     "isSaudi": false
   },
   {
@@ -1709,12 +1709,12 @@
       {
         "previous": "2026-10-17",
         "new": "2027-01-15",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 116",
     "isSaudi": false
   },
   {
@@ -1734,12 +1734,12 @@
       {
         "previous": "2026-10-17",
         "new": "2027-01-15",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 117",
     "isSaudi": false
   },
   {
@@ -1759,12 +1759,12 @@
       {
         "previous": "2026-10-18",
         "new": "2027-01-16",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Site Operations Technician",
-    "notes": "Name (Arabic): محمد راسل أوسين | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA0310000018100001383006)",
+    "notes": "NO: 29 | Name (Arabic): محمد راسل أوسين | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA0310000018100001383006)",
     "isSaudi": false
   },
   {
@@ -1784,12 +1784,12 @@
       {
         "previous": "2027-01-21",
         "new": "2027-04-21",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 118",
     "isSaudi": false
   },
   {
@@ -1809,12 +1809,12 @@
       {
         "previous": "2026-07-25",
         "new": "2027-01-21",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 119",
     "isSaudi": false
   },
   {
@@ -1834,12 +1834,12 @@
       {
         "previous": "2026-07-25",
         "new": "2027-01-21",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 120",
     "isSaudi": false
   },
   {
@@ -1859,12 +1859,12 @@
       {
         "previous": "2026-07-27",
         "new": "2027-01-23",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 122",
     "isSaudi": false
   },
   {
@@ -1884,12 +1884,12 @@
       {
         "previous": "2026-07-27",
         "new": "2027-01-23",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 143",
     "isSaudi": false
   },
   {
@@ -1909,12 +1909,12 @@
       {
         "previous": "2026-07-28",
         "new": "2027-01-24",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Name (Arabic): عمران خان حفيظ الله خان | Bank: NCBK (A/C: SA1010000066800000521801)",
+    "notes": "NO: 68 | Name (Arabic): عمران خان حفيظ الله خان | Bank: NCBK (A/C: SA1010000066800000521801)",
     "isSaudi": false
   },
   {
@@ -1934,12 +1934,12 @@
       {
         "previous": "2026-07-29",
         "new": "2027-01-25",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 97",
     "isSaudi": false
   },
   {
@@ -1959,12 +1959,12 @@
       {
         "previous": "2026-07-29",
         "new": "2027-01-25",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 179",
     "isSaudi": false
   },
   {
@@ -1984,12 +1984,12 @@
       {
         "previous": "2026-07-30",
         "new": "2027-01-26",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Site Operations Technician",
-    "notes": "Name (Arabic): بابل اختر | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA1910000018600001880303)",
+    "notes": "NO: 8 | Name (Arabic): بابل اختر | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA1910000018600001880303)",
     "isSaudi": false
   },
   {
@@ -2009,12 +2009,12 @@
       {
         "previous": "2026-07-31",
         "new": "2027-01-27",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 128",
     "isSaudi": false
   },
   {
@@ -2034,12 +2034,12 @@
       {
         "previous": "2026-08-01",
         "new": "2027-01-28",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Name (Arabic): KUBENDRAN RAMADOS RAMADOS | Bank: NCBK (A/C: SA4210000066800000518509)",
+    "notes": "NO: 71 | Name (Arabic): KUBENDRAN RAMADOS RAMADOS | Bank: NCBK (A/C: SA4210000066800000518509)",
     "isSaudi": false
   },
   {
@@ -2059,12 +2059,12 @@
       {
         "previous": "2026-08-01",
         "new": "2027-01-28",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Name (Arabic): سليم خان | Bank: #N/A (A/C: #N/A)",
+    "notes": "NO: 92 | Name (Arabic): سليم خان | Bank: #N/A (A/C: #N/A)",
     "isSaudi": false
   },
   {
@@ -2084,12 +2084,12 @@
       {
         "previous": "2026-08-01",
         "new": "2027-01-28",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 98",
     "isSaudi": false
   },
   {
@@ -2109,12 +2109,12 @@
       {
         "previous": "2026-08-01",
         "new": "2027-01-28",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 196",
     "isSaudi": false
   },
   {
@@ -2134,12 +2134,12 @@
       {
         "previous": "2026-08-01",
         "new": "2027-01-28",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 197",
     "isSaudi": false
   },
   {
@@ -2159,12 +2159,12 @@
       {
         "previous": "2026-08-01",
         "new": "2027-01-28",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 198",
     "isSaudi": false
   },
   {
@@ -2184,12 +2184,12 @@
       {
         "previous": "2026-08-01",
         "new": "2027-01-28",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 199",
     "isSaudi": false
   },
   {
@@ -2209,12 +2209,12 @@
       {
         "previous": "2026-08-01",
         "new": "2027-01-28",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 200",
     "isSaudi": false
   },
   {
@@ -2234,12 +2234,12 @@
       {
         "previous": "2026-08-01",
         "new": "2027-01-28",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 201",
     "isSaudi": false
   },
   {
@@ -2259,12 +2259,12 @@
       {
         "previous": "2026-08-02",
         "new": "2027-01-29",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 179",
     "isSaudi": false
   },
   {
@@ -2284,12 +2284,12 @@
       {
         "previous": "2026-08-03",
         "new": "2027-01-30",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Senior Civil Construction Lead",
-    "notes": "Name (Arabic): محمد طارق وزير احمد | Base Salary: SAR 2,600.00 | Bank: NCBK (A/C: SA5810000016700001371707)",
+    "notes": "NO: 32 | Name (Arabic): محمد طارق وزير احمد | Base Salary: SAR 2,600.00 | Bank: NCBK (A/C: SA5810000016700001371707)",
     "isSaudi": false
   },
   {
@@ -2309,12 +2309,12 @@
       {
         "previous": "2026-08-03",
         "new": "2027-01-30",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 166",
     "isSaudi": false
   },
   {
@@ -2334,12 +2334,12 @@
       {
         "previous": "2026-11-01",
         "new": "2027-01-30",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 167",
     "isSaudi": false
   },
   {
@@ -2359,12 +2359,12 @@
       {
         "previous": "2026-08-04",
         "new": "2027-01-31",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Site Operations Technician",
-    "notes": "Name (Arabic): قمر شميل ميا مولا | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA8010000018100001230106)",
+    "notes": "NO: 25 | Name (Arabic): قمر شميل ميا مولا | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA8010000018100001230106)",
     "isSaudi": false
   },
   {
@@ -2384,12 +2384,12 @@
       {
         "previous": "2026-08-04",
         "new": "2027-01-31",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Site Operations Technician",
-    "notes": "Name (Arabic): محمد عارف مياه اسلام | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA7310000018600001805902)",
+    "notes": "NO: 33 | Name (Arabic): محمد عارف مياه اسلام | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA7310000018600001805902)",
     "isSaudi": false
   },
   {
@@ -2409,12 +2409,12 @@
       {
         "previous": "2026-08-04",
         "new": "2027-01-31",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 121",
     "isSaudi": false
   },
   {
@@ -2434,12 +2434,12 @@
       {
         "previous": "2027-01-31",
         "new": "2027-05-01",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 126",
     "isSaudi": false
   },
   {
@@ -2459,12 +2459,12 @@
       {
         "previous": "2026-08-04",
         "new": "2027-01-31",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 127",
     "isSaudi": false
   },
   {
@@ -2484,12 +2484,12 @@
       {
         "previous": "2026-08-04",
         "new": "2027-01-31",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 129",
     "isSaudi": false
   },
   {
@@ -2509,12 +2509,12 @@
       {
         "previous": "2026-08-07",
         "new": "2027-02-03",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 145",
     "isSaudi": false
   },
   {
@@ -2534,12 +2534,12 @@
       {
         "previous": "2026-08-08",
         "new": "2027-02-04",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 158",
     "isSaudi": false
   },
   {
@@ -2559,12 +2559,12 @@
       {
         "previous": "2026-08-08",
         "new": "2027-02-04",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 202",
     "isSaudi": false
   },
   {
@@ -2584,12 +2584,12 @@
       {
         "previous": "2026-08-08",
         "new": "2027-02-04",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 203",
     "isSaudi": false
   },
   {
@@ -2609,12 +2609,12 @@
       {
         "previous": "2026-08-08",
         "new": "2027-02-04",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 204",
     "isSaudi": false
   },
   {
@@ -2634,12 +2634,12 @@
       {
         "previous": "2026-08-08",
         "new": "2027-02-04",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 205",
     "isSaudi": false
   },
   {
@@ -2659,12 +2659,12 @@
       {
         "previous": "2026-08-08",
         "new": "2027-02-04",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 206",
     "isSaudi": false
   },
   {
@@ -2684,12 +2684,12 @@
       {
         "previous": "2026-08-08",
         "new": "2027-02-04",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 209",
     "isSaudi": false
   },
   {
@@ -2709,12 +2709,12 @@
       {
         "previous": "2026-08-08",
         "new": "2027-02-04",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 210",
     "isSaudi": false
   },
   {
@@ -2734,12 +2734,12 @@
       {
         "previous": "2026-08-08",
         "new": "2027-02-04",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 211",
     "isSaudi": false
   },
   {
@@ -2759,12 +2759,12 @@
       {
         "previous": "2026-08-08",
         "new": "2027-02-04",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 212",
     "isSaudi": false
   },
   {
@@ -2784,12 +2784,12 @@
       {
         "previous": "2026-08-08",
         "new": "2027-02-04",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 213",
     "isSaudi": false
   },
   {
@@ -2809,12 +2809,12 @@
       {
         "previous": "2026-08-08",
         "new": "2027-02-04",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 507",
     "isSaudi": false
   },
   {
@@ -2834,12 +2834,12 @@
       {
         "previous": "2026-08-08",
         "new": "2027-02-04",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 508",
     "isSaudi": false
   },
   {
@@ -2859,12 +2859,12 @@
       {
         "previous": "2026-08-09",
         "new": "2027-02-05",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 153",
     "isSaudi": false
   },
   {
@@ -2884,12 +2884,12 @@
       {
         "previous": "2026-08-10",
         "new": "2027-02-06",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Site Operations Technician",
-    "notes": "Name (Arabic): شوهيل مد مياه شيخ | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA7410000018600001801907)",
+    "notes": "NO: 17 | Name (Arabic): شوهيل مد مياه شيخ | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA7410000018600001801907)",
     "isSaudi": false
   },
   {
@@ -2909,12 +2909,12 @@
       {
         "previous": "2026-08-10",
         "new": "2027-02-06",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Site Operations Technician",
-    "notes": "Name (Arabic): هيريدوي حسون | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA6510000018600001865604)",
+    "notes": "NO: 50 | Name (Arabic): هيريدوي حسون | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA6510000018600001865604)",
     "isSaudi": false
   },
   {
@@ -2934,12 +2934,12 @@
       {
         "previous": "2026-11-08",
         "new": "2027-02-06",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 100",
     "isSaudi": false
   },
   {
@@ -2959,12 +2959,12 @@
       {
         "previous": "2026-08-10",
         "new": "2027-02-06",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 154",
     "isSaudi": false
   },
   {
@@ -2984,12 +2984,12 @@
       {
         "previous": "2026-08-10",
         "new": "2027-02-06",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 179",
     "isSaudi": false
   },
   {
@@ -3009,12 +3009,12 @@
       {
         "previous": "2026-08-10",
         "new": "2027-02-06",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 182",
     "isSaudi": false
   },
   {
@@ -3034,12 +3034,12 @@
       {
         "previous": "2026-08-10",
         "new": "2027-02-06",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 215",
     "isSaudi": false
   },
   {
@@ -3059,12 +3059,12 @@
       {
         "previous": "2026-08-10",
         "new": "2027-02-06",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 216",
     "isSaudi": false
   },
   {
@@ -3084,12 +3084,12 @@
       {
         "previous": "2026-08-10",
         "new": "2027-02-06",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 217",
     "isSaudi": false
   },
   {
@@ -3109,12 +3109,12 @@
       {
         "previous": "2026-08-10",
         "new": "2027-02-06",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 218",
     "isSaudi": false
   },
   {
@@ -3134,12 +3134,12 @@
       {
         "previous": "2026-08-10",
         "new": "2027-02-06",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 219",
     "isSaudi": false
   },
   {
@@ -3159,12 +3159,12 @@
       {
         "previous": "2026-08-10",
         "new": "2027-02-06",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 220",
     "isSaudi": false
   },
   {
@@ -3184,12 +3184,12 @@
       {
         "previous": "2026-08-11",
         "new": "2027-02-07",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 147",
     "isSaudi": false
   },
   {
@@ -3209,12 +3209,12 @@
       {
         "previous": "2026-08-13",
         "new": "2027-02-09",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 168",
     "isSaudi": false
   },
   {
@@ -3234,12 +3234,12 @@
       {
         "previous": "2026-08-13",
         "new": "2027-02-09",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 221",
     "isSaudi": false
   },
   {
@@ -3259,12 +3259,12 @@
       {
         "previous": "2026-08-13",
         "new": "2027-02-09",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 222",
     "isSaudi": false
   },
   {
@@ -3284,12 +3284,12 @@
       {
         "previous": "2026-08-13",
         "new": "2027-02-09",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 223",
     "isSaudi": false
   },
   {
@@ -3309,12 +3309,12 @@
       {
         "previous": "2026-11-12",
         "new": "2027-11-01",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Name (Arabic): محمد حسين راج محمد حسين | Bank: SABB (A/C: SA2945000000078257722001)",
+    "notes": "NO: 72 | Name (Arabic): محمد حسين راج محمد حسين | Bank: SABB (A/C: SA2945000000078257722001)",
     "isSaudi": false
   },
   {
@@ -3334,12 +3334,12 @@
       {
         "previous": "2026-08-14",
         "new": "2027-02-10",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 159",
     "isSaudi": false
   },
   {
@@ -3359,12 +3359,12 @@
       {
         "previous": "2026-08-15",
         "new": "2027-02-11",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 179",
     "isSaudi": false
   },
   {
@@ -3384,12 +3384,12 @@
       {
         "previous": "2026-08-17",
         "new": "2027-02-13",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Site Operations Technician",
-    "notes": "Name (Arabic): مد بلال | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA9510000018100001428007)",
+    "notes": "NO: 40 | Name (Arabic): مد بلال | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA9510000018100001428007)",
     "isSaudi": false
   },
   {
@@ -3409,12 +3409,12 @@
       {
         "previous": "2026-08-17",
         "new": "2027-02-13",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 181",
     "isSaudi": false
   },
   {
@@ -3432,7 +3432,7 @@
     "expiryDate": "2026-11-15",
     "renewals": [],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 194",
     "isSaudi": false
   },
   {
@@ -3452,12 +3452,12 @@
       {
         "previous": "2026-08-18",
         "new": "2026-11-16",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 125",
     "isSaudi": false
   },
   {
@@ -3477,12 +3477,12 @@
       {
         "previous": "2026-08-20",
         "new": "2026-11-18",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Name (Arabic): كريشنال سوندارسان سوندرسان | Bank: RJHI (A/C: SA9780000102608016387448)",
+    "notes": "NO: 70 | Name (Arabic): كريشنال سوندارسان سوندرسان | Bank: RJHI (A/C: SA9780000102608016387448)",
     "isSaudi": false
   },
   {
@@ -3502,12 +3502,12 @@
       {
         "previous": "2026-08-20",
         "new": "2026-11-18",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 169",
     "isSaudi": false
   },
   {
@@ -3527,12 +3527,12 @@
       {
         "previous": "2026-08-19",
         "new": "2026-11-18",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 180",
     "isSaudi": false
   },
   {
@@ -3552,12 +3552,12 @@
       {
         "previous": "2026-08-20",
         "new": "2026-11-18",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 224",
     "isSaudi": false
   },
   {
@@ -3577,12 +3577,12 @@
       {
         "previous": "2026-08-20",
         "new": "2026-11-18",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 225",
     "isSaudi": false
   },
   {
@@ -3602,12 +3602,12 @@
       {
         "previous": "2026-08-20",
         "new": "2026-11-18",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 226",
     "isSaudi": false
   },
   {
@@ -3627,12 +3627,12 @@
       {
         "previous": "2026-08-20",
         "new": "2026-11-18",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 227",
     "isSaudi": false
   },
   {
@@ -3670,12 +3670,12 @@
       {
         "previous": "2026-08-21",
         "new": "2026-11-19",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 179",
     "isSaudi": false
   },
   {
@@ -3695,12 +3695,12 @@
       {
         "previous": "2026-08-23",
         "new": "2027-02-19",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Site Operations Technician",
-    "notes": "Name (Arabic): محمد رومان مياه | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA3310000018100001164507)",
+    "notes": "NO: 30 | Name (Arabic): محمد رومان مياه | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA3310000018100001164507)",
     "isSaudi": false
   },
   {
@@ -3720,12 +3720,12 @@
       {
         "previous": "2026-08-23",
         "new": "2027-02-19",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 132",
     "isSaudi": false
   },
   {
@@ -3745,12 +3745,12 @@
       {
         "previous": "2026-08-25",
         "new": "2026-11-23",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Name (Arabic): محمد رحمن | Bank: #N/A (A/C: #N/A)",
+    "notes": "NO: 93 | Name (Arabic): محمد رحمن | Bank: #N/A (A/C: #N/A)",
     "isSaudi": false
   },
   {
@@ -3768,7 +3768,7 @@
     "expiryDate": "2026-11-23",
     "renewals": [],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Internal Ref / Sponsor: AFSHAR",
+    "notes": "NO: 102 | Internal Ref / Sponsor: AFSHAR",
     "isSaudi": false
   },
   {
@@ -3788,12 +3788,12 @@
       {
         "previous": "2026-11-23",
         "new": "2027-02-21",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Internal Ref / Sponsor: ZABED IQBAL",
+    "notes": "NO: 103 | Internal Ref / Sponsor: ZABED IQBAL",
     "isSaudi": false
   },
   {
@@ -3813,12 +3813,12 @@
       {
         "previous": "2026-11-23",
         "new": "2027-02-21",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Internal Ref / Sponsor: ZAMEER KHAN",
+    "notes": "NO: 170 | Internal Ref / Sponsor: ZAMEER KHAN",
     "isSaudi": false
   },
   {
@@ -3838,8 +3838,8 @@
       {
         "previous": "2026-11-24",
         "new": "2027-02-22",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
@@ -3863,12 +3863,12 @@
       {
         "previous": "2026-11-25",
         "new": "2027-02-23",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Internal Ref / Sponsor: HARUNUR",
+    "notes": "NO: 148 | Internal Ref / Sponsor: HARUNUR",
     "isSaudi": false
   },
   {
@@ -3888,12 +3888,12 @@
       {
         "previous": "2026-11-26",
         "new": "2027-02-24",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Internal Ref / Sponsor: MASUD",
+    "notes": "NO: 183 | Internal Ref / Sponsor: MASUD",
     "isSaudi": false
   },
   {
@@ -3913,12 +3913,12 @@
       {
         "previous": "2026-11-27",
         "new": "2027-02-25",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Site Operations Technician",
-    "notes": "Name (Arabic): فرهد حسين | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA9710000018600001891509)",
+    "notes": "NO: 22 | Name (Arabic): فرهد حسين | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA9710000018600001891509)",
     "isSaudi": false
   },
   {
@@ -3938,12 +3938,12 @@
       {
         "previous": "2026-11-27",
         "new": "2027-02-25",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 149",
     "isSaudi": false
   },
   {
@@ -3963,12 +3963,12 @@
       {
         "previous": "2026-11-27",
         "new": "2027-02-25",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 171",
     "isSaudi": false
   },
   {
@@ -3988,12 +3988,12 @@
       {
         "previous": "2026-11-27",
         "new": "2027-02-25",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 190",
     "isSaudi": false
   },
   {
@@ -4013,12 +4013,12 @@
       {
         "previous": "2026-11-28",
         "new": "2027-02-26",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Site Operations Technician",
-    "notes": "Name (Arabic): جويل أبو ال قاسم | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA7610000018100001164703)",
+    "notes": "NO: 10 | Name (Arabic): جويل أبو ال قاسم | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA7610000018100001164703)",
     "isSaudi": false
   },
   {
@@ -4038,12 +4038,12 @@
       {
         "previous": "2026-11-28",
         "new": "2027-02-26",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Name (Arabic): زين العابدين محمد زكريا | Bank: NCBK (A/C: SA1810000066800000513703)",
+    "notes": "NO: 69 | Name (Arabic): زين العابدين محمد زكريا | Bank: NCBK (A/C: SA1810000066800000513703)",
     "isSaudi": false
   },
   {
@@ -4063,12 +4063,12 @@
       {
         "previous": "2026-11-28",
         "new": "2027-02-26",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 96",
     "isSaudi": false
   },
   {
@@ -4088,12 +4088,12 @@
       {
         "previous": "2026-11-28",
         "new": "2027-02-26",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 136",
     "isSaudi": false
   },
   {
@@ -4113,12 +4113,12 @@
       {
         "previous": "2026-11-30",
         "new": "2027-02-28",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Mechanical & Systems Foreman",
-    "notes": "Name (Arabic): محمد مياه موسى ابو | Base Salary: SAR 2,400.00 | Bank: NCBK (A/C: SA9010000018100001502205)",
+    "notes": "NO: 38 | Name (Arabic): محمد مياه موسى ابو | Base Salary: SAR 2,400.00 | Bank: NCBK (A/C: SA9010000018100001502205)",
     "isSaudi": false
   },
   {
@@ -4138,12 +4138,12 @@
       {
         "previous": "2026-12-02",
         "new": "2027-03-02",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Mechanical & Systems Foreman",
-    "notes": "Name (Arabic): أكبر على محمد بشير | Base Salary: SAR 2,400.00 | Bank: NCBK (A/C: SA1910000015900000646404)",
+    "notes": "NO: 6 | Name (Arabic): أكبر على محمد بشير | Base Salary: SAR 2,400.00 | Bank: NCBK (A/C: SA1910000015900000646404)",
     "isSaudi": false
   },
   {
@@ -4163,12 +4163,12 @@
       {
         "previous": "2026-12-02",
         "new": "2027-03-02",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Site Operations Technician",
-    "notes": "Base Salary: SAR 1,500.00",
+    "notes": "NO: 65 | Base Salary: SAR 1,500.00",
     "isSaudi": false
   },
   {
@@ -4188,12 +4188,12 @@
       {
         "previous": "2026-12-02",
         "new": "2027-03-02",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 140",
     "isSaudi": false
   },
   {
@@ -4213,12 +4213,12 @@
       {
         "previous": "2026-12-03",
         "new": "2027-03-03",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Site Operations Technician",
-    "notes": "Base Salary: SAR 1,500.00",
+    "notes": "NO: 76 | Base Salary: SAR 1,500.00",
     "isSaudi": false
   },
   {
@@ -4238,12 +4238,12 @@
       {
         "previous": "2026-12-03",
         "new": "2027-03-03",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 228",
     "isSaudi": false
   },
   {
@@ -4263,12 +4263,12 @@
       {
         "previous": "2026-12-04",
         "new": "2027-03-04",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 44",
     "isSaudi": false
   },
   {
@@ -4288,12 +4288,12 @@
       {
         "previous": "2026-12-04",
         "new": "2027-03-04",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 123",
     "isSaudi": false
   },
   {
@@ -4313,12 +4313,12 @@
       {
         "previous": "2026-12-05",
         "new": "2027-03-05",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 162",
     "isSaudi": false
   },
   {
@@ -4338,12 +4338,12 @@
       {
         "previous": "2026-12-06",
         "new": "2027-03-06",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 137",
     "isSaudi": false
   },
   {
@@ -4363,12 +4363,12 @@
       {
         "previous": "2026-12-06",
         "new": "2027-03-06",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 138",
     "isSaudi": false
   },
   {
@@ -4388,12 +4388,12 @@
       {
         "previous": "2026-12-06",
         "new": "2027-03-06",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 139",
     "isSaudi": false
   },
   {
@@ -4413,12 +4413,12 @@
       {
         "previous": "2026-12-06",
         "new": "2027-03-06",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 173",
     "isSaudi": false
   },
   {
@@ -4438,12 +4438,12 @@
       {
         "previous": "2026-12-07",
         "new": "2027-03-07",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 193",
     "isSaudi": false
   },
   {
@@ -4463,12 +4463,12 @@
       {
         "previous": "2026-12-09",
         "new": "2027-03-09",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 191",
     "isSaudi": false
   },
   {
@@ -4488,12 +4488,12 @@
       {
         "previous": "2026-12-09",
         "new": "2027-03-09",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 192",
     "isSaudi": false
   },
   {
@@ -4513,8 +4513,8 @@
       {
         "previous": "2026-12-13",
         "new": "2027-03-13",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
@@ -4538,12 +4538,12 @@
       {
         "previous": "2026-12-23",
         "new": "2027-03-23",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Senior Civil Construction Lead",
-    "notes": "Name (Arabic): محمد امام بخش شيف | Base Salary: SAR 2,600.00 | Bank: NCBK (A/C: SA5010000018100001274102)",
+    "notes": "NO: 28 | Name (Arabic): محمد امام بخش شيف | Base Salary: SAR 2,600.00 | Bank: NCBK (A/C: SA5010000018100001274102)",
     "isSaudi": false
   },
   {
@@ -4563,12 +4563,12 @@
       {
         "previous": "2026-12-27",
         "new": "2027-03-27",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 108",
     "isSaudi": false
   },
   {
@@ -4588,12 +4588,12 @@
       {
         "previous": "2027-01-02",
         "new": "2027-04-02",
-        "cost": 9650.0,
-        "notes": "Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650."
+        "cost": 650.0,
+        "notes": "Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650."
       }
     ],
     "jobPosition": "Site Operations Technician",
-    "notes": "Name (Arabic): مد شاهيل | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA0410000018600001798802)",
+    "notes": "NO: 42 | Name (Arabic): مد شاهيل | Base Salary: SAR 1,500.00 | Bank: NCBK (A/C: SA0410000018600001798802)",
     "isSaudi": false
   },
   {
@@ -4613,12 +4613,12 @@
       {
         "previous": "2026-10-08",
         "new": "2027-01-06",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 111",
     "isSaudi": false
   },
   {
@@ -4638,12 +4638,12 @@
       {
         "previous": "2026-10-08",
         "new": "2027-01-06",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 112",
     "isSaudi": false
   },
   {
@@ -4661,7 +4661,7 @@
     "expiryDate": "2027-01-09",
     "renewals": [],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 195",
     "isSaudi": false
   },
   {
@@ -4681,12 +4681,12 @@
       {
         "previous": "2026-08-01",
         "new": "2027-01-28",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 144",
     "isSaudi": false
   },
   {
@@ -4706,12 +4706,12 @@
       {
         "previous": "2026-08-14",
         "new": "2027-02-10",
-        "cost": 9650.0,
-        "notes": "Previous renewal cycle processed on schedule."
+        "cost": 650.0,
+        "notes": "Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650."
       }
     ],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Name (Arabic): مد هديت الله مد شمس مياه",
+    "notes": "NO: 101 | Name (Arabic): مد هديت الله مد شمس مياه",
     "isSaudi": false
   },
   {
@@ -4837,7 +4837,7 @@
     "expiryDate": "2025-03-02",
     "renewals": [],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 130",
     "isSaudi": false
   },
   {
@@ -4855,7 +4855,7 @@
     "expiryDate": "2030-12-31",
     "renewals": [],
     "jobPosition": "HR & Talent Acquisition Specialist",
-    "notes": "Name (Arabic): عهود شداد عمر العتيبي | Base Salary: SAR 3,000.00 | Bank: NCBK (A/C: SA0410000013800000833504) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "notes": "NO: 62 | Name (Arabic): عهود شداد عمر العتيبي | Base Salary: SAR 3,000.00 | Bank: NCBK (A/C: SA0410000013800000833504) | Saudi National Citizen ID. Registered under GOSI / Absher.",
     "isSaudi": true
   },
   {
@@ -4873,7 +4873,7 @@
     "expiryDate": "2023-08-04",
     "renewals": [],
     "jobPosition": "Site Logistics & Equipment Supervisor",
-    "notes": "Name (Arabic): عبد الهادي ابراهيم | Base Salary: SAR 3,500.00 | Bank: RJHI (A/C: SA7780000377608016177730)",
+    "notes": "NO: 63 | Name (Arabic): عبد الهادي ابراهيم | Base Salary: SAR 3,500.00 | Bank: RJHI (A/C: SA7780000377608016177730)",
     "isSaudi": false
   },
   {
@@ -4891,7 +4891,7 @@
     "expiryDate": "2023-10-26",
     "renewals": [],
     "jobPosition": "Senior Electrical Technician",
-    "notes": "Base Salary: SAR 2,300.00 | Bank: #N/A (A/C: #N/A)",
+    "notes": "NO: 80 | Base Salary: SAR 2,300.00 | Bank: #N/A (A/C: #N/A)",
     "isSaudi": false
   },
   {
@@ -4909,7 +4909,7 @@
     "expiryDate": "2023-09-01",
     "renewals": [],
     "jobPosition": "Head Office Operations Coordinator",
-    "notes": "Bank: #N/A (A/C: #N/A)",
+    "notes": "NO: 81 | Bank: #N/A (A/C: #N/A)",
     "isSaudi": false
   },
   {
@@ -4927,7 +4927,7 @@
     "expiryDate": "2023-08-18",
     "renewals": [],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Bank: #N/A (A/C: #N/A)",
+    "notes": "NO: 82 | Bank: #N/A (A/C: #N/A)",
     "isSaudi": false
   },
   {
@@ -4945,7 +4945,7 @@
     "expiryDate": "2030-12-31",
     "renewals": [],
     "jobPosition": "Government Relations Officer (GRO)",
-    "notes": "Base Salary: SAR 4,000.00 | Bank: #N/A (A/C: #N/A) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "notes": "NO: 83 | Base Salary: SAR 4,000.00 | Bank: #N/A (A/C: #N/A) | Saudi National Citizen ID. Registered under GOSI / Absher.",
     "isSaudi": true
   },
   {
@@ -4963,7 +4963,7 @@
     "expiryDate": "2030-12-31",
     "renewals": [],
     "jobPosition": "HR & Talent Acquisition Specialist",
-    "notes": "Bank: RJHI (A/C: SA4080000634608010031460) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "notes": "NO: 84 | Bank: RJHI (A/C: SA4080000634608010031460) | Saudi National Citizen ID. Registered under GOSI / Absher.",
     "isSaudi": true
   },
   {
@@ -4981,7 +4981,7 @@
     "expiryDate": "2023-08-11",
     "renewals": [],
     "jobPosition": "Chief Financial Accountant",
-    "notes": "Base Salary: SAR 3,000.00 | Bank: NCBK (A/C: SA5010000011562771000110)",
+    "notes": "NO: 85 | Base Salary: SAR 3,000.00 | Bank: NCBK (A/C: SA5010000011562771000110)",
     "isSaudi": false
   },
   {
@@ -4999,7 +4999,7 @@
     "expiryDate": "2030-12-31",
     "renewals": [],
     "jobPosition": "HR & Talent Acquisition Specialist",
-    "notes": "Bank: NCBK (A/C: SA0410000047459114000106) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "notes": "NO: 86 | Bank: NCBK (A/C: SA0410000047459114000106) | Saudi National Citizen ID. Registered under GOSI / Absher.",
     "isSaudi": true
   },
   {
@@ -5017,7 +5017,7 @@
     "expiryDate": "2021-01-13",
     "renewals": [],
     "jobPosition": "Head Office Operations Coordinator",
-    "notes": "Bank: #N/A (A/C: #N/A)",
+    "notes": "NO: 87 | Bank: #N/A (A/C: #N/A)",
     "isSaudi": false
   },
   {
@@ -5035,7 +5035,7 @@
     "expiryDate": "2030-12-31",
     "renewals": [],
     "jobPosition": "HR & Talent Acquisition Specialist",
-    "notes": "Bank: RIBL (A/C: SA2920000001363628989940) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "notes": "NO: 88 | Bank: RIBL (A/C: SA2920000001363628989940) | Saudi National Citizen ID. Registered under GOSI / Absher.",
     "isSaudi": true
   },
   {
@@ -5053,7 +5053,7 @@
     "expiryDate": "2022-08-29",
     "renewals": [],
     "jobPosition": "Head Office Operations Coordinator",
-    "notes": "Bank: #N/A (A/C: #N/A)",
+    "notes": "NO: 89 | Bank: #N/A (A/C: #N/A)",
     "isSaudi": false
   },
   {
@@ -5071,7 +5071,7 @@
     "expiryDate": "2023-03-10",
     "renewals": [],
     "jobPosition": "Head Office Operations Coordinator",
-    "notes": "Bank: #N/A (A/C: #N/A)",
+    "notes": "NO: 90 | Bank: #N/A (A/C: #N/A)",
     "isSaudi": false
   },
   {
@@ -5089,7 +5089,7 @@
     "expiryDate": "2030-12-31",
     "renewals": [],
     "jobPosition": "HR & Talent Acquisition Specialist",
-    "notes": "Base Salary: SAR 3,000.00 | Bank: NCBK (A/C: SA4210000011376892000110) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "notes": "NO: 94 | Base Salary: SAR 3,000.00 | Bank: NCBK (A/C: SA4210000011376892000110) | Saudi National Citizen ID. Registered under GOSI / Absher.",
     "isSaudi": true
   },
   {
@@ -5107,7 +5107,7 @@
     "expiryDate": "2030-12-31",
     "renewals": [],
     "jobPosition": "Government Relations Officer (GRO)",
-    "notes": "Bank: RJHI (A/C: SA8280000391608010100763) | Saudi National Citizen ID. Registered under GOSI / Absher.",
+    "notes": "NO: 95 | Bank: RJHI (A/C: SA8280000391608010100763) | Saudi National Citizen ID. Registered under GOSI / Absher.",
     "isSaudi": true
   },
   {
@@ -5125,7 +5125,7 @@
     "expiryDate": "2026-09-02",
     "renewals": [],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 184",
     "isSaudi": false
   },
   {
@@ -5143,7 +5143,7 @@
     "expiryDate": "2026-09-02",
     "renewals": [],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 185",
     "isSaudi": false
   },
   {
@@ -5161,7 +5161,7 @@
     "expiryDate": "2026-09-18",
     "renewals": [],
     "jobPosition": "Civil Site Specialist",
-    "notes": "Standard verified workforce record.",
+    "notes": "NO: 178",
     "isSaudi": false
   }
 ]

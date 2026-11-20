@@ -528,7 +528,7 @@ function EmployeeProfileContent() {
 
                         <div className="text-right shrink-0">
                           <span className="font-mono font-bold text-sm text-[#006C35]">
-                            {item.cost ? `SAR ${item.cost.toLocaleString()}` : "SAR 9,650"}
+                            {item.cost ? `SAR ${item.cost.toLocaleString()}` : "SAR 650"}
                           </span>
                           <p className="text-[10px] text-gray-500 mt-0.5">
                             By {item.updatedByName || "HR Manager"}

@@ -108,13 +108,17 @@ export async function GET(request: Request) {
           } catch (e) {}
         }
 
-        // Extract banking details and Arabic name from notes
+        // Extract banking details, serial NO, and Arabic name from notes
         const notes = emp.notes || "";
+        const noMatch = notes.match(/NO:\s*(\d+)/);
         const bankMatch = notes.match(/Bank:\s*([^\s(|]+)/);
         const acMatch = notes.match(/A\/C:\s*([^)|]+)/);
         const nameArbMatch = notes.match(/Name \(Arabic\):\s*([^|]+)/);
         const salaryMatch = notes.match(/Base Salary:\s*([^|]+)/);
 
+        const serialNo = noMatch
+          ? parseInt(noMatch[1], 10)
+          : parseInt(emp.employeeId?.replace(/\D/g, "") || "0", 10) || (index + 1);
         const bank = bankMatch ? bankMatch[1].trim() : (emp.bank || "—");
         const bankAc = acMatch ? acMatch[1].trim() : (emp.bankAccount || "—");
         const nameArb = nameArbMatch ? nameArbMatch[1].trim() : "";
@@ -122,7 +126,7 @@ export async function GET(request: Request) {
 
         return {
           ...emp,
-          serialNo: index + 1,
+          serialNo,
           rawId,
           bank,
           bankAc,

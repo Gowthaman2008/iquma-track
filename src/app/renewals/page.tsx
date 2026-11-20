@@ -96,7 +96,7 @@ export default function RenewalsPage() {
               Average Processing Fee
             </span>
             <div className="text-3xl font-black text-gray-900 mt-1 font-mono">
-              SAR {totalCount > 0 ? Math.round(totalCost / totalCount).toLocaleString() : "9,650"}
+              SAR {totalCount > 0 ? Math.round(totalCost / totalCount).toLocaleString() : "650"}
             </div>
             <p className="text-[11px] text-gray-500 mt-2">Standard Saudi expatriate tier</p>
           </div>
@@ -173,7 +173,7 @@ export default function RenewalsPage() {
                       </td>
 
                       <td className="py-3 px-4 font-mono font-bold text-gray-900">
-                        {r.cost ? `SAR ${r.cost.toLocaleString()}` : "SAR 9,650"}
+                        {r.cost ? `SAR ${r.cost.toLocaleString()}` : "SAR 650"}
                       </td>
 
                       <td className="py-3 px-4 text-gray-600">

@@ -78,7 +78,7 @@ export async function POST(
   const fallbackRecord = addFallbackRenewal({
     employeeId: id,
     newExpiryDate,
-    cost: cost ? parseFloat(cost) : 9650,
+    cost: cost ? parseFloat(cost) : 650,
     notes,
     updatedByName: user.name,
   });

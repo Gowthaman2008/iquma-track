@@ -196,8 +196,8 @@ for r in recs1:
                 renewals.append({
                     'previous': primary_end,
                     'new': col16_renew,
-                    'cost': 9650.0,
-                    'notes': f'Renewed via Qiwa/Muqeem portal. Maktab Amal fee SAR 9600 + Iqama fee SAR 650.'
+                    'cost': 650.0,
+                    'notes': f'Renewed via Qiwa/Muqeem portal. Official Jawazat Iqama fee SAR 650.'
                 })
         elif primary_end:
             effective_expiry = primary_end
@@ -205,8 +205,8 @@ for r in recs1:
                 renewals.append({
                     'previous': earlier_end,
                     'new': primary_end,
-                    'cost': 9650.0,
-                    'notes': f'Previous renewal cycle processed on schedule.'
+                    'cost': 650.0,
+                    'notes': f'Previous renewal cycle processed on schedule. Official Jawazat fee SAR 650.'
                 })
         elif earlier_end:
             effective_expiry = earlier_end
@@ -221,6 +221,8 @@ for r in recs1:
     
     # Notes builder
     notes_parts = []
+    if r.get('no'):
+        notes_parts.append(f"NO: {r['no']}")
     if arb and arb != display_name:
         notes_parts.append(f"Name (Arabic): {arb}")
     if salary:
@@ -302,6 +304,8 @@ for r in recs2:
     job_position = get_job_position(dept, nat, gender, salary, display_name)
     
     notes_parts = []
+    if r.get('no'):
+        notes_parts.append(f"NO: {r['no']}")
     if arb and arb != display_name:
         notes_parts.append(f"Name (Arabic): {arb}")
     if salary:

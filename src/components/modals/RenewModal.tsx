@@ -22,7 +22,7 @@ export function RenewModal({
 }: RenewModalProps) {
   const [newExpiryDate, setNewExpiryDate] = useState("");
   const [renewalDate, setRenewalDate] = useState(new Date().toISOString().split("T")[0]);
-  const [cost, setCost] = useState("9650"); // Typical Saudi Work Permit + Iqama fee
+  const [cost, setCost] = useState("650"); // Standard Saudi expatriate Iqama renewal fee (SAR 650)
   const [notes, setNotes] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -133,7 +133,7 @@ export function RenewModal({
               <div className="relative">
                 <input
                   type="number"
-                  placeholder="e.g. 9650"
+                  placeholder="e.g. 650"
                   value={cost}
                   onChange={(e) => setCost(e.target.value)}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-[#006C35] focus:outline-none"

@@ -235,7 +235,7 @@ export function addFallbackRenewal(data: {
     previousExpiryDate: prevExpiry,
     newExpiryDate: data.newExpiryDate,
     renewalDate: new Date().toISOString(),
-    cost: data.cost || 9650,
+    cost: data.cost || 650,
     notes: data.notes || "Standard Jawazat renewal",
     updatedByName: data.updatedByName || "HR Manager",
     employee: emp ? {
